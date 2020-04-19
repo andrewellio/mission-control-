@@ -6,7 +6,7 @@ The document should also demonstrate your understanding of the main analysis pri
 
 The ENGR 301 project proposal and requirements document should be based on the standard ISO/IEC/IEEE 29148:2011(E), primarily sections 8.4 and 9.5, plus section 9.4 for projects involving hardware and ISO 25010 SQuaRE for systemic requirements. While excerpts from the standard have been quoted within the template, to understand what is required it will be necessary to read earlier sections of the standards themselves. A supplementary treatment of requirements gathering in engineering projects may be found in [Requirements in Engineering Projects](https://victoria.rl.talis.com/items/F166DA94-DAD8-FBDB-0785-7A63C9BA3603.html?referrer=%2Flists%2F5886F297-2506-1F17-45D9-7F04CEE284EE.html%23item-F166DA94-DAD8-FBDB-0785-7A63C9BA3603) (Talis). The requirements document should contain the sections listed below, and conform to the formatting rules listed at the end of this brief. 
 
-All team members are expected to contribute equally to the document and list their contributions in section 6 of the document. You should work on your document in your team's GitLab repository. While collective contributions are expected to be the exception rather than the rule, if more than one team member has contributed to a particular commit then all those team member IDs should be included in the first line of the git commit message. `git blame`, `git diff`, file histories, etc. will be tools used to assess individual contributions, so everyone is encouraged to contribute individually, commit early and commit often. Any team wishing to separate individually contributed sections into a single file before collation into the single proposal document for submission is welcome to do so.
+All team members are expected to contribute equally to the document and list their contributions in section 7 of the document. You should work on your document in your team's GitLab repository. While collective contributions are expected to be the exception rather than the rule, if more than one team member has contributed to a particular commit then all those team member IDs should be included in the first line of the git commit message. `git blame`, `git diff`, file histories, etc. will be tools used to assess individual contributions, so everyone is encouraged to contribute individually, commit early and commit often. Any team wishing to separate individually contributed sections into a single file before collation into the single proposal document for submission is welcome to do so.
 
 ---
 
@@ -21,7 +21,13 @@ One page overall introduction including sections 1.1 and 1.2.
 
 ### Client
 
-Identify the client and their contact details
+Identify the client (some customer achivements/experience?)
+
+Contact details for our customer: 
+Name - Andre Geldenhuis
+Email - andre.geldenhuis@vuw.ac.nz
+Mattermost @geldenan
+
 
 ### 1.1 Purpose
 
@@ -221,6 +227,8 @@ One page glossary _as required_.
 ## 7. Contributions
 
 A one page statement of contributions, including a list of each member of the group and what they contributed to this document.
+
+Elliott Andrews has made contributions to identifyng the client/customer and their contact details. In addition has also identified and explanined some risks of the COVID-19 situation this year.
 
 ---
 
