@@ -21,12 +21,16 @@ One page overall introduction including sections 1.1 and 1.2.
 
 ### Client
 
-Identify the client (some customer achivements/experience?)
+**Contact details for our customer**
 
-Contact details for our customer: 
-Name - Andre Geldenhuis
-Email - andre.geldenhuis@vuw.ac.nz
-Mattermost @geldenan
+Name: Andre Geldenhuis
+
+Email: andre.geldenhuis@vuw.ac.nz
+
+Mattermost & Gitlab: @geldenan
+
+**Customer introduction** 
+- (Identify the client... some customer achivements/experience?)
 
 
 ### 1.1 Purpose
@@ -178,6 +182,22 @@ Identify dates for key project deliverables:
 Present a budget for the project (table), and justify each budget item (one paragraph per item, one page overall). 
 
 ### 5.3 Risks 
+
+(Basic facts, will need to be more detailed. Also quite a broad topic, could be worth re-writing with more specific risks)
+
+**COVID-19 Lockdown and Restrictions** (Thursday 26th March and currently ongoing)
+
+Type: Government announcement and National State of Emergency
+
+Likelihood: High and Likely that University will be closed
+
+Impact: Will delay any physical lab course work, will affect students living situations and job wages
+
+Mitigation Strategies: Will continue team work virtually and online
+
+Course and Univeristy announcement: to pause all effective project work for ENGR 301 and lecture teaching until the 28th of April
+
+[Victoria Univeristy of Wellington COVID-19 Information for Students](https://www.wgtn.ac.nz/covid-19/students)
 
 Identify the ten most important project risks to achieving project goals: their type, likelihood, impact, and mitigation strategies (3 pages).
 
