@@ -39,7 +39,10 @@ One sentence describing the purpose of the system (9.5.1)
 
 ### 1.2 Scope
 
-One paragraph describing the scope of the system (9.5.2)
+Should provide rocket flight logging system to record flight data.
+Should provide wireless control system.
+Should provide rocket self-control system to control motor during the flight, and open parachute.
+
 
 ### 1.3 Product overview 
 #### 1.3.1 Product perspective
