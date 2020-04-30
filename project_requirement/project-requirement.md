@@ -238,6 +238,15 @@ One page glossary _as required_.
 
 A one page statement of contributions, including a list of each member of the group and what they contributed to this document.
 
+| Team Member | Section Contributions |
+| ------ | ------ |
+| Elliott Andrews | cell |
+| Binke Xu | cell | 
+| Sandy (Alexander Saunders) | cell | 
+| Jesse Wood | cell | 
+| Marcus Rathod | cell | 
+| Mason Yi | cell | 
+
 Elliott Andrews has made contributions to identifyng the client/customer and their contact details. In addition has also identified and explanined some risks of the COVID-19 situation this year.
 
 ---
