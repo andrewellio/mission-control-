@@ -66,8 +66,8 @@ One page identifying the main classes of users and their characteristics (9.5.5)
 
 #### 1.3.4 Limitations
 
-The rocket will wireless monitoring with laptop, so the distance between the laptop and rocket will affect the monitoring effect, if rocket fly too height then laptop may not be able to receive signal from transmission unit on the rocket. 
-The terrain may also affect the data transmission effect, such as steep hill or woodland, those launch environment may lead data loss or unstable connection between laptop and rocket. 
+The rocket will wireless monitoring with laptop, so the distance between the laptop and rocket will affect the monitoring effect, if rocket fly too height then laptop may not be able to receive signal from transmission unit on the rocket.
+The terrain may also affect the data transmission effect, such as steep hill or woodland, those launch environment may lead data loss or unstable connection between laptop and rocket.
 
 ## 2. References
 
@@ -159,21 +159,21 @@ how you will verify that the product meets the most important specific requireme
 The format of this section should parallel section 3 of your document (see 9.5.18).
 Wherever possible (especially systemic requirements) you should indicate testable acceptance criteria.
 -->
-### 4.1 External Interfaces
+#### 4.1 External Interfaces
 
-### 4.2 Functions
+#### 4.2 Functions
 
-### 4.3 Usability Requirements
+#### 4.3 Usability Requirements
 
-### 4.4 Performance Requirements
+#### 4.4 Performance Requirements
 
-### 4.5 Domain Model Requirements
+#### 4.5 Domain Model Requirements
 
-### 4.6 Design Constraints
+#### 4.6 Design Constraints
 
-### 4.7 Software System Attributes
+#### 4.7 Software System Attributes
 
-### 4.8 Physical and Environmental Requirements
+#### 4.8 Physical and Environmental Requirements
 
 ## 5. Development schedule.
 
