@@ -73,6 +73,8 @@ The terrain may also affect the data transmission effect, such as steep hill or 
 
 References to other documents or standards. Follow the IEEE Citation  Reference scheme, available from the [IEEE website](https://www.ieee.org/) (please use the search box). (1 page, longer if required)
 
+\[1\] “Quality Assurance,” Quality Assurance " Software Quality Attributes. [Online]. Available: http://www.qasigma.com/2008/12/software-quality-attributes.html. [Accessed: 02-May-2020].
+
 ## 3. Specific requirements  
 
 20 pages outlining the requirements of the system. You should apportion these pages across the following subsections to focus on the most important parts of your product.
@@ -172,6 +174,48 @@ Wherever possible (especially systemic requirements) you should indicate testabl
 #### 4.6 Design Constraints
 
 #### 4.7 Software System Attributes
+##### Reliability
+<!-- The probability that this system fulfils a function (determined by the specifications) for a specified number of input conditions in a specified time interval (assuming that hardware and input are free of errors).
+
+A software system can be seen as reliable if this test produces a low error rate (i.e., the probability that an error will occur in a specified time interval.)
+
+The error rate depends on the frequency of inputs and on the probability that an individual input will lead to an error. [sqa] -->
+
+##### Robustness
+<!-- Robustness reduced the impact of operational mistakes, erroneous input data, and hardware errors.
+
+A software system is robust if the consequences of an error in its operation, in the input, or in the hardware, in relation to application, are inversely proportional to the probability of the occurrence of this error in the given application.
+
+- Frequent errors (e.g. erroneous commands, typing errors) must be handled with particular care.
+
+- Less frequent errors (e.g. power failure) can be handled more laxly, bust still must no lead to irreversible consequence. [sqa] -->
+
+##### Testability
+<!-- Suitability for allowing the programmer to follow program execution (runtime behaviour under given conditions) and for debugging. The testability of a software system depends on its:
+- modularity
+- structuredness: System-dependent elements are collected in easily interchangeable program components.
+
+Modular, well-structured programs prove more suitable for systematic, stepwise testing than monolithic, unstructured programs.
+
+Testing tools and the possibility of formulating consistency conditions (assertions) in the source code reduce the testing effort and provide important prerequisites for the extensive, systematic testing of all system components. [sqa] -->
+
+##### Efficiency
+<!-- Ability of a software system to fulfil its purpose with the best possible utilization of all necessary resources (time, storage, transmission channels, and peripherals). -->
+
+##### Portability
+<!-- The ease with which a software system can be adapted to run on computers other than the one for which it was designed.
+
+The portability of a software depends on:
+- Degree of hardware independence
+- Implementation language
+- Extent of exploitation of specialized system functions
+- Hardware properties
+- Structuredness: System-dependent elements are collected in easily interchangeable program components. [sqa] -->
+
+##### Correctness
+<!-- The correctness of a software system refers to:
+- Agreement of program code with specifications
+- Independence of the actual application of the software system -->
 
 #### 4.8 Physical and Environmental Requirements
 
