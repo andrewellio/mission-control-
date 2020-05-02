@@ -66,7 +66,8 @@ One page identifying the main classes of users and their characteristics (9.5.5)
 
 #### 1.3.4 Limitations
 
-One page on the limitations on the product (9.5.6)
+The rocket will wireless monitoring with laptop, so the distance between the laptop and rocket will affect the monitoring effect, if rocket fly too height then laptop may not be able to receive signal from transmission unit on the rocket. 
+The terrain may also affect the data transmission effect, such as steep hill or woodland, those launch environment may lead data loss or unstable connection between laptop and rocket. 
 
 ## 2. References
 
