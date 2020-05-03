@@ -30,12 +30,13 @@ Email: andre.geldenhuis@vuw.ac.nz
 Mattermost & Gitlab: @geldenan
 
 **Customer introduction**
-- (Identify the client... some customer achivements/experience?)
+
+Andre has been involved in several rocket projects, as well as some past Victoria University projects. He has provided us with our MC project brief, some useful example slides and other resources to help us with our project execution. He is available for contact using the above details.
 
 
 ### 1.1 Purpose
 
-One sentence describing the purpose of the system (9.5.1)
+Mission Control's purpose for the [Rocket Project](https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR301_2020T1/Project/2020_Rocket_Project_info.pdf) is to display the rocket's real-time data with additional (software based) launch requirements and operations.
 
 ### 1.2 Scope
 
@@ -233,7 +234,7 @@ Identify dates for key project deliverables:
 
 ### 5.2 Budget
 
-Present a budget for the project (table), and justify each budget item (one paragraph per item, one page overall).
+Is it assumed that MC will not need to use any funds from the project budget. More explanation for this can be found in the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project-charter) budget information.
 
 ### 5.3 Risks
 
@@ -296,7 +297,7 @@ One page on assumptions and dependencies (9.5.7).
 
 ### 6.2 Acronyms and abbreviations
 
-One page glossary _as required_.
+MC or MCS (Mission Control or Mission Control System/Software): Reference to Mission Control's part in the project (our team's part).
 
 ## 7. Contributions
 
@@ -304,15 +305,12 @@ A one page statement of contributions, including a list of each member of the gr
 
 | Team Member | Section Contributions |
 | ------ | ------ |
-| Elliott Andrews | cell |
+| Elliott Andrews | (1) - 1.1, (5) - 5.2, 5.3, (6) - 6.2 |
 | Binke Xu | cell |
 | Sandy (Alexander Saunders) | cell |
 | Jesse Wood | cell |
 | Marcus Rathod | cell |
 | Mason Yi | cell |
-
-Elliott Andrews has made contributions to identifyng the client/customer and their contact details. In addition has also identified and explanined some risks of the COVID-19 situation this year.
-
 ---
 
 ## Formatting Rules
