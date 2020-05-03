@@ -234,7 +234,8 @@ Identify dates for key project deliverables:
 
 ### 5.2 Budget
 
-Is it assumed that MC will not need to use any funds from the project budget. More explanation for this can be found in the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project-charter) budget information.
+Is it assumed that MC will not need to use any funds from the project budget. 
+More explanation for this can be found in the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project-charter) budget information.
 
 ### 5.3 Risks
 
