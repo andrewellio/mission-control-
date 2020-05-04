@@ -84,6 +84,12 @@ References to other documents or standards. Follow the IEEE Citation  Reference 
 
 See 9.5.10. for most systems this will be around one page.
 
+**Laptop**
+
+A laptop will be used on site to display data from the rocket. The data displayed on the laptop will include the current software state, current location, current altitude, local weather conditions (wind) and probable landing locations.
+The laptop will include further operations/functionalities which will allow additional data to be displayed on the laptop. This will include landing locations within a certain bound, a go/no go functionality and the imminence of when a 
+rocket is to be launched. The laptop will also allow the rocket to be integrated with openRocket which allow the mission control system to be integrated with monte-carlo integration. 
+
 ### 3.2 Functions
 
 This is typically the longest subsection in the document. List up to fifty use cases (in order of priority for development), and for at least top ten focal use cases, write a short goal statement and use case body (up to seven pages).  Identify the use cases that comprise a minimum viable product.
