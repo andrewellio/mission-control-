@@ -1,7 +1,9 @@
-# Mission Control Interface
+# Mission Control
 
-We are creating an interface to display information and data received from a
-rocket, based around this brief:
+## Wiki
+[Project Wiki](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/home)
+
+## Brief
 
 *"The mission control will run on a laptop in the field and display data from
 the rocket - such as the current software state and the current location and
