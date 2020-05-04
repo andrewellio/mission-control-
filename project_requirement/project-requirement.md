@@ -365,7 +365,7 @@ A one page statement of contributions, including a list of each member of the gr
 | Team Member | Section Contributions |
 | ------ | ------ |
 | Elliott Andrews | (1) - 1.1, (5) - 5.1, 5.2, 5.3, (6) - 6.2 |
-| Binke Xu | cell |
+| Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4 |
 | Sandy (Alexander Saunders) | cell |
 | Jesse Wood | 3.7, 4.7 |
 | Marcus Rathod | cell |
