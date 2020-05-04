@@ -61,6 +61,8 @@ The mission control system needs Integrate with local weather condition, simulat
 
 Use the current wind profile and the Monte-Carlo simulation to determine an upwind trajectory for the rocket to follow to minimize its landing distance from the launch site.
 
+Mission control device may not have internet connection all the time, so mission control system should be able to run in the absence of an internet connection.
+
 #### 1.3.3 User characteristics   
 
 One page identifying the main classes of users and their characteristics (9.5.5)
