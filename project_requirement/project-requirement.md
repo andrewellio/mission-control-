@@ -103,7 +103,8 @@ See 9.5.12. for most systems this will be around one page.
 > **9.5.12 Usability requirements**<br>
 > Define usability (quality in use) requirements. Usability requirements and objectives for the software system include measurable effectiveness, efficiency, and satisfaction criteria in specific contexts of use.
 
-Should work in the absence of an internet connection
+**Should work in the absence of an internet connection**
+
 The site of launch will most likely be in an area where there will be no available internet connection. To make the mission control system effective for the user (so that the user doesn’t have to personally provide a internet connection), 
 it will be a requirement for the mission control system to work without the use of an internet connection.
 
