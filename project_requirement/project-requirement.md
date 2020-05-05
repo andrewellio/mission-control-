@@ -368,7 +368,7 @@ A one page statement of contributions, including a list of each member of the gr
 | Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4 |
 | Sandy (Alexander Saunders) | cell |
 | Jesse Wood | 3.7, 4.7 |
-| Marcus Rathod | cell |
+| Marcus Rathod | 3.1 |
 | Mason Yi | cell |
 ---
 
