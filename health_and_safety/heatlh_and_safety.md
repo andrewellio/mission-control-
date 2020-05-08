@@ -1,10 +1,20 @@
 # Health and Safety
 
 ## Risk Matrix 
-| Risk | Type | Cause | Effect | Likelihood | Severity | Importance | Mitgation |
+| **Risk** | **Type** | **Cause** | **Effect** | **Likelihood** | **Severity** | **Importance** | **Mitgation** |
 | --- | --- | --- | --- | --- | --- | ---| ---| 
 | High wind speeds | Environmental | Under the circumstance of moderate to severe weather conditions. These can inlcude high wind speeds | Rocket launch will be unsafe and could cause damage of property and/or persons | Possible | Severe | Med Hi | Following the CAA and Model Rocketry guidelines, a launch will not take place during these conditions. The weather condition will be assessed through multiple sources prior to the launch. A judgement call will be made by the team based on the data available at the time |
-| Visibility| Environmental | cloud coverage, terrain, time of day and other phenomena can obscure visibility of the sky| After a launch we will not be able to track the trajectory of the rocket and see where it lands. This could results in unforseen damage to property and/or persons that could have been mitaged sooner | Possible | Severe | Med Hi | We follow the CAA and Model Rocketry guidelines. If there is more than 50% cloud coverage or other objects obscuring view, less than 8km horozontal visibility, or it is night time. The launch will not take place |
+| Low Visibility| Environmental | cloud coverage, terrain, time of day and other phenomena can obscure visibility of the sky| After a launch we will not be able to track the trajectory of the rocket and see where it lands. This could results in unforseen damage to property and/or persons that could have been mitaged sooner | Possible | Severe | Med Hi | We follow the CAA and Model Rocketry guidelines. If there is more than 50% cloud coverage or other objects obscuring view, less than 8km horozontal visibility, or it is night time. The launch will not take place |
+| Combustion | Hardware | --- | --- | Possible | Severe | Med Hi | ---| 
+| Explosion | Hardware | --- | --- | Possible | Severe | Med Hi | ---| 
+| Rocket Falling over | Hardware | --- | --- | Possible | Severe | Med Hi| ---| 
+| Rocket Not Flying Straight | Hardware | --- | --- | Likely | Severe | High| ---| 
+| Unsuccessful Launch | Technical | --- | --- | Likely | Severe | High| ---| 
+| Collision with Property and/or Persons| Medical | --- | --- | Possible | Severe | Med Hi | ---| 
+| Eye Damage | Medical | --- | --- | Possible | Severe | Med Hi | ---| 
+| Moderate to Severe Burns | Medical | --- | --- | Possible | Severe | Med Hi | ---| 
+| Interference with Aerodrome and/or Planes | Technical | --- | --- | Possible | Moderate | Medium | ---| 
+
 
 ## Appendices
 Risk Matrix  \[1\]
