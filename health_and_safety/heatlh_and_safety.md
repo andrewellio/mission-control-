@@ -3,8 +3,8 @@
 ## Risk Matrix 
 | **Risk** | **Type** | **Cause** | **Effect** | **Likelihood** | **Severity** | **Importance** | **Mitgation** |
 | --- | --- | --- | --- | --- | --- | ---| ---| 
-| High wind speeds | Environmental | Under the circumstance of moderate to severe weather conditions. These can inlcude high wind speeds | Rocket launch will be unsafe and could cause damage of property and/or persons | Possible | Severe | Med Hi | Following the CAA and Model Rocketry guidelines, a launch will not take place during these conditions. The weather condition will be assessed through multiple sources prior to the launch. A judgement call will be made by the team based on the data available at the time |
-| Low Visibility| Environmental | cloud coverage, terrain, time of day and other phenomena can obscure visibility of the sky| After a launch we will not be able to track the trajectory of the rocket and see where it lands. This could results in unforseen damage to property and/or persons that could have been mitaged sooner | Possible | Severe | Med Hi | We follow the CAA and Model Rocketry guidelines. If there is more than 50% cloud coverage or other objects obscuring view, less than 8km horozontal visibility, or it is night time. The launch will not take place |
+| High wind speeds | Environmental | Under the circumstance of moderate to severe weather conditions. These can inlcude high wind speeds | Rocket launch will be unsafe and could cause damage of property and/or persons | Possible | Severe | Med Hi | Following the CAA and Model Rocketry guidelines, a launch will not take place during these conditions. The weather condition will be assessed through multiple sources prior to the launch. A judgement call will be made by the team based on the data available at the time \[1\]|
+| Low Visibility| Environmental | cloud coverage, terrain, time of day and other phenomena can obscure visibility of the sky| After a launch we will not be able to track the trajectory of the rocket and see where it lands. This could results in unforseen damage to property and/or persons that could have been mitaged sooner | Possible | Severe | Med Hi | We follow the CAA and Model Rocketry guidelines. If there is more than 50% cloud coverage or other objects obscuring view, less than 8km horozontal visibility, or it is night time. The launch will not take place \[1\] |
 | Combustion | Hardware | --- | --- | Possible | Severe | Med Hi | ---| 
 | Explosion | Hardware | --- | --- | Possible | Severe | Med Hi | ---| 
 | Rocket Falling over | Hardware | --- | --- | Possible | Severe | Med Hi| ---| 
@@ -17,9 +17,10 @@
 
 
 ## Appendices
-Risk Matrix  \[1\]
+Risk Matrix  \[2\]
 
 ![Risk Matrix](https://i2.wp.com/riskacademy.blog/wp-content/uploads/2019/04/Typical-Risk-Matrix.png?fit=900%2C483&ssl=1)
 
 ## References 
-\[1\] Sidorenko, A., Julien, Robson, D., Huggins, P., &amp; Rivera, F. (2019, July 27). RISK-ACADEMY Blog. Retrieved May 08, 2020, from https://riskacademy.blog/finally-an-alternative-to-risk-matrices/
+- \[1\] Rocket Safety. (n.d.). Retrieved May 08, 2020, from https://www.nzrocketry.org.nz/rocketry/rocket-safety
+- \[2\] Sidorenko, A., Julien, Robson, D., Huggins, P., &amp; Rivera, F. (2019, July 27). RISK-ACADEMY Blog. Retrieved May 08, 2020, from https://riskacademy.blog/finally-an-alternative-to-risk-matrices/
