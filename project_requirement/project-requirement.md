@@ -65,7 +65,9 @@ Mission control device may not have internet connection all the time, so mission
 
 #### 1.3.3 User characteristics   
 
-One page identifying the main classes of users and their characteristics (9.5.5)
+**One page identifying the main classes of users and their characteristics (9.5.5)**
+Our mission control system is a simplified version of real mission control center, but our system will show core function of mission control system, the user will gain experience of how mission control works and what mission control system for. 
+User should be familiar with interact software by command line and GUI, also our system will be able to operate on major operating systems on market, so user need know how to install and run our software on different system.
 
 #### 1.3.4 Limitations
 
