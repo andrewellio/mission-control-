@@ -65,7 +65,7 @@ Mission control device may not have internet connection all the time, so mission
 
 #### 1.3.3 User characteristics   
 
-**One page identifying the main classes of users and their characteristics (9.5.5)**
+<!--One page identifying the main classes of users and their characteristics (9.5.5)-->
 Our mission control system is a simplified version of real mission control center, but our system will show core function of mission control system, the user will gain experience of how mission control works and what mission control system for. 
 User should be familiar with interact software by command line and GUI, also our system will be able to operate on major operating systems on market, so user need know how to install and run our software on different system.
 
@@ -376,7 +376,7 @@ A one page statement of contributions, including a list of each member of the gr
 | Team Member | Section Contributions |
 | ------ | ------ |
 | Elliott Andrews | (1) - 1.1, (5) - 5.1, 5.2, 5.3, (6) - 6.2 |
-| Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4 |
+| Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3 |
 | Sandy (Alexander Saunders) | cell |
 | Jesse Wood | 3.7, 4.7 |
 | Marcus Rathod | 3.1, 3.3 |
