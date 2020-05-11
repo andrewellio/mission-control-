@@ -17,6 +17,7 @@ This web server uses Tomcatv6 but may work with newer versions
 4. Under Apache > Select Tomcat v6.0 Server > (Next)
 5. Browse to where you installed Tomcat in step 1 > (Finish)
 6. Import into the project the .jar file
+7. ...........................EXTRA STEPS FOR BUILDING THE WEB APP LIBRARIES NEEDED
 
 You must first start the webserver from WebserverClient.java (the localhost and webpage should show)
 
