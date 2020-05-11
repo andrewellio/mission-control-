@@ -1,0 +1,11 @@
+@startuml
+class MissionControl
+
+class Model
+class View
+class Controller
+
+interface Simulation
+interface WeatherService
+interface MapService
+@enduml

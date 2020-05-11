@@ -1,0 +1,26 @@
+@startuml
+skinparam packageStyle rectangle
+
+skinparam usecase {
+	BackgroundColor<< Selected >> GreenYellow
+	BorderColor<< Selected >> Black
+}
+
+actor User
+
+rectangle MissionControl {
+
+}
+
+rectangle Simulation {
+
+}
+
+rectangle WeatherService {
+
+}
+
+rectangle MapService {
+
+}
+@enduml
