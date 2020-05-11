@@ -11,7 +11,7 @@
 | Rocket Not Flying Straight | Hardware | --- | --- | Likely | Severe | High| ---| 
 | Unsuccessful Launch | Technical | --- | --- | Likely | Severe | High| ---| 
 | Collision with Property and/or Persons| Medical | --- | --- | Possible | Severe | Med Hi | ---| 
-| Eye Damage | Medical | --- | --- | Possible | Severe | Med Hi | ---| 
+| Eye Damage | Medical | Motor’s exhaust from hitting the ground, or explosion occurs when rocket launching. | People get injury, their eye will get bind or vision loss. | Possible | Severe | Med Hi | Following the CAA and Model Rocketry guidelines, to prevent accidental eye injury,we will place launchers so that the end of the launch rod is above eye level or will cap the end of the rod when it is not in use. When launch the rocket everyone should ware goggles.| 
 | Moderate to Severe Burns | Medical | --- | --- | Possible | Severe | Med Hi | ---| 
 | Interference with Aerodrome and/or Planes | Technical | --- | --- | Possible | Moderate | Medium | ---| 
 
