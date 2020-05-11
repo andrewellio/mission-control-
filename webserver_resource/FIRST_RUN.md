@@ -1,7 +1,9 @@
 Elliott Andrews 
+
 Resource from NWEN 243 2019 Victoria University of Wellington (Educational use only)
 
 This is the readme to setup the webserver client that reads weather parameters
+
 It has been tested to run in Eclipse but should run in other IDE's
 
 
@@ -17,5 +19,7 @@ This web server uses Tomcatv6 but may work with newer versions
 6. Import into the project the .jar file
 
 You must first start the webserver from WebserverClient.java (the localhost and webpage should show)
+
 Then run the application also from the same .java as above
+
 Enter required infomation and should display realtime data
