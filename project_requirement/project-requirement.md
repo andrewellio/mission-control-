@@ -114,6 +114,14 @@ See 9.5.12. for most systems this will be around one page.
 The site of launch will most likely be in an area where there will be no available internet connection. To make the mission control system effective for the user (so that the user doesn’t have to personally provide a internet connection), 
 it will be a requirement for the mission control system to work without the use of an internet connection.
 
+
+**Display data in a coherent method**
+
+When the data is displayed to the user, we want to make sure that it is displayed in a way that's understandable and easy to look at from the point of view of the user. We assume that the user of the mission control system will have some knowledge
+of rockets, but that doesn't allow us to create a system that will make the user do unecessary operations to obtain a specific piece of data. This is why as opposed to displaying data in a command line (something which would be easier to develop),
+creating a user interface (UI) will allow the data to be displayed in a more coherent manner.
+
+
 ### 3.4 Performance requirements
 
 See 9.5.13. for most systems this will be around one page. Hardware projects also see section 9.4.6.
