@@ -1,11 +1,53 @@
 @startuml
-class MissionControl
+class MissionControl {
 
-class Model
-class View
-class Controller
+}
+
+class View {
+  goNoGo: GoNoGoView
+  map: MapView
+  phase: PhaseView
+  readings: ReadingsView
+}
+
+class Model {
+  alititude: float
+  location: Point(float, float)
+  vector: Vector(float, float)
+  altitude: float
+  velocity: float
+
+  void updateRocketData()
+  void runSimulations
+}
+
+class Controller {
+  void sendNoGo()
+  void sendGo()
+  void sendLauncImmiment()
+  (angle, direction) getLaunchAngle()
+}
+
+View "*" <-- MissionControl
+Model "1" <-- "1" MissionControl
+Controller "1" <-- "1" MissionControl
+
+enum State {
+  LIFT_OFF,
+  POWERED_ASCENT
+  COAST
+  APOGEE
+  EJECTION
+  RECOVERY
+}
+
+State "1" <-- "1" Model
 
 interface Simulation
 interface WeatherService
 interface MapService
+
+Simulation <-- Model
+WeatherService <-- Model
+MapService <-- Model
 @enduml
