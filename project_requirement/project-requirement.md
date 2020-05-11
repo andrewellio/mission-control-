@@ -66,7 +66,7 @@ Mission control device may not have internet connection all the time, so mission
 #### 1.3.3 User characteristics   
 
 <!--One page identifying the main classes of users and their characteristics (9.5.5)-->
-Our mission control system is a simplified version of real mission control center, but our system will show core function of mission control system, the user will gain experience of how mission control works and what mission control system for. 
+Our mission control system is a simplified version of real mission control center, but our system will show core function of mission control system, the user will gain experience of how mission control works and what mission control system for.
 User should be familiar with interact software by command line and GUI, also our system will be able to operate on major operating systems on market, so user need know how to install and run our software on different system.
 
 #### 1.3.4 Limitations
@@ -91,8 +91,8 @@ See 9.5.10. for most systems this will be around one page.
 **Laptop**
 
 A laptop will be used on site to display data from the rocket. The data displayed on the laptop will include the current software state, current location, current altitude, local weather conditions (wind) and probable landing locations.
-The laptop will include further operations/functionalities which will allow additional data to be displayed on the laptop. This will include landing locations within a certain bound, a go/no go functionality and the imminence of when a 
-rocket is to be launched. The laptop will also allow the rocket to be integrated with openRocket which allow the mission control system to be integrated with monte-carlo integration. 
+The laptop will include further operations/functionalities which will allow additional data to be displayed on the laptop. This will include landing locations within a certain bound, a go/no go functionality and the imminence of when a
+rocket is to be launched. The laptop will also allow the rocket to be integrated with openRocket which allow the mission control system to be integrated with monte-carlo integration.
 
 ### 3.2 Functions
 
@@ -111,7 +111,7 @@ See 9.5.12. for most systems this will be around one page.
 
 **Should work in the absence of an internet connection**
 
-The site of launch will most likely be in an area where there will be no available internet connection. To make the mission control system effective for the user (so that the user doesn’t have to personally provide a internet connection), 
+The site of launch will most likely be in an area where there will be no available internet connection. To make the mission control system effective for the user (so that the user doesn’t have to personally provide a internet connection),
 it will be a requirement for the mission control system to work without the use of an internet connection.
 
 
@@ -169,53 +169,23 @@ see 9.5.15 and 9.5.16. for most systems, this will be around one page.
 
 ### 3.7 Nonfunctional system attributes
 
-Present the systemic (aka nonfunctional) requirements of the product (see ISO/IEC 25010).
+<!-- Present the systemic (aka nonfunctional) requirements of the product (see ISO/IEC 25010).
 List up to twenty systemic requirements / attributes.
-Write a short natural language description of the top nonfunctional requirements (approx. five pages).
+Write a short natural language description of the top nonfunctional requirements (approx. five pages). -->
 
-##### Reliability
-<!-- The probability that this system fulfils a function (determined by the specifications) for a specified number of input conditions in a specified time interval (assuming that hardware and input are free of errors).
+For a mission control system the most important non-functional system attributes in priority order as as follows; _reliability_, _portability_, _testability_, _robustness_, _correctness_, _efficiency_. Each of these software quality attribute can be derived from the requirements definition.
 
-A software system can be seen as reliable if this test produces a low error rate (i.e., the probability that an error will occur in a specified time interval.)
+The quality attribute of _Reliability_ is the probability that the system fulfils its function. The error rate is derived from the frequency of inputs that produce an error compared to the total input frequency. The mission control system relies on input from multiple sensors. GPS, altimeters, accelerometers, barometer, and radio transmission, to name a few. Each of these sensors has a certain degree of both precision and accuracy. Take for example GPS, coordinates can only be accurate to +/- XYZ degrees of precision. All of the sensors on the rocket that provide information to our mission control system also operate at different frequencies. The system must be able to check for redundancy and provide sufficient error handling. Which leads naturally into the next quality attribute.
 
-The error rate depends on the frequency of inputs and on the probability that an individual input will lead to an error. [sqa] -->
+_Robustness_ deals with the effects of operational mistakes, erroneous input data and hardware errors. Take the hypothetical situation of the GPS readings are changing exponentially, where as the accelerometer readings say the rocket is stationary. The system will employ "sanity checks, to maintain reliability. Operational mistakes like an accidental launch should be reversible. While it is not within the scope of our system to fix hardware errors. It can certainly be designed in such a way to check for common hardware errors. Then prevent actions such as a launch from happening, under situations where hardware errors will have drastic impacts. These pre-flight checks can be incorporated into the "go / no go" functionality. Monitoring important factors such as the battery temperature, voltage and current. Checking that all the sensors are operational and transmitting data to our system. These are all practice steps that we can take in order to ensure we have a robust system.
 
-##### Robustness
-<!-- Robustness reduced the impact of operational mistakes, erroneous input data, and hardware errors.
+_Portability_ is an important attribute for our system to have, because it is an explicit requirement. The software must run on a laptop, presumably at the launch site, or at least within radio frequency range. This laptop is not team property. Therefore it is crucial that the system is able to be deployed to _any_ laptop. The software has to be hardware agnostic; it must run on any operating system. This effects the chosen language and development framework that will be used. A language that has a framework that supports continuous integration and deployment will be essential. We test that the current version is able to be built on another system through an integrated pipeline.
 
-A software system is robust if the consequences of an error in its operation, in the input, or in the hardware, in relation to application, are inversely proportional to the probability of the occurrence of this error in the given application.
+This ties into the _testability_. This is dependent on the modularity and structuredness of the system. Through thorough architecture planning and the use of design patterns and principles we ensure the system's testability. To separate the codebase into modular components through abstractions and interfaces, we ensure to reduce the coupling increase modularity. This avoids monolithic spaghetti code. The system employs unit testing and aims for high coverage. These test are run on each commit, through an automated pipeline. These tests will involve linting, static analysis, unit tests and integration tests.
 
-- Frequent errors (e.g. erroneous commands, typing errors) must be handled with particular care.
+The _correctness_ of is another important quality attribute. This revolves around the agreement of the program code with specifications, and the independence of the actual application of the software system. We employ goal directed design and agile development in order to ensure this. By following goal-directed design we ensure that the requirements definition and business objectives inform the design. We start with the requirements from the customer. All the predominant aspects of the design are derived from those requirements. Nothing more, nothing less. Also through agile development process, we involve the customer in the process. With constant feedback and throughput from the client we can stay on course with their desired trajectory.
 
-- Less frequent errors (e.g. power failure) can be handled more laxly, bust still must no lead to irreversible consequence. [sqa] -->
-
-##### Testability
-<!-- Suitability for allowing the programmer to follow program execution (runtime behaviour under given conditions) and for debugging. The testability of a software system depends on its:
-- modularity
-- structuredness: System-dependent elements are collected in easily interchangeable program components.
-
-Modular, well-structured programs prove more suitable for systematic, stepwise testing than monolithic, unstructured programs.
-
-Testing tools and the possibility of formulating consistency conditions (assertions) in the source code reduce the testing effort and provide important prerequisites for the extensive, systematic testing of all system components. [sqa] -->
-
-##### Efficiency
-<!-- Ability of a software system to fulfil its purpose with the best possible utilization of all necessary resources (time, storage, transmission channels, and peripherals). -->
-
-##### Portability
-<!-- The ease with which a software system can be adapted to run on computers other than the one for which it was designed.
-
-The portability of a software depends on:
-- Degree of hardware independence
-- Implementation language
-- Extent of exploitation of specialized system functions
-- Hardware properties
-- Structuredness: System-dependent elements are collected in easily interchangeable program components. [sqa] -->
-
-##### Correctness
-<!-- The correctness of a software system refers to:
-- Agreement of program code with specifications
-- Independence of the actual application of the software system -->
-
+The systems ability to utilize of its resources to their maximum capacity is the final important quality attribute. _Efficiency_ makes the system a practice solution. Regardless of all the bells and whistles we add to the mission control interface, if they add too much computational complexity and the system cannot operate in real-time it is hopeless. We might as well store the information on the rocket, and then retrieve it afterwards. Therefore it is crucial that the interface runs with minimal overhead, but still delivers on the necessary functionality. The 80/20 rule is applicable here. Where 80% of a products output is produced by 20% of its features. We develop a system that meets the requirements . It processes the information as quickly as possible. Then displays it in the simplest and most readable format. It is important here to remove excise.
 
 ### 3.8 Physical and Environmental Requirements
 
@@ -311,7 +281,7 @@ More details for the Project Schedule can be seen on the [Project Charter](https
 
 ### 5.2 Budget
 
-Is it assumed that MC will not need to use any funds from the project budget. 
+Is it assumed that MC will not need to use any funds from the project budget.
 More explanation for this can be found in the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project-charter) budget information.
 
 ### 5.3 Risks
