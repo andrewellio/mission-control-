@@ -17,6 +17,7 @@ class Model {
   rocketVector: Vector
   rocketAltitude: float
   rocketVelocity: float
+  simulationResults: List<Simulation>
 
   void updateRocket()
   void runSimulations()
@@ -28,6 +29,7 @@ class Controller {
   void sendLaunchImminent()
   Vector getLaunchAngle()
   void suggestLaunchAngle(Vector)
+  void runSimulations()
 }
 
 View "*" <-- "1" MissionControl
