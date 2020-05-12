@@ -1,8 +1,8 @@
 @startuml MissionControl
 class MissionControl {
-    Model: Model
-    List<View>: views
-    Controller: controller
+    model: Model
+    views: List<View>
+    controller: Controller
 }
 
 class View {
