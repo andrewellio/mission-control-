@@ -1,6 +1,8 @@
 @startuml
 class MissionControl {
-
+    Model: Model
+    List<View>: views
+    Controller: controller
 }
 
 class View {
@@ -11,29 +13,29 @@ class View {
 }
 
 class Model {
-  alititude: float
-  location: Point(float, float)
-  vector: Vector(float, float)
-  altitude: float
-  velocity: float
+  rocketLocation: Location
+  rocketVector: Vector
+  rocketAltitude: float
+  rocketVelocity: float
 
-  void updateRocketData()
-  void runSimulations
+  void updateRocket()
+  void runSimulations()
 }
 
 class Controller {
   void sendNoGo()
   void sendGo()
-  void sendLauncImmiment()
-  (angle, direction) getLaunchAngle()
+  void sendLaunchImminent()
+  Vector getLaunchAngle()
+  void suggestLaunchAngle(Vector)
 }
 
-View "*" <-- MissionControl
+View "*" <-- "1" MissionControl
 Model "1" <-- "1" MissionControl
 Controller "1" <-- "1" MissionControl
 
-enum State {
-  LIFT_OFF,
+enum RocketState {
+  LIFT_OFF
   POWERED_ASCENT
   COAST
   APOGEE
@@ -41,13 +43,23 @@ enum State {
   RECOVERY
 }
 
-State "1" <-- "1" Model
+class Location {
+    latitude: float
+    longitude: float
+}
 
-interface Simulation
-interface WeatherService
+RocketState "1" <-- "1" Model
+
+interface Simulator {
+    List<Simulation> getResults()
+}
+interface WeatherService {
+    getWeather()
+    setLocation(Location)
+}
 interface MapService
 
-Simulation <-- Model
+Simulator <-- Model
 WeatherService <-- Model
-MapService <-- Model
+MapService <-- View
 @enduml
