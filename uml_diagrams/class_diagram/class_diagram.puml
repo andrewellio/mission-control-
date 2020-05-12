@@ -37,9 +37,11 @@ class Controller {
   void sendNoGo()
   void sendGo()
   void sendLaunchImminent()
-  Vector getLaunchAngle()
+  void updateLaunchAngle()
+  void updateWeather()
   void suggestLaunchAngle(Vector)
   void runSimulations()
+  void setLocation(Location)
 }
 Model "1" <-- "1" Controller : sends inputs to
 
@@ -81,7 +83,6 @@ interface WeatherService {
   void setLocation(Location)
 }
 Model <-- WeatherService : sends results to
-
 
 interface MapService
 
