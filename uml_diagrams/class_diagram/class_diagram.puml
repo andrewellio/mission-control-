@@ -1,4 +1,4 @@
-@startuml
+@startuml MissionControl
 class MissionControl {
     Model: Model
     List<View>: views
