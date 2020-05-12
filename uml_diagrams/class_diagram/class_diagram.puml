@@ -1,9 +1,12 @@
 @startuml MissionControl
 class MissionControl {
-    model: Model
-    views: List<View>
-    controller: Controller
+  model: Model
+  views: List<View>
+  controller: Controller
 }
+View "1..*" <-- "1" MissionControl
+Model "1" <-- "1" MissionControl
+Controller "1" <-- "1" MissionControl
 
 class View {
   goNoGo: GoNoGoView
@@ -11,19 +14,25 @@ class View {
   phase: PhaseView
   readings: ReadingsView
 }
+MapService "1" <-- "1" View : has
 
 class Model {
   rocketLocation: Location
   rocketVector: Vector
   rocketAltitude: float
   rocketVelocity: float
+  rocketState: RocketState
   simulationResults: List<Simulation>
 
   void updateRocket()
   void runSimulations()
 }
+Simulator <-- Model : has
+WeatherService <-- Model : has
+Avonics <-- Model : has
 
 class Controller {
+
   void sendNoGo()
   void sendGo()
   void sendLaunchImminent()
@@ -32,9 +41,7 @@ class Controller {
   void runSimulations()
 }
 
-View "*" <-- "1" MissionControl
-Model "1" <-- "1" MissionControl
-Controller "1" <-- "1" MissionControl
+
 
 enum RocketState {
   LIFT_OFF
@@ -46,22 +53,33 @@ enum RocketState {
 }
 
 class Location {
-    latitude: float
-    longitude: float
+  latitude: float
+  longitude: float
 }
 
-RocketState "1" <-- "1" Model
+class Vector {
+  x: float
+  y: float
+  z: float
+}
+
+interface Avonics {
+  void suggestLaunchAngle(Vector)
+  void update()
+}
 
 interface Simulator {
-    List<Simulation> getResults()
+  Simulation runSimulation(Vector, Location, Weather)
+  List<Simulation> getResults()
 }
+
+
 interface WeatherService {
-    getWeather()
-    setLocation(Location)
+  Weather getWeather()
+  void setLocation(Location)
 }
+
+
 interface MapService
 
-Simulator <-- Model
-WeatherService <-- Model
-MapService <-- View
 @enduml
