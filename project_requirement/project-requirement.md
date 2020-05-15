@@ -172,7 +172,20 @@ see 9.5.15 and 9.5.16. for most systems, this will be around one page.
 List up to twenty systemic requirements / attributes.
 Write a short natural language description of the top nonfunctional requirements (approx. five pages). -->
 
-For a mission control system the most important non-functional system attributes in priority order as as follows; _reliability_, _portability_, _testability_, _robustness_, _correctness_, _efficiency_. Each of these software quality attribute can be derived from the requirements definition.
+For a mission control system the most important non-functional system attributes in priority order as as follows;
+
+1. _reliability_,
+1. _portability_,
+1. _robustness_,
+1. _correctness_,
+1. _efficiency_,
+1. _Learnability_
+1. _Maintainability_
+1. _testability_,
+1. _readability_,
+1. _Extensibility_
+
+Each of these software quality attribute can be derived from the requirements definition.
 
 The quality attribute of _Reliability_ is the probability that the system fulfils its function. The error rate is derived from the frequency of inputs that produce an error compared to the total input frequency. The mission control system relies on input from multiple sensors. GPS, altimeters, accelerometers, barometer, and radio transmission, to name a few. Each of these sensors has a certain degree of both precision and accuracy. Take for example GPS, coordinates can only be accurate to +/- XYZ degrees of precision. All of the sensors on the rocket that provide information to our mission control system also operate at different frequencies. The system must be able to check for redundancy and provide sufficient error handling. Which leads naturally into the next quality attribute.
 
@@ -180,11 +193,38 @@ _Robustness_ deals with the effects of operational mistakes, erroneous input dat
 
 _Portability_ is an important attribute for our system to have, because it is an explicit requirement. The software must run on a laptop, presumably at the launch site, or at least within radio frequency range. This laptop is not team property. Therefore it is crucial that the system is able to be deployed to _any_ laptop. The software has to be hardware agnostic; it must run on any operating system. This effects the chosen language and development framework that will be used. A language that has a framework that supports continuous integration and deployment will be essential. We test that the current version is able to be built on another system through an integrated pipeline.
 
-This ties into the _testability_. This is dependent on the modularity and structuredness of the system. Through thorough architecture planning and the use of design patterns and principles we ensure the system's testability. To separate the codebase into modular components through abstractions and interfaces, we ensure to reduce the coupling increase modularity. This avoids monolithic spaghetti code. The system employs unit testing and aims for high coverage. These test are run on each commit, through an automated pipeline. These tests will involve linting, static analysis, unit tests and integration tests.
-
 The _correctness_ of is another important quality attribute. This revolves around the agreement of the program code with specifications, and the independence of the actual application of the software system. We employ goal directed design and agile development in order to ensure this. By following goal-directed design we ensure that the requirements definition and business objectives inform the design. We start with the requirements from the customer. All the predominant aspects of the design are derived from those requirements. Nothing more, nothing less. Also through agile development process, we involve the customer in the process. With constant feedback and throughput from the client we can stay on course with their desired trajectory.
 
 The systems ability to utilize of its resources to their maximum capacity is the final important quality attribute. _Efficiency_ makes the system a practice solution. Regardless of all the bells and whistles we add to the mission control interface, if they add too much computational complexity and the system cannot operate in real-time it is hopeless. We might as well store the information on the rocket, and then retrieve it afterwards. Therefore it is crucial that the interface runs with minimal overhead, but still delivers on the necessary functionality. The 80/20 rule is applicable here. Where 80% of a products output is produced by 20% of its features. We develop a system that meets the requirements . It processes the information as quickly as possible. Then displays it in the simplest and most readable format. It is important here to remove excise.
+
+_Learnability_ depends on both: the design on the interfaces; and the clarity and simplicity of the user instructions. We use goal-oriented design in order to create an interface that meets the user personas goals and business objectives. We use user personas and context scenarios to construct the requirements definition. That requirements definition is the base of the design framework. This ensures that the system will have the user personas goals at the forefront of its design. An important user personas experience goals is _ease of use_. Through using goal-oriented design we will ensure the interface of the system has _learnability_ as a predominant focus.
+
+A key software quality attribute that is derived from a other attributes is _Maintainability_. It is composed from the _Readability_, _Extensibility_ and _Testability_ of the system. Each of these attributes are discussed in detail later. A system that is maintainable, is suitable for debugging, modification and extension. Given the size of the teams for this project, it is imperative for the system to be maintainable. Otherwise the project will devolve into a monolith. With any future changes showing diminishing returns in overall product.  
+
+_Readability_ depends on a variety of factors. These include:
+- form of representation
+- programming style
+- consistency
+- readability of the implementation of programming languages
+- structureness of the system
+- quality of the documentation
+- tools available for inspection
+
+The programming style of the project will follow standard design principles and patterns. With a focus on convention over configuration. Given the system in a user interface. We adopt the MVC framework. That is the model, view, controller. Interfaces will be used for all communication with external systems. For example; we have a Weather Service, Map Service, and Simulation interfaces.
+
+To ensure the programming languages are readable, we user linters. They are predefined styles for programming languages. Linters are integrated into the automated pipelines. If code does not meet the style guidelines, the pipeline fails. This ensures that all production code is written in using the same conventions. This maintains the readability of the programming languages code.
+
+Quality documentation for the entire code base is  mandatory. The entire team reviews each of the merge requests before approving them. During this review the codes functionality and documentation is reviewed. The contributor of the issue explains what the contribution does. If the documentation is easy to understand, or even existent, the team does not approve the request. The documentation will then be revised. This process ensures that all production code is well documented.
+
+A variety of tools can be used for inspection of the code base. The automated pipeline provides test reports which describe test coverage, static analysis, and test results. The Gitlabs version control system allows us to view the history of the project. Every version of the system is kept, and can be viewed on the repository. Any user can download and open the repository on an IDE of their choice with the `git clone` command. Since the project is open source, we only use tools that are freely available for development. So there is no pay wall required to inspect all aspects of the project.
+
+This ties into the _testability_. This is dependent on the modularity and structuredness of the system. Through thorough architecture planning and the use of design patterns and principles we ensure the system's testability. To separate the codebase into modular components through abstractions and interfaces, we ensure to reduce the coupling increase modularity. This avoids monolithic spaghetti code. The system employs unit testing and aims for high coverage. These test are run on each commit, through an automated pipeline. These tests will involve linting, static analysis, unit tests and integration tests.
+
+_Extensibility_ is how easily the codebase can be refactored without side effects. This depends on the
+- structuredness of the system
+- possibilities that implementation language provides for this purpose
+- readability
+- availability of comprehensible program documentation
 
 ### 3.8 Physical and Environmental Requirements
 
