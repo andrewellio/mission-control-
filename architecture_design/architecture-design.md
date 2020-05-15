@@ -33,15 +33,29 @@ One page overall introduction including sections 1.1 and 1.2 (ISO/IEC/IEEE 42010
 
 ### Client
 
-Identify the client and their contact details.
+**Contact details for our customer**
+
+Name: Andre Geldenhuis
+
+Email: andre.geldenhuis@vuw.ac.nz
+
+Mattermost & Gitlab: @geldenan
+
+**Customer introduction**
+
+Andre has been involved in several rocket projects, as well as some past Victoria University projects. He has provided us with our MC project brief, some useful example slides and other resources to help us with our project execution. He is available for contact using the above details.
 
 ### 1.1 Purpose
 
-One sentence describing the purpose of the system.
+Mission Control's purpose for the [Rocket Project](https://ecs.wgtn.ac.nz/foswiki/pub/Courses/ENGR301_2020T1/Project/2020_Rocket_Project_info.pdf) is to display the rocket's real-time data with additional (software based) launch requirements and operations.
 
 ### 1.2 Scope
 
-One paragraph describing the scope of the system.
+Should provide rocket flight logging system to record flight data.
+
+Should provide wireless control system.
+
+Should provide rocket self-control system to control motor during the flight, and open parachute.
 
 ### 1.3 Changes to requirements
 
