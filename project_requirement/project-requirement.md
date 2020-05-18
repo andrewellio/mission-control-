@@ -288,7 +288,7 @@ More explanation for this can be found in the [Project Charter](https://gitlab.e
 | Risk | Type | Likelihood | Impact | Mitigation Strategies |
 | ------ | ------ | ------ | ------ | ------ |
 | Laptop Battery Dies and/or Software Fails to run | Technical | Unlikely (preperation/testing dependent) | High | With regards to the battery, if available bring a secondary battery. Checks before hand should take place for battery levels. If software fails to run, have several packages with trouble shooting options (i.e. compatability). To assist with with, take a seconday laptop which has been tested. |
-| cell | cell | cell | cell | cell |
+| Placement of Mission Control | Locational/Enviromental | Very Unliekly | Low | Mission Control Station should be reasonably mobile to allow a approximate radius range of where the rocket may land. Mission Control should not be placed near the launchpad and outside the landing locations. Range testing should ensure that the data can be recieved from the rocket at a safe distance. |
 
 If the project will involve any work outside the ECS laboratories, i.e. off-campus activities, these should be included in the following section.
 
