@@ -287,17 +287,20 @@ More explanation for this can be found in the [Project Charter](https://gitlab.e
 
 | Risk | Type | Likelihood | Impact | Mitigation Strategies |
 | ------ | ------ | ------ | ------ | ------ |
+| Failure to produce mission control software by launch date| Pratical/Deliverable | Even (subject to change | Low | Consistent retrospectives and sprints should indicate a long term plan to prevent project fallout. Some deliverable or prototype should be produced, even if not functional yet. |
 | Unexpected Univeristy Shutdown/Course changes | Operations | Very Unlikely | High | Remain with primary channel of communication; Mattermost for announcments of course or University changes. Concerns to be taken up with class reps, tutors, lecturer, course co-ordinator or ecs dean. Follow any given instructions accordingly. Prepare for project halt ot termination. |
 | Laptop Battery Dies and/or Software Fails to run | Technical | Unlikely (preperation/testing dependent) | High | With regards to the battery, if available bring a secondary battery. Checks before hand should take place for battery levels. If software fails to run, have several packages with trouble shooting options (i.e. compatability). To assist with with, take a seconday laptop which has been tested. |
 | Placement of Mission Control | Locational/Enviromental | Very Unliekly | Low | Mission Control Station should be reasonably mobile to allow a approximate radius range of where the rocket may land. Mission Control should not be placed near the launchpad and outside the landing locations. Range testing should ensure that the data can be recieved from the rocket at a safe distance. |
 | Weather Conditions | Enviromental | Even (subject to change) | High | If predicted weather conditions are unfavourable on the day, there should be a postponement day/s scheduled, if applicable. If there is a sudden weather change, the resources taken to travel to launch site should be as minimal as possible, to allow a lauch retry on the postponement day. |
 | Rocket Launch Injury | Saftey & Health | Very Unlikely | Very High | Following the strict safety and health requirements, this likelihood of this risk should remain as low as possible. Launch site should be secured and all operations should pass the go functionality for a safe launch. |
 | Rocket Inflight Injury | Saftey & Health | Very Unlikely | Very High | Following the strict safety and health requirements, this likelihood of this risk should remain as low as possible. Rocket flight should approximatley follow simulation predictions and data being recieved in consitent, including flight time, max height and max velocity. |
-| Rocket Return Injury | Saftey & Health | Very Unlikely | Very High | Following the strict safety and health requirements, this likelihood of this risk should remain as low as possible. There should be two landing mitigations, the paracute with air friction and the landing zone. The paracutes should have various measures and testing to keep the depolyment at a high level, and everyone is well distanced from the landing zone area.
-
-If the project will involve any work outside the ECS laboratories, i.e. off-campus activities, these should be included in the following section.
+| Rocket Return Injury | Saftey & Health | Very Unlikely | Very High | Following the strict safety and health requirements, this likelihood of this risk should remain as low as possible. There should be two landing mitigations, the paracute with air friction and the landing zone. The paracutes should have various measures and testing to keep the depolyment at a high level, and everyone is well distanced from the landing zone area.|
+| Rocket loses communication within flight| Tehnical | High | Medium | Testing with rocket range, turbulance and height (if possible) should decrease the loss of communication. Exception handling/logs should programmed to report when, how and what error occured.| 
+| Rocket refuses communication before launch| Tehnical | High | Medium | If possible, data should have the cabalitlity to be run offline. If other teams and requirments allow this, there can be a bypass for real-time data and continue with the go/no go assessment.|
 
 ### 5.4 Health and Safety
+
+If the project will involve any work outside the ECS laboratories, i.e. off-campus activities, these should be included here.
 
 Document here project requirements for Health and Safety. All teams must state in this section:
 
