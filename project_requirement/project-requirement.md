@@ -285,27 +285,22 @@ More explanation for this can be found in the [Project Charter](https://gitlab.e
 
 ### 5.3 Risks
 
-(Basic facts, will need to be more detailed. Also quite a broad topic, could be worth re-writing with more specific risks)
-
-**COVID-19 Lockdown and Restrictions** (Thursday 26th March and currently ongoing)
-
-Type: Government announcement and National State of Emergency
-
-Likelihood: High and Likely that University will be closed
-
-Impact: Will delay any physical lab course work, will affect students living situations and job wages
-
-Mitigation Strategies: Will continue team work virtually and online
-
-Course and Univeristy announcement: to pause all effective project work for ENGR 301 and lecture teaching until the 28th of April
-
-[Victoria Univeristy of Wellington COVID-19 Information for Students](https://www.wgtn.ac.nz/covid-19/students)
-
-Identify the ten most important project risks to achieving project goals: their type, likelihood, impact, and mitigation strategies (3 pages).
-
-If the project will involve any work outside the ECS laboratories, i.e. off-campus activities, these should be included in the following section.
+| Risk | Type | Likelihood | Impact | Mitigation Strategies |
+| ------ | ------ | ------ | ------ | ------ |
+| Failure to produce Mission Control software by launch date | Practical/deliverable | Even (subject to change) | Low | Consistent retrospectives and sprints should indicate a long term plan to prevent project fallout. Some deliverable or prototype should be produced, even if not functional yet. |
+| Unexpected univeristy shutdown/course changes | Operations | Very unlikely | High | Remain with primary channel of communication; Mattermost for announcments of course or university changes. Concerns to be taken up with class reps, tutors, lecturer, course co-ordinator or ECS dean. Follow any given instructions accordingly. Prepare for project halt or termination. |
+| Laptop battery dies and/or software fails to run | Technical | Unlikely (preperation/testing dependent) | High | With regards to the battery, if available bring a secondary battery. Checks before hand should take place for battery levels. If software fails to run, have several packages with troubleshooting options (i.e. compatability). To assist with with, take a secondary laptop which has been tested. |
+| Placement of Mission Control | Locational/Enviromental | Very unlikely | Low | Mission Control Station should be reasonably mobile to allow a approximate radius range of where the rocket may land. Mission Control should not be placed near the launchpad and outside the landing locations. Range testing should ensure that the data can be recieved from the rocket at a safe distance. |
+| Weather conditions | Environmental | Even (subject to change) | High | If predicted weather conditions are unfavourable on the day, there should be a postponement day scheduled, if applicable. If there is a sudden weather change, the resources taken to travel to launch site should be as minimal as possible, to allow a launch retry on the postponement day. |
+| Rocket launch injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, this likelihood of this risk should remain as low as possible. Launch site should be secured and all operations should pass the go functionality for a safe launch. |
+| Rocket in-flight injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, this likelihood of this risk should remain as low as possible. Rocket flight should approximately follow simulation predictions and data being received in consistent, including flight time, max height and max velocity. |
+| Rocket return injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, this likelihood of this risk should remain as low as possible. There should be two landing mitigations, the parachute with air friction and the landing zone. The parachutes should have various measures and testing to keep the deployment at a high level, and everyone is well distanced from the landing zone area. |
+| Rocket loses communication within flight | Technical | High | Medium | Testing with rocket range, turbulance and height (if possible) should decrease the loss of communication. Exception handling/logs should programmed to report when, how and what error occurred. | 
+| Rocket refuses communication before launch | Technical | High | Medium | If possible, data should have the capability to be run offline. If other teams and requirements allow this, there can be a bypass for real-time data and continue with the go/no go assessment. |
 
 ### 5.4 Health and Safety
+
+If the project will involve any work outside the ECS laboratories, i.e. off-campus activities, these should be included here.
 
 Document here project requirements for Health and Safety. All teams must state in this section:
 
@@ -352,9 +347,9 @@ A one page statement of contributions, including a list of each member of the gr
 
 | Team Member | Section Contributions |
 | ------ | ------ |
-| Elliott Andrews | (1) - 1.1, (5) - 5.1, 5.2, 5.3, (6) - 6.2 |
+| Elliott Andrews | 1.1, 5.1, 5.2, 5.3, 6.2 |
 | Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3 |
-| Sandy (Alexander Saunders) | cell |
+| Sandy (Alexander Saunders) | 5.3 |
 | Jesse Wood | 3.7, 4.7 |
 | Marcus Rathod | 3.1, 3.3 |
 | Mason Yi | cell |
