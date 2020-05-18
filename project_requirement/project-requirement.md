@@ -287,7 +287,7 @@ More explanation for this can be found in the [Project Charter](https://gitlab.e
 
 | Risk | Type | Likelihood | Impact | Mitigation Strategies |
 | ------ | ------ | ------ | ------ | ------ |
-| cell | cell | cell | cell | cell |
+| Laptop Battery Dies and/or Software Fails to run | Technical | Unlikely (preperation/testing dependent) | High | With regards to the battery, if available bring a secondary battery. Checks before hand should take place for battery levels. If software fails to run, have several packages with trouble shooting options (i.e. compatability). To assist with with, take a seconday laptop which has been tested. |
 | cell | cell | cell | cell | cell |
 
 If the project will involve any work outside the ECS laboratories, i.e. off-campus activities, these should be included in the following section.
