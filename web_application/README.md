@@ -2,10 +2,16 @@
 
 Mission Control Interface made using React.
 
-## Process
+## Create
 We can create an application on react with this:
 ```bash
 $ npx create-react-app web_application
+```
+
+## Install
+This install the libraries for a local machine.
+```bash  
+$ npm install
 ```
 
 ## Run
