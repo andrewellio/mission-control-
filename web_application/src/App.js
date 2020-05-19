@@ -6,17 +6,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Mission Control</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          A template <code>Mission-Control-System</code>
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Repository
         </a>
       </header>
     </div>
