@@ -229,6 +229,9 @@ Wherever possible (especially systemic requirements) you should indicate testabl
 #### 4.2 Functions
 
 #### 4.3 Usability Requirements
+In order to achieve the usability requirement, the mission control software needs to run on any operating system, also it should not require any installation or internet connection. The software should have a graphicical interface to display data, it should also have buttons to make the user interaction with the mission control software easier. 
+All buttons and graphical interfaces should be easy to understand by the user, such as buttons and should show text on it. Ths will help to show the function of this button, and the graphical area should also have a label to show what data is displayed in this area.
+As long as the user can easily understand how to use this software the usuability requirement is met.
 
 #### 4.4 Performance Requirements
 
