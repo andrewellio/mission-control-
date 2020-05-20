@@ -100,6 +100,7 @@ This is typically the longest subsection in the document. List up to fifty use c
 The primary function for our product is to serve as a diagnostics tool, providing data before and during a flight. This data from the rocket allows the user to analyse the flight of the rocket, checking that everything is working as it should. For our client, the main use cases for our product would be: Launch, and mid-flight analysis.
 
 **Use cases**
+
 Launch
 
 During the launch process, our client will be primarily using the product to notify whether the launch is imminent. This notifying is used to allow the avionics team to arm the parachute ejection charges. 
