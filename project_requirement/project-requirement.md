@@ -97,8 +97,18 @@ rocket is to be launched. The laptop will also allow the rocket to be integrated
 
 This is typically the longest subsection in the document. List up to fifty use cases (in order of priority for development), and for at least top ten focal use cases, write a short goal statement and use case body (up to seven pages).  Identify the use cases that comprise a minimum viable product.
 
+The primary function for our product is to serve as a diagnostics tool, providing data before and during a flight. This data from the rocket allows the user to analyse the flight of the rocket, checking that everything is working as it should. For our client, the main use cases for our product would be: Launch, and mid-flight analysis.
+
 **Use cases**
 
+Launch
+
+During the launch process, our client will be primarily using the product to notify whether the launch is imminent. This notifying is used to allow the avionics team to arm the parachute ejection charges. 
+Along with this, the product has a go/no go funcitonality. This will analyse the current launch situation and our client will use this to assess whether the rocket should launch or not. 
+
+Mid-flight analysis
+
+The mid-flight portion is where the main use will be for our product. During flight, our product will display real time data from the rocket to a laptop in the field. This data will be used by our client to analyse the rocket's flight and help diagnose the current state/s of the rocket flight should there be any issues.
 
 
 ### 3.3 Usability Requirements
@@ -107,6 +117,20 @@ See 9.5.12. for most systems this will be around one page.
 
 > **9.5.12 Usability requirements**<br>
 > Define usability (quality in use) requirements. Usability requirements and objectives for the software system include measurable effectiveness, efficiency, and satisfaction criteria in specific contexts of use.
+
+**Goal**
+The goal is to create a system that can control the flight of a rocket, ensuring stability and safe flight. It must also be able to display real time data from the rocket on a laptop such as height, location etc.
+
+
+**Scenarios**
+Launch
+
+Before launch, the mission control system is required to notify when the launch is imminent so the avionics can arm the parachute ejection charges. 
+
+Diagnostics
+
+During flight, the mission control system must run on a laptop in the field and display data from the rocket. 
+
 
 **Should work in the absence of an internet connection**
 
@@ -371,6 +395,7 @@ MC or MCS (Mission Control or Mission Control System/Software): Reference to Mis
 
 A one page statement of contributions, including a list of each member of the group and what they contributed to this document.
 
+
 | Team Member | Section Contributions |
 | ------ | ------ |
 | Elliott Andrews | 1.1, 5.1, 5.2, 5.3, 6.2 |
@@ -378,7 +403,7 @@ A one page statement of contributions, including a list of each member of the gr
 | Sandy (Alexander Saunders) | 5.3 |
 | Jesse Wood | 3.7, 4.7 |
 | Marcus Rathod | 3.1, 3.3 |
-| Mason Yi | cell |
+| Mason Yi | 3.2, 3.3 |
 ---
 
 ## Formatting Rules
