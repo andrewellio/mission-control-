@@ -350,12 +350,12 @@ Examples:
 
 <!-- For systems with hardware components, identify the physical characteristics of that hardware (9.4.10) and environment conditions in which it must operate (9.4.11).  Depending on the project, this section may be from one page up to 5 pages. -->
 
-We need the system to run on any operating system. It is important our software is agnostic to the operating system that it runs on. For example; Windows, MacOS and Linux (ubunutu/debian/fedora).
-We can develop, test and the deploy the system on these operating systems. This also applies to the user instructions and documentation. They must explain the system for all operating systems.
+We need the system to run on any operating system. Our software must be agnostic to the operating system that it runs on. For example; Windows, macOS and Linux (Ubuntu/Debian/fedora).
+We can develop, test and then deploy the system on these operating systems. This equally applies to user instructions and documentation. They must explain the system for all operating systems.
 
-The predominant use case scenario for this software is in the field. So the system must run on a laptop. There are limitations for the hardware of Laptops. More sp than its desktop counterpart due its smaller form factor. As a consequence, they have reduced storage, GPU, CPU and Ram capacity. Desktops rely on an external power supply. But laptops rely on an internal power supply. They can run out of battery. We need take these factors into account. We must reduce any computational overhead to accommodate for the hardware of laptops.
+The predominant use case scenario for this software is in the field. So the system must run on a laptop. There are limitations for the hardware of Laptops. More so than its desktop counterpart due to its smaller form factor. As a consequence, they have reduced storage, GPU, CPU and Ram capacity. Desktops rely on an external power supply. But laptops rely on an internal power supply. They can run out of battery. We take these factors into account. We must reduce any computational overhead to accommodate for the hardware of laptops.
 
-The system must comply with Civil Aviation Authority (CAA) guidelines. This involves encouraging the practise of NZ Rocketry Guidelines. The [wiki](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Health-and-Safety/Rocketry-Safety) provides an overview of these. We ensure that the operator follows CAA and NZ Rocketry guidelines. Both before, during and after a launch.
+The system must comply with the Civil Aviation Authority (CAA) guidelines. This involves encouraging the practice of NZ Rocketry Guidelines. The [wiki](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Health-and-Safety/Rocketry-Safety) provides an overview of these. The software must ensure that the operator follows CAA and NZ Rocketry guidelines. Both before, during and after launch. 
 
 ### 3.9 Supporting information
 
