@@ -432,13 +432,13 @@ Usability tests
 - make sure the design is consistent different platforms
  -->
 
-The verification discussed refers to the design constraints mentioned previously in 3.6. We use mock data in our testing framework to verify the functionality. This includes mock data from a rocket, weather service and simulation.
+The verification discussed refers to the design constraints mentioned in 3.6. We utilize mock data in our testing framework to verify the functionality. This includes mock data from a rocket, weather service and simulation.
 
-We use mock LoRa data in our integration tests. The mock data is comprised of the transmissions sent by rockets in previous launches. The testing framework simulates that same rocket launch again. It sends that data to the mission control system at the same frequency at was originally. The testing framework verifies that the data parsed by the system is the same as its original input.
+We employ mock LoRa data in our integration tests. We base the mock data of transmissions sent by rockets in previous launches. The testing framework accurately simulates that same rocket launch again. It transmits that data to the Mission Control System at the same frequency. The testing framework verifies that the data parsed by the system is the same as its original input.
 
-To verify the weather service interface we use mock data. We store an XML response from the weather service. The testing framework parses this mock data through the system. Then we compare the parsed output to its original input. To check for irregularities.
+To verify the weather service interface we employ mock data. We store an XML response from the weather service. The testing framework parses this mock data through the system. Next, we compare the parsed output to its original input. To check for irregularities.
 
-Should the simulation team choose JSON. We ask the simulation teams to provide us with mock output data. This is data that their system create in a data-interchange format. The testing framework parses mock data from multiple simulation teams. Again, we compare the parsed output from our system, to the original input. Checking for discrepenscies between the two.
+Should the simulation team choose JSON. We ask the simulation teams to provide us with mock output data. This is data that their system generates in a data-interchange format. The testing framework parses mock data from simulation teams. Once more, we compare the parsed output from our system to the original input. Checking for possible discrepancies between the two.
 
 #### 4.7 Software System Attributes
 <!-- TODO
