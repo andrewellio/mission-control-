@@ -11,7 +11,7 @@
 
 <div style="page-break-after: always;"></div>
 
-# ENGR 301 Project *NN* Project Proposal and Requirements Document
+# ENGR 301 Project 12 Project Proposal and Requirements Document
 
 #### Elliott Andrews, Jesse Wood, Binke Xu, Alexander Saunders, Mason Yi, Marcus Rathod
 
