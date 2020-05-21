@@ -490,24 +490,19 @@ The portability of a software depends on:
 
 ### 5.1 Schedule
 
-<!-- TODO
-- spelling and grammar checks
-- whole team to review  
- -->
-
 **Architectural Prototype**
 
 The Architectural Prototype and the supporting Architecture Design document is currently scheduled to be completed by the end of June 2020. The approximate aim for a date completion is the 15th of June.
 
 **Minimum Viable Product**
 
-The Minimial Viable Product is currently scheduled to be near the beginning of June (end of Trimester 1), but may be delayed until approximatley the 13th of July (start of Trimester 2).
+The Minimial Viable Product is currently scheduled to be near the beginning of July (end of Trimester 1), but may be delayed until approximatley the 13th of July (start of Trimester 2).
 
 **Further releases**
 
-The Final Prototype will be completed by the end of October (approximatley by the 15th) and refined until the end of November (approximatley the day before the launch)
+The Final Prototype will be completed by the end of October (approximatley by the 15th) and refined/tested until the end of November (approximatley the day before the launch)
 
-More details for the Project Schedule can be seen on the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project%20Charter) and this repository [Milestones](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/milestones).
+More details for the Project Schedule can be seen on the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project%20Charter).
 
 
 ### 5.2 Budget
