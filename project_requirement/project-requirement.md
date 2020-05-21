@@ -17,7 +17,19 @@
 
 ## 1. Introduction
 
-<!-- One page overall introduction including sections 1.1 and 1.2. -->
+Amateur rockets are flown regularly worldwide. These rockets are typically
+flown with off the shelf rocket motors with widely available propellant reloads.
+These rockets often exceed the speed of sound, altitudes above 30 km are not
+unheard of. These rockets are almost never controlled, they are stable due to
+passive aerodynamic features.
+
+While passively stable rockets are reasonably simple and reliable if well designed, they are susceptible to a variety of disturbances, particularly early in
+flight. Unexpected winds can cause the rocket to weathercock; flexibility in the
+launch tower/rail can cause railwhip, imparting a random launch angle to the
+rocket; the thrust from the rocket motor is also never perfectly symmetrical.
+
+The responsibility for this project's group is to develop software with appropriate functionality to
+operate as a mission control station that runs on a laptop. 
 
 ### Client
 
