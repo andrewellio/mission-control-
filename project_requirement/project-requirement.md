@@ -45,8 +45,8 @@ Mission Control's purpose for the [Rocket Project](https://ecs.wgtn.ac.nz/foswik
 
 ### 1.2 Scope
 
-Our system should provide a rocket flight logging system to record flight data, and display those data on a graphic interface. Also, our system should provide a wireless control system to connect with the rocket. 
-To ensure the rocket launch is safe and under the control, our system should be able to simulate flight before the rocket launch and display feedback data on the screen, so the user can decide to launch the rocket or not.
+Our system should provide a rocket flight logging system to record flight data, and display this data on a graphic interface. Also, our system should provide a wireless control system to connect with the rocket. 
+To ensure the rocket launch is safe and under control, our system should be able to simulate the rocket flight with the intergrated similation software. This will be done before the rocket launch and display feedback data on the screen, so the mission control team can verify and confirm wether it is safe to launch the rocket or not.
 
 <!-- TODO
 a more report like flow,
@@ -57,8 +57,8 @@ rather than bullet points
 ### 1.3 Product overview
 #### 1.3.1 Product perspective
 
-This project aims to provide a simplified version of mission control system, this system contains the core function of the real mission control system, such as check rocket states, display rocket data on user interface, rocket launch button, etc.
-The user can understand how the mission control system works through this project, also the user will understand how to track rocket flight and launch a rocket.
+This project aims to provide a simplified version of mission control system, this system contains the core functionality of a real mission control system, such monitoring and checking rocket states, displaying rocket data on user interface and providing rocket launch buttons, etc.
+The user can understand how the mission control system works through this project. In additon the user will understand how to track the rocket throughout its flight and the process and checkes needed beforehand to launch a rocket.
 
 <!-- TODO
 - grammar checks
@@ -73,11 +73,11 @@ The user can understand how the mission control system works through this projec
 
 * The mission control system should display all the data on the laptop as a graphical interface.
 
-* The mission control system needs to integrate with the local weather conditions, simulate flight flights can determine probable landing locations to decide if the rocket can be launch.
+* The mission control system needs to integrate with the local weather conditions, simulate flight paths and can determine probable landing locations to decide if the rocket can be launched.
 
 * Use the current wind profile and the Monte-Carlo simulation to determine an upwind trajectory for the rocket to follow to minimize its landing distance from the launch site.
 
-* Mission control device may not have internet connection all the time, so the mission control system should be able to run in the absence of an internet connection.
+* Mission control device may not have a internet connection available, so the mission control system should be able to run in the absence of an internet connection.
 
 * Mission control software should run on any operating system.
 
