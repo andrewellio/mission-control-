@@ -178,18 +178,37 @@ Mid flight, the weather conditions are required to provide data such as the curr
 
 This is typically the longest subsection in the document. List up to fifty use cases (in order of priority for development), and for at least top ten focal use cases, write a short goal statement and use case body (up to seven pages).  Identify the use cases that comprise a minimum viable product.
 
-The primary function for our product is to serve as a diagnostics tool, providing data before and during a flight. This data from the rocket allows the user to analyse the flight of the rocket, checking that everything is working as it should. For our client, the main use cases for our product would be: Launch, and mid-flight analysis.
+The primary function for our product is to serve as a diagnostics tool, providing data before and during a flight. This data from the rocket allows the user to analyse the flight of the rocket, checking that everything is working as
+it should. For our client, the main use cases for our product would be: Launch, and mid-flight analysis.
 
-**Use cases**
+####Use cases
 
-Launch
+**Launch**
 
-During the launch process, our client will be primarily using the product to notify whether the launch is imminent. This notifying is used to allow the avionics team to arm the parachute ejection charges.
-Along with this, the product has a go/no go funcitonality. This will analyse the current launch situation and our client will use this to assess whether the rocket should launch or not.
+During the launch process, our client will be primarily using the product to notify whether the launch is imminent. This notifying is used to allow the avionics team to arm the parachute ejection charges. The primary use for the mission
+control system during launch is to assure that every aspect of the rocket is ready for launch.
 
-Mid-flight analysis
+**Go/No Go Functionality**
 
-The mid-flight portion is where the main use will be for our product. During flight, our product will display real time data from the rocket to a laptop in the field. This data will be used by our client to analyse the rocket's flight and help diagnose the current state/s of the rocket flight should there be any issues.
+Our mission control system has a go/no go funcitonality. This means that the system will analyse the current launch situation and our client will use this to assess whether the rocket should launch or not. The initial check for our 
+system will be to check the hardware of the rocket is all working properly. This is essential for the launch process of the rocket as the system will analyse all hardware, ensuring everything is working as intended before launch. 
+
+
+Another check that the go/no go functionality will make is for the weather before a launch. The weather must be assessed before the launch of a rocket to see whether there are any chance of the rocket flight going wrong. The main 
+weather components that are assessed for the go/no go functionality are the cloud coverage and wind speed.
+
+The cloud coverage is an essential component of the assessment for the potential launch of a rocket. The weather needs to be relatively clear in order for a weather conditions to be viable to launch. This is because if the clouds 
+are too thick, it can create atmospheric temperatures that are too cold for a rocket to operate in. 
+
+Arguably the most important weather component that can affect a rocket's flight are the wind speeds of the surrounding area for the rocket launch. When wind speeds are too high for a rocket, it is able to put the rocket off course.
+By putting the rocket off course, this means that the landing process is hugely affected and this already requires much precision. 
+
+
+**Mid-flight analysis**
+
+The mid-flight portion is where the main use will be for our product. During flight, our product will display real time data from the rocket to a laptop in the field. This data will be used by our client to analyse the rocket's flight
+and help diagnose the current state/s of the rocket flight should there be any issues.
+
 
 
 ### 3.3 Usability Requirements
