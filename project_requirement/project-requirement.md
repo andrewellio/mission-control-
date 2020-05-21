@@ -102,8 +102,9 @@ User should be familiar with interact software by command line and GUI, also our
   - bandwidth - software needs to operate in real-time
  -->
 
-The rocket will wireless monitoring with laptop, so the distance between the laptop and rocket will affect the monitoring effect, if rocket fly too height then laptop may not be able to receive signal from transmission unit on the rocket.
-The terrain may also affect the data transmission effect, such as steep hill or woodland, those launch environment may lead data loss or unstable connection between laptop and rocket.
+The rocket will wireless monitoring with a laptop, so the distance between the laptop and rocket may impact monitoring effect, if the rocket filght too height then the laptop may not be able to receive the signal from the transmission unit on the rocket.
+The terrain may also affect the data transmission effect, such as steep hill or woodland, those launch environment may lead to data loss or unstable connection between laptop and rocket.
+The bandwidth is a limitation since the software needs real-time data transmission between laptop and rocket, if it has low bandwidth between the laptop and the rocket, then the data transmission will be delayed.
 
 ## 2. References
 
