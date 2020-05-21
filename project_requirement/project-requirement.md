@@ -596,7 +596,7 @@ MC or MCS (Mission Control or Mission Control System/Software): Reference to Mis
 | Team Member | Section Contributions |
 | ------ | ------ |
 | Elliott Andrews | 1.1, 5.1, 5.2, 5.3, 6.2 |
-| Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3 |
+| Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3, 4.3 |
 | Sandy (Alexander Saunders) | 5.3 |
 | Jesse Wood | 3.7, 4.7 |
 | Marcus Rathod | 3.1, 3.3 |
