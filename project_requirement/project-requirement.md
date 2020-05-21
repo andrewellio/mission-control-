@@ -14,6 +14,8 @@
 # ENGR 301 Project *NN* Project Proposal and Requirements Document
 #### Author list, a comma-separated list of the names of each member of the team.
 
+Elliott Andrews, Jesse Wood, Binke Xu, Alexander Saunders, Mason Yi, Marcus Rathod
+
 ## 1. Introduction
 
 <!-- One page overall introduction including sections 1.1 and 1.2. -->
