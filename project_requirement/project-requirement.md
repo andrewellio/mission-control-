@@ -45,11 +45,8 @@ Mission Control's purpose for the [Rocket Project](https://ecs.wgtn.ac.nz/foswik
 
 ### 1.2 Scope
 
-Should provide rocket flight logging system to record flight data.
-
-Should provide wireless control system.
-
-Should provide rocket self-control system to control motor during the flight, and open parachute.
+Our system should provide a rocket flight logging system to record flight data, and display this data on a graphic interface. Also, our system should provide a wireless control system to connect with the rocket. 
+To ensure the rocket launch is safe and under control, our system should be able to simulate the rocket flight with the intergrated similation software. This will be done before the rocket launch and display feedback data on the screen, so the mission control team can verify and confirm wether it is safe to launch the rocket or not.
 
 <!-- TODO
 a more report like flow,
@@ -60,8 +57,8 @@ rather than bullet points
 ### 1.3 Product overview
 #### 1.3.1 Product perspective
 
-This project aims to vertical launch a rocket and keep rocket stable during the flight, also need display data from racket on the laptop such as height, location, flight time.
-The project is a prototype of real rocket mission control system, this project will provide an experience of how mission control system works, and the relationships between avionics and simulations.
+This project aims to provide a simplified version of mission control system, this system contains the core functionality of a real mission control system, such monitoring and checking rocket states, displaying rocket data on user interface and providing rocket launch buttons, etc.
+The user can understand how the mission control system works through this project. In additon the user will understand how to track the rocket throughout its flight and the process and checkes needed beforehand to launch a rocket.
 
 <!-- TODO
 - grammar checks
@@ -74,13 +71,15 @@ The project is a prototype of real rocket mission control system, this project w
 - use bullet points
  -->
 
-The mission control system should display all the data on laptop as graphical interface.
+* The mission control system should display all the data on the laptop as a graphical interface.
 
-The mission control system needs Integrate with local weather condition, simulate flight flights can determine probable landing locations to decide if rocket can be launch.
+* The mission control system needs to integrate with the local weather conditions, simulate flight paths and can determine probable landing locations to decide if the rocket can be launched.
 
-Use the current wind profile and the Monte-Carlo simulation to determine an upwind trajectory for the rocket to follow to minimize its landing distance from the launch site.
+* Use the current wind profile and the Monte-Carlo simulation to determine an upwind trajectory for the rocket to follow to minimize its landing distance from the launch site.
 
-Mission control device may not have internet connection all the time, so mission control system should be able to run in the absence of an internet connection.
+* Mission control device may not have a internet connection available, so the mission control system should be able to run in the absence of an internet connection.
+
+* Mission control software should run on any operating system.
 
 #### 1.3.3 User characteristics   
 
@@ -102,8 +101,9 @@ User should be familiar with interact software by command line and GUI, also our
   - bandwidth - software needs to operate in real-time
  -->
 
-The rocket will wireless monitoring with laptop, so the distance between the laptop and rocket will affect the monitoring effect, if rocket fly too height then laptop may not be able to receive signal from transmission unit on the rocket.
-The terrain may also affect the data transmission effect, such as steep hill or woodland, those launch environment may lead data loss or unstable connection between laptop and rocket.
+The rocket will perform wireless monitoring with a laptop, so the distance between the laptop and rocket may impact and have an unexpected effect on monitoring, if the rocket reaches a higher height than anticipated then the laptop may not be able to receive the signal from the transmission unit on the rocket.
+The terrain may also affect the data transmission, such as a steep hill or trees/woodland. Considering this launch environment may lead to data loss or a unstable connection between the laptop and the rocket.
+The bandwidth is a  important limitation since the software needs real-time data transmission to be consitent between the laptop and rocket, if the bandwith is too low between the laptop and the rocket, then the data transmission will suffer from delays.
 
 ## 2. References
 
@@ -605,7 +605,7 @@ MC or MCS (Mission Control or Mission Control System/Software): Reference to Mis
 | Team Member | Section Contributions |
 | ------ | ------ |
 | Elliott Andrews | 1.1, 5.1, 5.2, 5.3, 6.2 |
-| Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3 |
+| Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3, 4.3 |
 | Sandy (Alexander Saunders) | 5.3 |
 | Jesse Wood | 3.7, 4.7 |
 | Marcus Rathod | 3.1, 3.3 |
