@@ -517,10 +517,6 @@ More explanation for this can be found in the [Project Charter](https://gitlab.e
 
 ### 5.3 Risks
 
-<!-- TODO
-- spelling and grammar checks
--->
-
 | Risk | Type | Likelihood | Impact | Mitigation Strategies |
 | ------ | ------ | ------ | ------ | ------ |
 | Failure to produce Mission Control software by launch date | Practical/deliverable | Even (subject to change) | Low | Consistent retrospectives and sprints should indicate a long term plan to prevent project fallout. Some deliverable or prototype should be produced, even if not functional yet. |
@@ -533,6 +529,8 @@ More explanation for this can be found in the [Project Charter](https://gitlab.e
 | Rocket return injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, this likelihood of this risk should remain as low as possible. There should be two landing mitigations, the parachute with air friction and the landing zone. The parachutes should have various measures and testing to keep the deployment at a high level, and everyone is well distanced from the landing zone area. |
 | Rocket loses communication within flight | Technical | High | Medium | Testing with rocket range, turbulance and height (if possible) should decrease the loss of communication. Exception handling/logs should programmed to report when, how and what error occurred. |
 | Rocket refuses communication before launch | Technical | High | Medium | If possible, data should have the capability to be run offline. If other teams and requirements allow this, there can be a bypass for real-time data and continue with the go/no go assessment. |
+
+For more information about the health and safety risks outlined here, follow the link in section 5.4 below
 
 ### 5.4 Health and Safety
 
