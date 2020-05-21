@@ -181,7 +181,7 @@ This is typically the longest subsection in the document. List up to fifty use c
 The primary function for our product is to serve as a diagnostics tool, providing data before and during a flight. This data from the rocket allows the user to analyse the flight of the rocket, checking that everything is working as
 it should. For our client, the main use cases for our product would be: Launch, and mid-flight analysis.
 
-####Use cases
+#### Use cases
 
 **Launch**
 
@@ -218,23 +218,23 @@ and help diagnose the current state/s of the rocket flight should there be any i
 > Define usability (quality in use) requirements. Usability requirements and objectives for the software system include measurable effectiveness, efficiency, and satisfaction criteria in specific contexts of use.
 
 <!-- TODO  
-- bold the titles for clarity
-- formatting issues
 - mention personas
   i.e., usability requirements are derived from user personas goals and context scenarios
 - spelling and grammar: aim for clarity - unecessary/unnecessary
 -->
 
-**Goal**
-The goal is to create a system that can control the flight of a rocket, ensuring stability and safe flight. It must also be able to display real time data from the rocket on a laptop such as height, location etc.
+#### Goal
+
+The goal is to create a system that can control the flight of a rocket, ensuring stability and safe flight. The system must also be able to display real time data from the rocket on a laptop such as height, location etc.
 
 
-**Scenarios**
-Launch
+#### Scenarios
+
+**Launch**
 
 Before launch, the mission control system is required to notify when the launch is imminent so the avionics can arm the parachute ejection charges.
 
-Diagnostics
+**Diagnostics**
 
 During flight, the mission control system must run on a laptop in the field and display data from the rocket.
 
