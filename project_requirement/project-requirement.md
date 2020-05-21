@@ -45,7 +45,7 @@ Mission Control's purpose for the [Rocket Project](https://ecs.wgtn.ac.nz/foswik
 
 ### 1.2 Scope
 
-Our system should provide a rocket flight logging system to record flight data, and display this data on a graphic interface. Also, our system should provide a wireless control system to connect with the rocket. 
+Our system should provide a rocket flight logging system to record flight data, and display this data on a graphic interface. Also, our system should provide a wireless control system to connect with the rocket.
 To ensure the rocket launch is safe and under control, our system should be able to simulate the rocket flight with the intergrated similation software. This will be done before the rocket launch and display feedback data on the screen, so the mission control team can verify and confirm wether it is safe to launch the rocket or not.
 
 <!-- TODO
@@ -349,6 +349,12 @@ Examples:
 -->
 
 <!-- For systems with hardware components, identify the physical characteristics of that hardware (9.4.10) and environment conditions in which it must operate (9.4.11).  Depending on the project, this section may be from one page up to 5 pages. -->
+
+The system must be run on any operating system. It is important our software is agnostic to the operating system that it runs on. For example; Windows, MacOS and Linux (ubunutu/debian/fedora). The system must be able to be developed, tested and deployed on all of these operating systems. Also the user instructions and documentation for how to use the software must be written for all popular operating systems.
+
+The predominant use case scenario for this software is in the field. So the system must run on a laptop. Laptop hardware is limited more than its desktop counterpart due its smaller form factor. As a consequence, they have reduced storage, GPU, CPU and Ram capacity. Desktops rely on an external power supply. However laptops rely on an internal power supply. They can run out of battery. It is an important requirement to take these factors into account. We must reduce any computational overhead to accommodate for the hardware of laptops.
+
+The main environmental requirement for this system is to comply with Civil Aviation Authority (CAA) guidelines. This involves encouraging the practise of NZ Rocketry Guidelines. The [wiki](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Health-and-Safety/Rocketry-Safety) provides an overview of these. The software must ensure that the operator follows CAA and NZ Rocketry guidelines before and during launches. 
 
 ### 3.9 Supporting information
 
