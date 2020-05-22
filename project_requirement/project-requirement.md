@@ -206,11 +206,11 @@ By putting the rocket off course, this means that the landing process is hugely 
 
 ### 3.3 Usability Requirements
 
-####Goal
+#### Goal
 
 The goal is to create a system that can control the flight of a rocket, ensuring stability and safe flight. It must also be able to display real time data from the rocket on a laptop such as height, location etc.
 
-####Scenarios
+#### Scenarios
 
 **Launch**
 
