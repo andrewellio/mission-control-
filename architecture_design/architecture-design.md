@@ -23,9 +23,9 @@ All team members are expected to contribute equally to the document and list the
 
 ---
 
-# ENGR 301 Project *NN* Architectural Design and Proof-of-Concept
+# ENGR 301 Project 12 Architectural Design and Proof-of-Concept
 
-**Authors:** a comma-separated list of the names of each member of the team.
+#### Elliott Andrews, Jesse Wood, Binke Xu, Alexander Saunders, Mason Yi, Marcus Rathod
 
 ## 1. Introduction
 
@@ -65,6 +65,8 @@ If the requirement have changed significantly since the requirements document, o
 
 References to other documents or standards. Follow the IEEE Citation Reference scheme, available from the [IEEE website](https://ieee-dataport.org/sites/default/files/analysis/27/IEEE%20Citation%20Guidelines.pdf) (PDF; 20 KB). (1 page, longer if required)
 
+[1] Civil Aviation Authority of New Zealand, Civil Aviation Rules 101, Part 101 Gyrogliders and Parasails, Unmanned Aircraft (including Balloons), Kites, and Rockets Operating Rules [Online]. Available at: https://www.aviation.govt.nz/rules/rule-part/show/101. [Accessed May. 22, 2020]
+
 ## 3. Architecture
 
 Describe your system's architecture according to ISO/IEC/IEEE 42010:2011(E), ISO/IEC/IEEE 12207, ISO/IEC/IEEE 15289 and ISO/IEC/IEEE 15288.
@@ -77,9 +79,55 @@ This means that you should refer to information (e.g. risks, requirements, model
 
 ### 3.1 Stakeholders
 
-See ISO/IEC/IEEE 42010 clause 5.3 and ISO/IEC/IEEE 12207 clause 6.4.4.3(2).
+<!--See ISO/IEC/IEEE 42010 clause 5.3 and ISO/IEC/IEEE 12207 clause 6.4.4.3(2).-->
 
-For most systems this will be about 2 pages, including a table mapping concerns to stakeholder.
+<!--For most systems this will be about 2 pages, including a table mapping concerns to stakeholder.-->
+
+**Customer/Client**
+
+*  Software should be compiled into a executable format 
+*  Software should be as portable to run as possible
+*  Software should be able to run on any mordern operating system
+*  Software should display all required data with consistent units
+*  Software should be displayed as a GUI with mapping features
+*  Software should include the go/no go functionality with various checks
+
+**Software Developers/Engineers**
+
+*  Shall be able to communicate with other teams to share ideas with suggestions and solutions
+*  Shall work as a team while being respectful and listen to everyones ideas
+*  Shall comment and use 'approval feature' for feedback on contributions
+
+**Software Testers**
+
+*  Shall use both testing methods of blackbox testing and whitebox testing 
+*  Shall have a well defined testing process, with goals, requirments and results for each test
+*  Releate back to user experiences while testing, such as personas and use cases
+
+**Victoria University of Wellington: Engineering and Computer Science**
+
+*  Abide to the health and saftey standards set by the ECS while in labs
+*  Licensing should be educational and open source as defined by the project code agreement signed
+
+**Rocket enthusiasts and communites within New Zealand**
+
+*  Encourage and promote the open source license of the code, to allow extesnions and resuability for people who are looking to implement a similar system. However make sure to include a no responsibility clause, with a short terms of use and appropriate warnings listed.
+
+**Wellington City Council (WCC)**
+
+*  Should comply with regulations and laws according to those with relation to 'model rockets' and compy with CAANZ.
+*  The software shall be used and used only for the model rocket, no copyright or trademarks need registering by the council.
+
+**Wellington business and residential zones**
+
+*  Depending on the enviroment, nearby business's / resident's may need to be informed of the rocket launch if they are near the launch site. They must accept and give their permission for the launch to continue. If they field is large enough, this will likely not be required.
+
+**Civil Aviation Authority of New Zealand (CAANZ)**
+
+* This project should follow all related CAA regulations, particularly those in  regulations; part 101 [1]
+
+(Still needs a table maaping concerns to stakeholder)
+
 
 ### 3.2 Architectural Viewpoints
 (1 page, 42010 5.4) 
@@ -109,6 +157,13 @@ Each architectural view should include at least one architectural model. If arch
 
 ### 4.1 Logical
 ...
+<!-- Images have been written in this format so they will update if they change. However the exact filenames and locatins must stay the same -->
+
+**Class Diagram**
+
+This diagram shows the proposed UML class layout. Currently the diagram shows four classes (C), one enum (E) and three interfaces (I).
+
+![A image of the Class Diagram](uml_diagrams/class_diagram/class_diagram.png)
 
 ### 4.2 Development
 ...
@@ -116,11 +171,19 @@ Each architectural view should include at least one architectural model. If arch
 ### 4.3 Process
 ...
 
+This diagram shows the proposed tree view for the main processes that the software package should interpret.
+
+![A image of a Tree View](uml_diagrams/tree_view/tree-view.png)
+
 ### 4.4 Physical 
 ...
 
 ### 4.5 Scenarios
 ...
+
+This diagram shows the different classes and what the user may have access to.
+
+![A use case diagram](uml_diagrams/use_case_diagram/use_case_diagram.png)
 
 ## 5. Development Schedule
 
@@ -142,9 +205,9 @@ Identify dates for key project deliverables:
 
 #### 5.2.1 Budget
 
-Present a budget for the project (as a table), showing the amount of expenditure the project requires and the date(s) on which it will be incurred. Substantiate each budget item by reference to fulfilment of project goals (one paragraph per item).
 
-(1 page). 
+Is it assumed that MC will not need to use any funds from the project budget.
+More explanation for this can be found in the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project-charter) budget information.
 
 #### 5.2.2 Procurement
 
@@ -176,7 +239,14 @@ One page glossary as required
 
 ## 7. Contributions
 
-An one page statement of contributions, including a list of each member of the group and what they contributed to this document.
+| Team Member | Section Contributions |
+| ------ | ------ |
+| Elliott Andrews | 2, 3.1 |
+| Binke Xu |  |
+| Sandy (Alexander Saunders) |  |
+| Jesse Wood | 4.1, 4.3, 4.5|
+| Marcus Rathod |  |
+| Mason Yi |  |
 
 ---
 

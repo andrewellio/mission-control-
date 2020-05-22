@@ -1,26 +1,42 @@
-@startuml
+@startuml use_case_diagram
 skinparam packageStyle rectangle
-
-skinparam usecase {
-	BackgroundColor<< Selected >> GreenYellow
-	BorderColor<< Selected >> Black
-}
 
 actor User
 
 rectangle MissionControl {
-
+	(runSimulation) as RS
+	(updateRocket) as UR
+	(getWeather) as GW
+	(primeLaunch) as PL
+	(launch) as L
+	(getLaunchAngle) as GLA
+	(setLocation) as SL
+	(getSimulationResults) as GSR
 }
 
-rectangle Simulation {
+User --> RS
+User --> UR
+User --> GW
+User --> PL
+User --> L
+User --> GLA
+User --> SL
+User --> GSR
 
+rectangle Simulation {
+	(runSimulation) <. RS
+	(getResults) <. GSR
+}
+
+rectangle Rocket {
+		(Prime) <. PL
+		(Launch) <. L
+		(suggestLaunchAngle) <. GLA
+		(update) <. UR
 }
 
 rectangle WeatherService {
-
-}
-
-rectangle MapService {
-
+	(getWeather) <. GW
+	(setLocation) <. SL
 }
 @enduml
