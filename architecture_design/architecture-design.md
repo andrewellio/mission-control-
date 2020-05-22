@@ -196,7 +196,7 @@ One page glossary as required
 | Elliott Andrews | 2, 3.1 |
 | Binke Xu |  |
 | Sandy (Alexander Saunders) |  |
-| Jesse Wood | |
+| Jesse Wood | 4.1, 4.3, 4.5|
 | Marcus Rathod |  |
 | Mason Yi |  |
 
