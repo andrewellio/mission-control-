@@ -193,13 +193,20 @@ Schedules must be justified and supported by evidences; they must be either dire
 
 ### 5.1 Schedule
 
-Identify dates for key project deliverables:
+**Architectural Prototype**
 
-1. prototype(s).
-1. first deployment to the client.
-1. further improvements required or specified by the client.
+The Architectural Prototype and the supporting Architecture Design document is currently scheduled to be completed by the end of June 2020. The approximate aim for a date completion is the 15th of June.
 
-(1 page).
+**Minimum Viable Product**
+
+The Minimial Viable Product is currently scheduled to be near the beginning of July (end of Trimester 1), but may be delayed until approximatley the 13th of July (start of Trimester 2).
+
+**Further releases**
+
+The Final Prototype will be completed by the end of October (approximatley by the 15th) and refined/tested until the end of November (approximatley the day before the launch)
+
+More details for the Project Schedule can be seen on the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project%20Charter).
+
 
 ### 5.2 Budget and Procurement
 
@@ -216,11 +223,27 @@ Present a table of goods or services that will be required to deliver project go
 
 ### 5.3 Risks 
 
-Identify the ten most important project risks: their type, likelihood, impact, and mitigation strategies (3 pages).
+| Risk | Type | Likelihood | Impact | Mitigation Strategies |
+| ------ | ------ | ------ | ------ | ------ |
+| Failure to produce Mission Control software by launch date | Practical/deliverable | Even (subject to change) | Low | Consistent retrospectives and sprints should indicate a long term plan to prevent project fallout. Some deliverable or prototype should be produced, even if the resulting product is not functional yet. |
+| Unexpected Univeristy shutdown/course changes | Operations | Very unlikely | High | Remain in contact with primary channel of communication; Mattermost for announcments related to course or university changes. Concerns to be taken up with class reps, tutors, lecturer, course co-ordinator or ECS dean. Follow any given instructions accordingly. Prepare for any temporary project pauses or overall termination. |
+| Laptop battery dies and/or software fails to run | Technical | Unlikely (preperation/testing dependent) | High | With regards to the battery, if available bring a secondary battery. Checks before hand should take place for battery charge levels. If the software fails to run, have several packages with troubleshooting options (i.e. compatability modes). It also should be considered to take a secondary laptop which has been tested. |
+| Location of Mission Control Station | Locational/Enviromental | Very unlikely | Low | Mission Control Station should be reasonably mobile to allow a approximate radius range of where the rocket may land. Mission Control should not be placed near the launchpad or inside the probable landing locations. Range testing and data transmission should ensure that the data can be recieved from the rocket at a safe distance. |
+| Weather conditions | Environmental | Even (subject to change) | High | If predicted weather conditions are unfavourable on the day, there should be a postponement day scheduled, if applicable. If there is a sudden weather change, the resources taken to travel to launch site should be as minimal as possible, to allow a launch retry on the postponement day. |
+| Rocket launch injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Launch site should be secured and all operations should pass the go functionality for a safe launch. |
+| Rocket in-flight injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Rocket flight should approximately follow simulation predictions and data should be received consistently, including flight time, max height and max velocity. |
+| Rocket return injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Various landing mitigations should be in place. The parachute with air friction and the probable landing zone. The parachutes should have various measures and testing to keep the deployment at a high probability sucess level. In additon, everyone is well distanced from the landing zone area. |
+| Rocket loses communication within flight | Technical | High | Medium | Testingthe cabalility of various rocket ranges, turbulance simulations and height distance (if possible) should decrease the chances of communication loss. Exception handling/logs should programmed to report when, how and what error occurred durining rocket being in-flight. |
+| Rocket refuses communication before launch | Technical | High | Medium | If possible, data should have the capability to be run offline. If other teams and requirements allow this, there may be a bypass method for real-time data and other laterations with the go/no go assessment to ensure health and saftey requirements are still upheld. |
 
+For more information about the health and safety risks outlined here, follow the link in section 5.4 below
 ### 5.4 Health and Safety
 
-Document here project requirements for Health and Safety.
+Link to the document highlighting the health and safety apsects of this project: 
+
+https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/blob/master/health_and_safety/heatlh_and_safety.md 
+
+We will follow the following website [2] as a guide to conduct procedures to make sure that person(s) associated with this project stays safe from risks highlighted in the health_and_safety.md (the link above). More information found in the link above.
 
 #### 5.4.1 Safety Plans
 
