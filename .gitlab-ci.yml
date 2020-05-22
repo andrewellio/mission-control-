@@ -15,11 +15,9 @@ install_dependencies:
         - npm install
     artifacts:
         paths:
-            - cd web_application
             - node_modules/
 
 testing_testing:
     stage: test
     script:
-        - cd web_application
         - npm test
