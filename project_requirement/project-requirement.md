@@ -66,22 +66,12 @@ a more report like flow,
 rather than bullet points  
 -->
 
-<!-- TODO
-a more report like flow,
-rather than bullet points  
--->
-
 
 ### 1.3 Product overview
 #### 1.3.1 Product perspective
 
 This project aims to provide a simplified version of mission control system, this system contains the core functionality of a real mission control system, such monitoring and checking rocket states, displaying rocket data on user interface and providing rocket launch buttons, etc.
 The user can understand how the mission control system works through this project. In additon the user will understand how to track the rocket throughout its flight and the process and checkes needed beforehand to launch a rocket.
-
-<!-- TODO
-- grammar checks
-- more expansion
- -->
 
 <!-- TODO
 - grammar checks
@@ -124,7 +114,6 @@ User should be familiar with interact software by command line and GUI, also our
   - bandwidth - software needs to operate in real-time
  -->
 
-
 The rocket will perform wireless monitoring with a laptop, so the distance between the laptop and rocket may impact and have an unexpected effect on monitoring, if the rocket reaches a higher height than anticipated then the laptop may not be able to receive the signal from the transmission unit on the rocket.
 The terrain may also affect the data transmission, such as a steep hill or trees/woodland. Considering this launch environment may lead to data loss or a unstable connection between the laptop and the rocket.
 The bandwidth is a  important limitation since the software needs real-time data transmission to be consitent between the laptop and rocket, if the bandwith is too low between the laptop and the rocket, then the data transmission will suffer from delays.
@@ -138,8 +127,6 @@ The bandwidth is a  important limitation since the software needs real-time data
 References to other documents or standards. Follow the IEEE Citation  Reference scheme, available from the [IEEE website](https://www.ieee.org/) (please use the search box). (1 page, longer if required)
 
 \[1\] “Quality Assurance,” Quality Assurance " Software Quality Attributes. [Online]. Available: http://www.qasigma.com/2008/12/software-quality-attributes.html. [Accessed: 02-May-2020].
-
-\[2\] "Gyrogliders and Parasails,Unmanned Aircraft (including Balloons), Kites, and Rockets – Operating Rules". [Online]. Available: https://www.aviation.govt.nz/assets/rules/consolidations/Part_101_Consolidation.pdf. [Accessed: 21-May-2020].
 
 ## 3. Specific requirements  
 
@@ -163,6 +150,7 @@ A laptop will be used on site to display data from the rocket. The data displaye
 The laptop will include further operations/functionalities which will allow additional data to be displayed on the laptop. This will include landing locations within a certain bound, a go/no go functionality and the imminence of when a
 rocket is to be launched. The laptop will also allow the rocket to be integrated with openRocket which allow the mission control system to be integrated with monte-carlo integration.
 
+<<<<<<< project_requirement/project-requirement.md
 **Simulation Interface**
 
 A simulation interface will help provide an accurate representation of how a rocket flies with our integrated mission control system. The simulation interface that we will be using is called OpenRocket. OpenRocket is a software that
@@ -185,24 +173,6 @@ Mid flight, the weather conditions are required to provide data such as the curr
 
 
 ### 3.2 Functions
-
-<!-- TODO
-- At least 5 use cases
-  - Go / No Go
-    - Hardware state check
-      - all sensors working
-      - input seams sensible  
-      - Simulation
-    - Weather check
-      - cloud coverage
-      - wind speed
-  - Launch
-    - ready for launch
-    - launch
-  - Perhaps include stakeholder requirements to support the use cases.
--->
-
-This is typically the longest subsection in the document. List up to fifty use cases (in order of priority for development), and for at least top ten focal use cases, write a short goal statement and use case body (up to seven pages).  Identify the use cases that comprise a minimum viable product.
 
 The primary function for our product is to serve as a diagnostics tool, providing data before and during a flight. This data from the rocket allows the user to analyse the flight of the rocket, checking that everything is working as
 it should. For our client, the main use cases for our product would be: Launch, and mid-flight analysis.
@@ -230,41 +200,18 @@ Arguably the most important weather component that can affect a rocket's flight 
 By putting the rocket off course, this means that the landing process is hugely affected and this already requires much precision.
 
 
-**Mid-flight analysis**
-
-The mid-flight portion is where the main use will be for our product. During flight, our product will display real time data from the rocket to a laptop in the field. This data will be used by our client to analyse the rocket's flight
-and help diagnose the current state/s of the rocket flight should there be any issues.
-
-
 ### 3.3 Usability Requirements
-<!-- See 9.5.12. for most systems this will be around one page. -->
 
-> **9.5.12 Usability requirements**<br>
-> Define usability (quality in use) requirements. Usability requirements and objectives for the software system include measurable effectiveness, efficiency, and satisfaction criteria in specific contexts of use.
-
-<!-- TODO  
-<<<<<<< project_requirement/project-requirement.md
-=======
-- bold the titles for clarity
-- formatting issues
->>>>>>> project_requirement/project-requirement.md
-- mention personas
-  i.e., usability requirements are derived from user personas goals and context scenarios
-- spelling and grammar: aim for clarity - unecessary/unnecessary
--->
-
-#### Goal
-
-The goal is to create a system that can control the flight of a rocket, ensuring stability and safe flight. The system must also be able to display real time data from the rocket on a laptop such as height, location etc.
+**Goal**
+The goal is to create a system that can control the flight of a rocket, ensuring stability and safe flight. It must also be able to display real time data from the rocket on a laptop such as height, location etc.
 
 
-#### Scenarios
-
-**Launch**
+**Scenarios**
+Launch
 
 Before launch, the mission control system is required to notify when the launch is imminent so the avionics can arm the parachute ejection charges.
 
-**Diagnostics**
+Diagnostics
 
 During flight, the mission control system must run on a laptop in the field and display data from the rocket.
 
@@ -356,19 +303,51 @@ Miru's Examples:
 N.B We will ask the other teams what they have done
 -->
 
+The information provided by external interfaces limits the design. The simulation, rocket and weather service are the external interfaces. These each provides our system with information. Which our system then represents in a graphical interface. Our software has to communicate with _any_ simulation or rocket system. To do so, we implement a generic interface.
+
+The system requires radio communication through LoRa. We use to communicate with the rocket. LoRa is a low-power wide-area network protocol. LoRa offers wireless technology that offers a long-range. Our system must process the incoming transmissions in real-time. Our GUI must be able to represent the real-time nature of these transmissions. Updating the current view at regular frequencies.
+
+The system interacts with data provided by external simulation software. We parse this through a generic data-interchange format. Examples include XML or JSON. JSON is a Javascript Object Notation. It is straightforward for both machines and humans to read and write (we discuss XML next.) The system can process the chosen format.
+
+
 ### 3.7 Nonfunctional system attributes
 
 <!-- Present the systemic (aka nonfunctional) requirements of the product (see ISO/IEC 25010).
 List up to twenty systemic requirements / attributes.
 Write a short natural language description of the top nonfunctional requirements (approx. five pages). -->
 
+<<<<<<< project_requirement/project-requirement.md
+We list the important non-functional system attributes below. They are in order of their priority \[1\].
+
+#### Reliability
+First the quality attribute of _Reliability_. It is the probability that the system fulfils its function. We can calculate the error rate. That is the frequency of inputs that produce an error compared to the total input frequency. The mission control system relies on input from sensors. GPS, altimeters, accelerators, barometer, and radio transmission, to name a few. Each of these sensors has a certain degree of both precision and accuracy. For example, GPS coordinates can only be accurate to +/- XYZ degrees of precision. The sensors on the rocket that provide information to our mission control system. They also operate at different frequencies. The system must be capable to check for redundancy. It must also provide error handling. Which leads to our next quality attribute.
+
+#### Robustness
+_Robustness_. The effects of operational mistakes, erroneous input data and hardware errors. Take the following hypothetical situation. GPS readings are changing, whereas the accelerometer readings say the rocket is stationary. The system has "sanity checks", to maintain reliability. Operational mistakes like an accidental launch should be reversible. While it is not within the scope of our system to fix hardware errors. We design it in such a way to check for hardware errors. In some situations, hardware errors have drastic impacts. We may prevent actions like launches from happening. We include these pre-flight checks with the "go/no go" functionality. Monitoring important factors like the battery temperature, voltage and current. Checking that all sensors are operational and transmitting data to our system. These are all practice steps that we can take to ensure a robust system.
+
+#### Portability
+_Portability_ represents an important attribute for our system. This is because it is an explicit requirement. The software must run on a laptop. Presumably at the launch site, or at least within the radio frequency range. This laptop is not team property. We can deploy the system on _any_ laptop. The software has to be hardware-agnostic; it must run on any operating system. This effects the chosen language and development framework. The framework and language we chose must support CI/CD. Through tests, we build the system on another machine. Through an integrated pipeline.
+
+#### Correctness
+The _correctness_ is another important quality attribute. Does the code meet its specifications? We use the goal-directed design and agile development to ensure this. The goal-directed design relies on the requirements definition and business objectives. We start with the requirements of the customer. We derive all the predominant aspects of the design from those requirements. Nothing more, nothing less. Also through the agile development process, we involve the customer in the process. We have constant feedback and throughput from the client. So we can stay on course with their desired trajectory.
+
+#### Efficiency
+_Efficiency_ makes the system a practicable solution. The systems ability to use its resources to their capacity. Despite all the bells and whistles, our system must operate in real-time. If not our system is redundant. Instead, we would store the information on the rocket and then retrieve it afterwards. So the interface must run with minimal overhead. Also, it must deliver all the necessary functionality. The 80/20 rule is applicable here. 20% of its features produce 80% of the output. We develop a system that meets the requirements. It processes the information quickly. Then display it in the simplest and most readable format. It is important here to remove excise.
+
+#### Learnability
+_Learnability_ depends on two things. The design on the interfaces; and, the clarity and simplicity of the user instructions. We meet the users' personas goals and business objectives. That's why we have chosen goal-oriented design. We use user personas and context scenarios to construct the requirements definition. That requirements definition is the base of the design framework. The system will have the user personas goals at the forefront of its design. An important user personas experience goals is _ease of use_. The goal-oriented design ensures the interface is easy to learn.
+
+#### Maintainability
+We derive _Maintainability_ from other attributes. _Readability_, _Extensibility_ and _Testability_. We discuss each of these attributes in detail later. A maintainable system is suitable for debugging, modification and extension. Given the size of the teams for this project, the system must be maintainable. Otherwise, the project will devolve into a monolith. With any future changes showing diminishing returns for the product.
+=======
 <!-- TODO
 - proofread this section for grammatical issues
 - formatting - sub headings for each section
 -->
 
-The important non-functional system attributes are listed below in order of their priority.
+We list the important non-functional system attributes below. They are in order of their priority.
 
+<<<<<<< project_requirement/project-requirement.md
 First the quality attribute of _Reliability_. It is the probability that the system fulfils its function. We can calculate the error rate. That is the frequency of inputs that produce an error compared to the total input frequency.
 The mission control system relies on input from sensors. GPS, altimeters, accelerators, barometer, and radio transmission, to name a few. Each of these sensors has a certain degree of both precision and accuracy. For example, GPS
 coordinates can only be accurate to +/- XYZ degrees of precision. The sensors on the rocket that provide information to our mission control system. They also operate at different frequencies. The system must be capable to check for
@@ -396,8 +375,30 @@ We use user personas and context scenarios to construct the requirements definit
 important user personas experience goals is _ease of use_. The goal-oriented design ensures the interface is easy to learn.
 
 We derive _Maintainability_ from other attributes. _Readability_, _Extensibility_ and _Testability_. We discuss each of these attributes in detail later. A maintainable system is suitable for debugging, modification and extension.
-Given the size of the teams for this project, the system must be maintainable. Otherwise, the project will devolve into a monolith. With any future changes showing diminishing returns for the product.
+=======
+First the quality attribute of _Reliability_. It is the probability that the system fulfils its function. We can calculate the error rate. That is the frequency of inputs that produce an error compared to the total input frequency. The mission control system relies on input from sensors. GPS, altimeters, accelerators, barometer, and radio transmission, to name a few. Each of these sensors has a certain degree of both precision and accuracy. For example, GPS coordinates can only be accurate to +/- XYZ degrees of precision. The sensors on the rocket that provide information to our mission control system. They also operate at different frequencies. The system must be capable to check for redundancy. It must also provide error handling. Which leads to our next quality attribute.
 
+_Robustness_. The effects of operational mistakes, erroneous input data and hardware errors. Take the following hypothetical situation. GPS readings are changing, whereas the accelerometer readings say the rocket is stationary. The system has "sanity checks, to maintain reliability. Operational mistakes like an accidental launch should be reversible. While it is not within the scope of our system to fix hardware errors. We design it in such a way to check for hardware errors. In some situations, hardware errors have drastic impacts. We may prevent actions like launches from happening. We include these pre-flight checks with the "go/no go" functionality. Monitoring important factors like the battery temperature, voltage and current. Checking that all sensors are operational and transmitting data to our system. These are all practice steps that we can take to ensure a robust system.
+
+_Portability_ represents an important attribute for our system. This is because it is an explicit requirement. The software must run on a laptop. Presumably at the launch site, or at least within the radio frequency range. This laptop is not team property. We can deploy the system on _any_ laptop. The software has to be hardware-agnostic; it must run on any operating system. This effects the chosen language and development framework. The framework and language we chose must support CI/CD. Through tests, we build the system on another machine. Through an integrated pipeline.
+
+The _correctness_ is another important quality attribute. Does the code meet its specifications? We use the goal-directed design and agile development to ensure this. The goal-directed design relies on the requirements definition and business objectives. We start with the requirements of the customer. We derive all the predominant aspects of the design from those requirements. Nothing more, nothing less. Also through the agile development process, we involve the customer in the process. We have constant feedback and throughput from the client. So we can stay on course with their desired trajectory.
+
+_Efficiency_ makes the system a practicable solution. The systems ability to use its resources to their capacity. Despite all the bells and whistles, our system must operate in real-time. If not our system is redundant. Instead, we would store the information on the rocket and then retrieve it afterwards. So the interface must run with minimal overhead. Also, it must deliver all the necessary functionality. The 80/20 rule is applicable here. 20% of its features produce 80% of the output. We develop a system that meets the requirements. It processes the information quickly. Then display it in the simplest and most readable format. It is important here to remove excise.
+
+_Learnability_ depends on two things. The design on the interfaces; and, the clarity and simplicity of the user instructions. We meet the users' personas goals and business objectives. That's why we have chosen goal-oriented design. We use user personas and context scenarios to construct the requirements definition. That requirements definition is the base of the design framework. The system will have the user personas goals at the forefront of its design. An important user personas experience goals is _ease of use_. The goal-oriented design ensures the interface is easy to learn.
+
+<<<<<<< project_requirement/project-requirement.md
+We derive _Maintainability_ from other attributes. _Readability_, _Extensibility_ and _Testability_. We discuss each of these attributes in detail later. A maintainable system is suitable for debugging, modification and extension. 
+>>>>>>> project_requirement/project-requirement.md
+Given the size of the teams for this project, the system must be maintainable. Otherwise, the project will devolve into a monolith. With any future changes showing diminishing returns for the product.
+>>>>>>> project_requirement/project-requirement.md
+=======
+We derive _Maintainability_ from other attributes. _Readability_, _Extensibility_ and _Testability_. We discuss each of these attributes in detail later. A maintainable system is suitable for debugging, modification and extension. Given the size of the teams for this project, the system must be maintainable. Otherwise, the project will devolve into a monolith. With any future changes showing diminishing returns for the product.
+>>>>>>> project_requirement/project-requirement.md
+
+
+#### Readability
 _Readability_ depends on a variety of factors. These include
 - the form of representation
 - programming style
@@ -413,10 +414,12 @@ To ensure the programming languages are readable, we use linting. A predefined s
 
 Quality documentation for the entire code base is mandatory. The entire team reviews each of the merge requests before approving them. We review the functionality and documentation of the code. The contributor of the issue explains what the contribution does. We check if the documentation is easy to understand. Or if it even exists. If not the team does not approve the request. We revise the documentation and then reassess later. This process ensures that all production code is well documented.
 
-We use A variety of tools can be for inspection of the codebase. The automated pipeline provides test reports. They describe coverage, static analysis, and individual results. The Gitlabs version control system allows us to view the history of the project. We keep every version of the system. We can view each iteration on the repository. Any user can download and open the repository on an IDE of their choice with the `git clone` command. The project is open source. We use tools available to anyone. So there is no paywall required to inspect all aspects of the project.
+We use a variety of tools can be for inspection of the codebase. The automated pipeline provides test reports. They describe coverage, static analysis, and individual results. The Gitlabs version control system allows us to view the history of the project. We keep every version of the system. We can view each iteration on the repository. Any user can download and open the repository on an IDE of their choice with the `git clone` command. The project is open source. We use tools available to anyone. So there is no paywall required to inspect all aspects of the project.
 
+#### Testability
 This ties into the _testability_. This is dependent on the modularity and structuredness of the system. We can ensure the system is testable. Through thorough architecture planning and following design patterns. We can also reduce coupling and increase modularity. We separate it into modular components using abstractions and interfaces. This avoids the monolithic spaghetti code. The system employs unit testing and aims for high coverage. We run these tests on each commit, through an automated pipeline. These tests will involve linting, static analysis, unit tests and integration tests.
 
+#### Extensibility
 _Extensibility_ is how easy it is to refactor the codebase. Without causing any side effects. This depends on the:
 - structuredness of the system
 - possibilities that implementation language provides for this purpose
@@ -437,6 +440,15 @@ Examples:
 
 <!-- For systems with hardware components, identify the physical characteristics of that hardware (9.4.10) and environment conditions in which it must operate (9.4.11).  Depending on the project, this section may be from one page up to 5 pages. -->
 
+<<<<<<< project_requirement/project-requirement.md
+<<<<<<< project_requirement/project-requirement.md
+We need the system to run on any operating system. Our software must be agnostic to the operating system that it runs on. For example; Windows, macOS and Linux (Ubuntu/Debian/fedora).
+We can develop, test and then deploy the system on these operating systems. This equally applies to user instructions and documentation. They must explain the system for all operating systems.
+
+The predominant use case scenario for this software is in the field. So the system must run on a laptop. There are limitations for the hardware of Laptops. More so than its desktop counterpart due to its smaller form factor. As a consequence, they have reduced storage, GPU, CPU and Ram capacity. Desktops rely on an external power supply. But laptops rely on an internal power supply. They can run out of battery. We take these factors into account. We must reduce any computational overhead to accommodate for the hardware of laptops.
+
+The system must comply with the Civil Aviation Authority (CAA) guidelines. This involves encouraging the practice of NZ Rocketry Guidelines. The [wiki](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Health-and-Safety/Rocketry-Safety) provides an overview of these. The software must ensure that the operator follows CAA and NZ Rocketry guidelines. Both before, during and after launch. 
+=======
 **Operating Systems**
 
 The ability to run the mission control system from any different operating system is an essential requirement for our product. This is because the system must be able to run on any type of operating system that the user may have.
@@ -459,7 +471,10 @@ Subpart D, 101.157 of CAA's Part 101 rules state that:
 - A person shall not operate a rocket into cloud.
 
 
+>>>>>>> project_requirement/project-requirement.md
 
+=======
+>>>>>>> project_requirement/project-requirement.md
 ### 3.9 Supporting information
 
 <!-- see 9.5.19. -->
@@ -504,6 +519,8 @@ Our testing framework covers what we need.
 -->
 
 #### 4.3 Usability Requirements
+<<<<<<< HEAD
+=======
 
 <!-- TODO
 - Wireframe testing
@@ -513,6 +530,7 @@ Our testing framework covers what we need.
 - formatting, subsections for each requirement -- same as section 3.3
 -->
 
+>>>>>>> 9e565e4ad574a54d6c15f7d7fdb37b912e6cbacd
 In order to achieve the usability requirement, the mission control software needs to run on any operating system, also it should not require any installation or internet connection. The software should have a graphicical interface to display data, it should also have buttons to make the user interaction with the mission control software easier.
 All buttons and graphical interfaces should be easy to understand by the user, such as buttons and should show text on it. Ths will help to show the function of this button, and the graphical area should also have a label to show what data is displayed in this area.
 As long as the user can easily understand how to use this software the usuability requirement is met.
@@ -539,6 +557,14 @@ Usability tests
 - try different browsers
 - make sure the design is consistent different platforms
  -->
+
+The verification discussed refers to the design constraints mentioned in 3.6. We utilize mock data in our testing framework to verify the functionality. This includes mock data from a rocket, weather service and simulation.
+
+We employ mock LoRa data in our integration tests. We base the mock data of transmissions sent by rockets in previous launches. The testing framework accurately simulates that same rocket launch again. It transmits that data to the Mission Control System at the same frequency. The testing framework verifies that the data parsed by the system is the same as its original input.
+
+To verify the weather service interface we employ mock data. We store an XML response from the weather service. The testing framework parses this mock data through the system. Next, we compare the parsed output to its original input. To check for irregularities.
+
+Should the simulation team choose JSON. We ask the simulation teams to provide us with mock output data. This is data that their system generates in a data-interchange format. The testing framework parses mock data from simulation teams. Once more, we compare the parsed output from our system to the original input. Checking for possible discrepancies between the two.
 
 #### 4.7 Software System Attributes
 <!-- TODO
@@ -694,12 +720,11 @@ MC or MCS (Mission Control or Mission Control System/Software): Reference to Mis
 | Team Member | Section Contributions |
 | ------ | ------ |
 | Elliott Andrews | 1.1, 5.1, 5.2, 5.3, 6.2 |
-<<<<<<< project_requirement/project-requirement.md
 | Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3, 4.3 |
 | Sandy (Alexander Saunders) | 5.3 |
 | Jesse Wood | 3.7, 4.7 |
 | Marcus Rathod | 3.1, 3.3 |
-| Mason Yi | 3.1, 3.2, 3.3, 3.8 |
+| Mason Yi | 3.2, 3.3 |
 ---
 
 <!--  
