@@ -598,7 +598,7 @@ _If the project is purely software and requires no contact risks involving physi
 
 ### 6.2 Acronyms and abbreviations
 
-- **MC** or MCS (Mission Control or Mission Control System/Software): Reference to Mission Control's part in the project (our team's part).
+- **MC** or **MCS** (Mission Control or Mission Control System/Software): Reference to Mission Control's part in the project (our team's part).
 - **DD**: Test-driven development 
 - **CAA**: Civil Aviation Authority
 - **IEEE**: The Institute of Electrical and Electronics Engineers
@@ -618,7 +618,7 @@ _If the project is purely software and requires no contact risks involving physi
 | Elliott Andrews | 1.1, 5.1, 5.2, 5.3, 6.2, 3.4, 4.4 |
 | Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3, 4.3 |
 | Sandy (Alexander Saunders) | 5.3 |
-| Jesse Wood | 3.6, 3.7, 3.8, 4.6, 4.7 |
+| Jesse Wood | 3.6, 3.7, 3.8, 4.6, 4.7, 6.2 |
 | Marcus Rathod | 3.1, 3.3, 5.4 |
 | Mason Yi | 3.2, 3.3 |
 
