@@ -716,7 +716,7 @@ MC or MCS (Mission Control or Mission Control System/Software): Reference to Mis
 | Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3, 4.3 |
 | Sandy (Alexander Saunders) | 5.3 |
 | Jesse Wood | 3.7, 4.7 |
-| Marcus Rathod | 3.1, 3.3 |
+| Marcus Rathod | 3.1, 3.3, 5.4 |
 | Mason Yi | 3.1, 3.2, 3.3, 3.8 |
 ---
 
