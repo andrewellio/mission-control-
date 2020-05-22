@@ -109,6 +109,13 @@ Each architectural view should include at least one architectural model. If arch
 
 ### 4.1 Logical
 ...
+<!-- Images have been written in this format so they will update if they change. However the exact filenames and locatins must stay the same -->
+
+**Class Diagram**
+
+This diagram shows the proposed UML class layout. Currently the diagram shows four classes (C), one enum (E) and three interfaces (I).
+
+![A image of the Class Diagram](uml_diagrams/class_diagram/class_diagram.png)
 
 ### 4.2 Development
 ...
