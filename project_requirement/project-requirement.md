@@ -150,7 +150,6 @@ A laptop will be used on site to display data from the rocket. The data displaye
 The laptop will include further operations/functionalities which will allow additional data to be displayed on the laptop. This will include landing locations within a certain bound, a go/no go functionality and the imminence of when a
 rocket is to be launched. The laptop will also allow the rocket to be integrated with openRocket which allow the mission control system to be integrated with monte-carlo integration.
 
-<<<<<<< project_requirement/project-requirement.md
 **Simulation Interface**
 
 A simulation interface will help provide an accurate representation of how a rocket flies with our integrated mission control system. The simulation interface that we will be using is called OpenRocket. OpenRocket is a software that
