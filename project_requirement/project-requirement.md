@@ -247,23 +247,7 @@ When the rocket is first turned on, the software should be able to connect to th
 The go/no go functionality should be incorporated into the software, preferaby within the same software package. The functionality needs to be programmed into a requirment checklist. This will involve gathering a report about the rocket and report it's status for a 'go' or 'no go.' The report will result in a success or a fail (fail will report which checks failed and why if applicable.) Overall the performace requirments for this functionality needs to complete the go/no go checklist at least under a minute and can be run mutiple times.
 
 Sending and reciving data should be intergrated within the software package and the monte-carlo simulation (e.g OpenRocket). When first retriving the intial data, this should be sent automatically to be simulated (no manual data enterning is ideal). The simulation data received back would also be incorporated into the go/no go checklist. In additon with sending inital rocket data, current weather conditions should be fetched within a five minute time frame. This will ensure the most up to date data is used and will increase the accuracy of the simulations. Overall the performance requirements for the communication data is to be accurate and automated.
-<!--> **9.5.13 Performance requirements** <br>
-> Specify both the static and the dynamic numerical requirements placed on the software or on human interaction with the software as a whole.
->
-> Static numerical requirements may include the following:
->
-> a) The number of terminals to be supported;  
-> b) The number of simultaneous users to be supported;  
-> c) Amount and type of information to be handled.
->
-> Static numerical requirements are sometimes identified under a separate section entitled Capacity.
->
-> Dynamic numerical requirements may include, for example, the numbers of transactions and tasks and the amount of data to be processed within certain time periods for both normal and peak workload conditions. The performance requirements should be stated in measurable terms.
->
->  For example, "_95 % of the transactions shall be processed in less than 1 second._" rather than, "An operator shall not have to wait for the transaction to complete."
->
-> NOTE Numerical limits applied to one specific function are normally specified as part of the processing subparagraph description of that function.
--->
+
 
 ### 3.5 Logical database requirements
 
