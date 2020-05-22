@@ -20,4 +20,5 @@ install_dependencies:
 testing_testing:
     stage: test
     script:
+        - cd web_application
         - npm test
