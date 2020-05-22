@@ -1,31 +1,24 @@
-stages:
-  - Build
-  - Test
-  - Deploy
+    image: node:latest
 
-build:
-  stage: Build
-  tags:
-    - Shell
-  script:
-    - echo "static analysis"
-    - exit 1
-  allow_failure: true
+    stages:
+      - build
+      - test
 
-unittest:
-  stage: Test
-  tags:
-    - Shell
-  script:
-    - echo "test"
-    - exit 1
-  allow_failure: true
+    cache:
+      paths:
+        - web_application/node_modules/
 
-deploy:
-  stage: Deploy
-  tags:
-    - Shell
-  script:
-    - echo "deploy"
-    - exit 1
-  allow_failure: true
+    install_dependencies:
+      stage: build
+      script: | 
+        - cd web_application
+        - npm install
+      artifacts:
+        paths:
+          - web_application/node_modules/
+
+    testing_testing:
+      stage: test
+      script: | 
+        - cd web_application
+        - npm test
