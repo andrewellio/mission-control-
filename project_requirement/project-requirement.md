@@ -628,7 +628,7 @@ Below is a list of the assumptions for this project listed in ascending priority
 | Elliott Andrews | 1.1, 5.1, 5.2, 5.3, 6.2, 3.4, 4.4 |
 | Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3, 4.3 |
 | Sandy (Alexander Saunders) | 5.3 |
-| Jesse Wood | 3.6, 3.7, 3.8, 4.6, 4.7, 6.2 |
+| Jesse Wood | 3.6, 3.7, 3.8, 4.6, 4.7, 6.1, 6.2 |
 | Marcus Rathod | 3.1, 3.3, 5.4 |
 | Mason Yi | 3.2, 3.3 |
 
