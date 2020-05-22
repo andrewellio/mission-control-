@@ -176,7 +176,14 @@ One page glossary as required
 
 ## 7. Contributions
 
-An one page statement of contributions, including a list of each member of the group and what they contributed to this document.
+| Team Member | Section Contributions |
+| ------ | ------ |
+| Elliott Andrews |  |
+| Binke Xu |  |
+| Sandy (Alexander Saunders) |  |
+| Jesse Wood | |
+| Marcus Rathod |  |
+| Mason Yi |  |
 
 ---
 
