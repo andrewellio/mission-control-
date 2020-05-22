@@ -123,7 +123,7 @@ This diagram shows the proposed UML class layout. Currently the diagram shows fo
 ### 4.3 Process
 ...
 
-This diagram shows the proposed tree view for the main processes that the software package should interpret,
+This diagram shows the proposed tree view for the main processes that the software package should interpret.
 
 ![A image of a Tree View](uml_diagrams/tree_view/tree-view.png)
 
@@ -132,6 +132,10 @@ This diagram shows the proposed tree view for the main processes that the softwa
 
 ### 4.5 Scenarios
 ...
+
+This diagram shows the different classes and what the user may have access to.
+
+![A use case diagram](uml_diagrams/use_case_diagram/use_case_diagram.png)
 
 ## 5. Development Schedule
 
