@@ -1,53 +1,125 @@
-@startuml
-class MissionControl {
+@startuml class_diagram
 
+skinparam packageStyle rectangle
+
+' Mission Control System
+rectangle MissionControl {
+
+  class Model {
+  }
+
+  class View {
+    goNoGo: GoNoGoView
+    map: MapView
+    phase: PhaseView
+    readings: ReadingsView
+    void draw()
+  }
+
+  class Controller {
+    void updateLaunchAngle()
+    void suggestLaunchAngle(Vector)
+    void setLocation(Location)
+    void updateWeather()
+    void runSimulations()
+    void sendNoGo()
+    void sendGo()
+    void primeLaunch()
+    void launchRocket()
+  }
 }
 
-class View {
-  goNoGo: GoNoGoView
-  map: MapView
-  phase: PhaseView
-  readings: ReadingsView
+rectangle Rocket {
+  interface Rocket {
+    void suggestLaunchAngle(Vector)
+    void prime()
+    void launch()
+    void update()
+  }
+
+  enum RocketState {
+    LIFT_OFF
+    POWERED_ASCENT
+    COAST
+    APOGEE
+    EJECTION
+    RECOVERY
+  }
 }
 
-class Model {
-  alititude: float
-  location: Point(float, float)
-  vector: Vector(float, float)
-  altitude: float
+class Location {
+  latitude: float
+  longitude: float
+}
+
+class Velocity {
   velocity: float
-
-  void updateRocketData()
-  void runSimulations
 }
 
-class Controller {
-  void sendNoGo()
-  void sendGo()
-  void sendLauncImmiment()
-  (angle, direction) getLaunchAngle()
+class Vector {
+  x: float
+  y: float
+  z: float
 }
 
-View "*" <-- MissionControl
-Model "1" <-- "1" MissionControl
-Controller "1" <-- "1" MissionControl
+rectangle Simulator {
+  interface Simulator {
+    Simulation runSimulation(Vector, Location, Weather)
+  }
 
-enum State {
-  LIFT_OFF,
-  POWERED_ASCENT
-  COAST
-  APOGEE
-  EJECTION
-  RECOVERY
+  class Simulation {
+    Simulation run()
+  }
 }
 
-State "1" <-- "1" Model
+rectangle Weather {
+  interface WeatherService {
+    Weather run()
+  }
 
-interface Simulation
-interface WeatherService
-interface MapService
+  class Weather {
+    windSpeed: float
+    cloudCoverage: float
+  }
+}
 
-Simulation <-- Model
-WeatherService <-- Model
-MapService <-- Model
+rectangle Map {
+  interface MapService {
+    void run()
+  }
+}
+
+' MVC
+Model "1" <-- "1" Controller : controller
+View "1..*" <-- "1" Model : views
+Simulator <-- Model : simulations
+
+' External Interface
+MapService "1" <-- "1" View : map
+WeatherService <-- Model : weather
+Rocket "1" <-- "1" Model : sendsInstructions
+Model "1" <-- "1" Rocket : rocket
+
+' Rocket
+Rocket "1" --> "1" Location : location
+Rocket "1" --> "1" Velocity: velocity
+Rocket "1" --> "1" Vector : location
+Rocket "1" --> "1" RocketState : state
+
+' Simulation
+Simulator "1" --> "0..*" Simulation : simulations
+Simulation "1" --> "1" Location : location
+Simulation "1" --> "1" Vector: vector
+Simulation "1" --> "1" Weather: weather
+
+' Model
+Model "1" <-- "1" Simulator : sends results to
+Model "1" <-- "1" WeatherService : getReadings
+
+' Weather
+WeatherService "1" --> "1" Location: location
+WeatherService "1" --> "1" Weather
+
+' Map
+MapService "1" --> "1" Location : location
 @enduml
