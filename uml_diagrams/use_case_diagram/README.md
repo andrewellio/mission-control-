@@ -1,3 +1,3 @@
 # Use Case Diagram
 
-![use case diagram](use-case-diagram.png)
+![use case diagram](use_case_diagram.png)
