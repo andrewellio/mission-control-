@@ -23,9 +23,9 @@ All team members are expected to contribute equally to the document and list the
 
 ---
 
-# ENGR 301 Project *NN* Architectural Design and Proof-of-Concept
+# ENGR 301 Project 12 Architectural Design and Proof-of-Concept
 
-**Authors:** a comma-separated list of the names of each member of the team.
+#### Elliott Andrews, Jesse Wood, Binke Xu, Alexander Saunders, Mason Yi, Marcus Rathod
 
 ## 1. Introduction
 
@@ -109,6 +109,13 @@ Each architectural view should include at least one architectural model. If arch
 
 ### 4.1 Logical
 ...
+<!-- Images have been written in this format so they will update if they change. However the exact filenames and locatins must stay the same -->
+
+**Class Diagram**
+
+This diagram shows the proposed UML class layout. Currently the diagram shows four classes (C), one enum (E) and three interfaces (I).
+
+![A image of the Class Diagram](uml_diagrams/class_diagram/class_diagram.png)
 
 ### 4.2 Development
 ...
@@ -116,11 +123,19 @@ Each architectural view should include at least one architectural model. If arch
 ### 4.3 Process
 ...
 
+This diagram shows the proposed tree view for the main processes that the software package should interpret.
+
+![A image of a Tree View](uml_diagrams/tree_view/tree-view.png)
+
 ### 4.4 Physical 
 ...
 
 ### 4.5 Scenarios
 ...
+
+This diagram shows the different classes and what the user may have access to.
+
+![A use case diagram](uml_diagrams/use_case_diagram/use_case_diagram.png)
 
 ## 5. Development Schedule
 
@@ -142,9 +157,9 @@ Identify dates for key project deliverables:
 
 #### 5.2.1 Budget
 
-Present a budget for the project (as a table), showing the amount of expenditure the project requires and the date(s) on which it will be incurred. Substantiate each budget item by reference to fulfilment of project goals (one paragraph per item).
 
-(1 page). 
+Is it assumed that MC will not need to use any funds from the project budget.
+More explanation for this can be found in the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project-charter) budget information.
 
 #### 5.2.2 Procurement
 
@@ -176,7 +191,14 @@ One page glossary as required
 
 ## 7. Contributions
 
-An one page statement of contributions, including a list of each member of the group and what they contributed to this document.
+| Team Member | Section Contributions |
+| ------ | ------ |
+| Elliott Andrews | 2, 3.1 |
+| Binke Xu |  |
+| Sandy (Alexander Saunders) |  |
+| Jesse Wood | |
+| Marcus Rathod |  |
+| Mason Yi |  |
 
 ---
 
