@@ -83,7 +83,7 @@ This means that you should refer to information (e.g. risks, requirements, model
 
 <!--For most systems this will be about 2 pages, including a table mapping concerns to stakeholder.-->
 
-Customer/Client
+**Customer/Client**
 
 *  Software should be compiled into a executable format 
 *  Software should be as portable to run as possible
@@ -92,37 +92,37 @@ Customer/Client
 *  Software should be displayed as a GUI with mapping features
 *  Software should include the go/no go functionality with various checks
 
-Software Developers/Engineers
+**Software Developers/Engineers**
 
 *  Shall be able to communicate with other teams to share ideas with suggestions and solutions
 *  Shall work as a team while being respectful and listen to everyones ideas
 *  Shall comment and use 'approval feature' for feedback on contributions
 
-Software Testers
+**Software Testers**
 
 *  Shall use both testing methods of blackbox testing and whitebox testing 
 *  Shall have a well defined testing process, with goals, requirments and results for each test
 *  Releate back to user experiences while testing, such as personas and use cases
 
-Victoria University of Wellington: Engineering and Computer Science
+**Victoria University of Wellington: Engineering and Computer Science**
 
 *  Abide to the health and saftey standards set by the ECS while in labs
 *  Licensing should be educational and open source as defined by the project code agreement signed
 
-Rocket enthusiasts and communites within New Zealand
+**Rocket enthusiasts and communites within New Zealand**
 
 *  Encourage and promote the open source license of the code, to allow extesnions and resuability for people who are looking to implement a similar system. However make sure to include a no responsibility clause, with a short terms of use and appropriate warnings listed.
 
-Wellington City Council (WCC)
+**Wellington City Council (WCC)**
 
 *  Should comply with regulations and laws according to those with relation to 'model rockets' and compy with CAANZ.
 *  The software shall be used and used only for the model rocket, no copyright or trademarks need registering by the council.
 
-Wellington business and residential zones
+**Wellington business and residential zones**
 
 *  Depending on the enviroment, nearby business's / resident's may need to be informed of the rocket launch if they are near the launch site. They must accept and give their permission for the launch to continue. If they field is large enough, this will likely not be required.
 
-Civil Aviation Authority of New Zealand (CAANZ)
+**Civil Aviation Authority of New Zealand (CAANZ)**
 
 * This project should follow all related CAA regulations, particularly those in  regulations; part 101 [1]
 
