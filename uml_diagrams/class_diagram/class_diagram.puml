@@ -4,8 +4,8 @@ skinparam packageStyle rectangle
 
 ' Mission Control System
 rectangle MissionControl {
+
   class Model {
-    void updateRocket()
   }
 
   class View {
@@ -29,20 +29,22 @@ rectangle MissionControl {
   }
 }
 
-interface Rocket {
-  void suggestLaunchAngle(Vector)
-  void prime()
-  void launch()
-  void update()
-}
+rectangle Rocket {
+  interface Rocket {
+    void suggestLaunchAngle(Vector)
+    void prime()
+    void launch()
+    void update()
+  }
 
-enum RocketState {
-  LIFT_OFF
-  POWERED_ASCENT
-  COAST
-  APOGEE
-  EJECTION
-  RECOVERY
+  enum RocketState {
+    LIFT_OFF
+    POWERED_ASCENT
+    COAST
+    APOGEE
+    EJECTION
+    RECOVERY
+  }
 }
 
 class Location {
@@ -60,27 +62,31 @@ class Vector {
   z: float
 }
 
-interface Simulator {
-  Simulation runSimulation(Vector, Location, Weather)
-  List<Simulation> getResults()
+rectangle Simulator {
+  interface Simulator {
+    Simulation runSimulation(Vector, Location, Weather)
+  }
+
+  class Simulation {
+    Simulation run()
+  }
 }
 
-class Simulation {
-  Simulation run()
+rectangle Weather {
+  interface WeatherService {
+    Weather run()
+  }
+
+  class Weather {
+    windSpeed: float
+    cloudCoverage: float
+  }
 }
 
-interface WeatherService {
-  Weather getWeather()
-  void setLocation(Location)
-}
-
-class Weather {
-  windSpeed: float
-  cloudCoverage: float
-}
-
-interface MapService {
-
+rectangle Map {
+  interface MapService {
+    void run()
+  }
 }
 
 ' MVC
@@ -101,7 +107,7 @@ Rocket "1" --> "1" Vector : location
 Rocket "1" --> "1" RocketState : state
 
 ' Simulation
-Simulator "1" --> "0..*" Simulation
+Simulator "1" --> "0..*" Simulation : simulations
 Simulation "1" --> "1" Location : location
 Simulation "1" --> "1" Vector: vector
 Simulation "1" --> "1" Weather: weather
