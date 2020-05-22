@@ -598,7 +598,15 @@ _If the project is purely software and requires no contact risks involving physi
 
 ### 6.2 Acronyms and abbreviations
 
-MC or MCS (Mission Control or Mission Control System/Software): Reference to Mission Control's part in the project (our team's part).
+- **MC** or MCS (Mission Control or Mission Control System/Software): Reference to Mission Control's part in the project (our team's part).
+- **DD**: Test-driven development 
+- **CAA**: Civil Aviation Authority
+- **IEEE**: The Institute of Electrical and Electronics Engineers
+- **JSON**: JSON (JavaScript Object Notation) is a lightweight data-interchange format
+- **LoRa**:  low-power wide-area network protocol
+- **UML** The Unified Modeling Language (UML)
+- **XML**: Extensible Markup Language (XML) is a markup language
+
 
 ## 7. Contributions
 
