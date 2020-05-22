@@ -123,6 +123,10 @@ This diagram shows the proposed UML class layout. Currently the diagram shows fo
 ### 4.3 Process
 ...
 
+This diagram shows the proposed tree view for the main processes that the software package should interpret,
+
+![A image of a Tree View](uml_diagrams/tree_view/tree-view.png)
+
 ### 4.4 Physical 
 ...
 
