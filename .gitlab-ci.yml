@@ -1,5 +1,4 @@
-image: 
-    name: node:latest
+image: node:latest
 
 stages:
   - build
@@ -14,10 +13,10 @@ install_dependencies:
     script:
         - cd web_application
         - npm install
-  artifacts:
-    paths:
-        - cd web_application
-        - node_modules/
+    artifacts:
+        paths:
+            - cd web_application
+            - node_modules/
 
 testing_testing:
     stage: test
