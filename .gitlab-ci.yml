@@ -1,24 +1,24 @@
-    image: 
-        name: node:latest
-        entrypoint: "/web_application"
+image: 
+    name: node:latest
+    entrypoint: "/web_application"
 
-    stages:
-      - build
-      - test
+stages:
+  - build
+  - test
 
-    cache:
-      paths:
-        - node_modules/
+cache:
+  paths:
+    - node_modules/
 
-    install_dependencies:
-      stage: build
-      script:
-        - npm install
-      artifacts:
-        paths:
-          - node_modules/
+install_dependencies:
+  stage: build
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
 
-    testing_testing:
-      stage: test
-      script:
-        - npm test
+testing_testing:
+  stage: test
+  script:
+    - npm test
