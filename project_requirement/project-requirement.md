@@ -128,6 +128,8 @@ References to other documents or standards. Follow the IEEE Citation  Reference 
 
 \[1\] “Quality Assurance,” Quality Assurance " Software Quality Attributes. [Online]. Available: http://www.qasigma.com/2008/12/software-quality-attributes.html. [Accessed: 02-May-2020].
 
+\[2\]  “Rocket Safety,” NZ Rocketry Association. [Online]. Available: https://www.nzrocketry.org.nz/rocketry/rocket-safety. [Accessed: 18-May-2020].
+
 ## 3. Specific requirements  
 
 <!-- 20 pages outlining the requirements of the system. You should apportion these pages across the following subsections to focus on the most important parts of your product. -->
@@ -531,6 +533,12 @@ For more information about the health and safety risks outlined here, follow the
 - add link to health and safety document
 -->
 
+Link to the document highlighting the health and safety apsects of this project: 
+
+https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/blob/master/health_and_safety/heatlh_and_safety.md 
+
+We will follow the following website [2] as a guide to conduct procedures to make sure that person(s) associated with this project stays safe from risks highlighted in the health_and_safety.md (the link above). More information found in the link above.
+
 <!-- If the project will involve any work outside the ECS laboratories, i.e. off-campus activities, these should be included here.
 
 Document here project requirements for Health and Safety. All teams must state in this section:
@@ -591,7 +599,7 @@ MC or MCS (Mission Control or Mission Control System/Software): Reference to Mis
 | Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3, 4.3 |
 | Sandy (Alexander Saunders) | 5.3 |
 | Jesse Wood | 3.7, 4.7 |
-| Marcus Rathod | 3.1, 3.3 |
+| Marcus Rathod | 3.1, 3.3, 5.4 |
 | Mason Yi | 3.2, 3.3 |
 ---
 
