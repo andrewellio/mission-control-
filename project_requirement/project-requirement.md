@@ -653,7 +653,7 @@ Link to the document highlighting the health and safety apsects of this project:
 
 https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/blob/master/health_and_safety/heatlh_and_safety.md 
 
-We will follow the following website [3] as a guide to conduct procedures to make sure that person(s) associated with this project stays safe from risks highlighted in the health_and_safety.md (the link above).
+We will follow the following website [3] as a guide to conduct procedures to make sure that person(s) associated with this project stays safe from risks highlighted in the health_and_safety.md (the link above). More information found in the link above.
 
 <!-- If the project will involve any work outside the ECS laboratories, i.e. off-campus activities, these should be included here.
 
