@@ -254,7 +254,14 @@ Safety Plans may be required for some projects, depending on project requirement
 
 ### 6.1 Assumptions and dependencies 
 
-One page on assumptions and dependencies (9.5.7) 
+Below is a list of the assumptions for this project listed in ascending priority order \[3\]:
+
+- Level 2 lifted: The current lockdown level will be lifted as some point making it safe for practical applications of the software
+- Performance of developing equipment: the team has access to all necessary developing hardware and software they need
+- Human resource availability: All key project team members are available and have the necessary skills and knowledge to work on the project.
+- Scheduling accuracy: The set deadlines and milestones are achievable and the project can be finished on time.
+- Budget availability: The determined budget is accurate and covers all project expenses.
+- ECS support: we will have the support and buy-in from the customer and tutor, who will back you up when issues arise.
 
 ### 6.2 Acronyms and abbreviations
 
