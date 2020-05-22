@@ -65,7 +65,10 @@ If the requirement have changed significantly since the requirements document, o
 
 References to other documents or standards. Follow the IEEE Citation Reference scheme, available from the [IEEE website](https://ieee-dataport.org/sites/default/files/analysis/27/IEEE%20Citation%20Guidelines.pdf) (PDF; 20 KB). (1 page, longer if required)
 
-[1] Civil Aviation Authority of New Zealand, Civil Aviation Rules 101, Part 101 Gyrogliders and Parasails, Unmanned Aircraft (including Balloons), Kites, and Rockets Operating Rules [Online]. Available at: https://www.aviation.govt.nz/rules/rule-part/show/101. [Accessed May. 22, 2020]
+\[1\] Civil Aviation Authority of New Zealand, Civil Aviation Rules 101, Part 101 Gyrogliders and Parasails, Unmanned Aircraft (including Balloons), Kites, and Rockets Operating Rules [Online]. Available at: https://www.aviation.govt.nz/rules/rule-part/show/101. [Accessed May. 22, 2020]
+
+\[2\] "A Guide to Dependencies, Constraints and Assumptions (Part 3): Project Assumptions", InLoox. [Online]. Available: https://www.inloox.com/company/blog/articles/a-guide-to-dependencies-constraints-and-assumptions-part-3-project-assumptions/ [Accessed: 22-May-2020]
+
 
 ## 3. Architecture
 
@@ -281,7 +284,7 @@ Below is a list of the assumptions for this project listed in ascending priority
 | Elliott Andrews | 2, 3.1 |
 | Binke Xu |  |
 | Sandy (Alexander Saunders) |  |
-| Jesse Wood | 4.1, 4.3, 4.5|
+| Jesse Wood | 4.1, 4.3, 4.5, 6.1, 6.2|
 | Marcus Rathod |  |
 | Mason Yi |  |
 
