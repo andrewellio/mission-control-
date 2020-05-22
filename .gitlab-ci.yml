@@ -1,6 +1,6 @@
 image: 
     name: node:latest
-    entrypoint: "/web_application"
+    entrypoint: ["/web_application"]
 
 stages:
   - build
