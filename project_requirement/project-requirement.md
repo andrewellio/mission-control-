@@ -68,6 +68,7 @@ rather than bullet points
 
 
 ### 1.3 Product overview
+
 #### 1.3.1 Product perspective
 
 This project aims to provide a simplified version of mission control system, this system contains the core functionality of a real mission control system, such monitoring and checking rocket states, displaying rocket data on user interface and providing rocket launch buttons, etc.
@@ -205,31 +206,19 @@ By putting the rocket off course, this means that the landing process is hugely 
 
 ### 3.3 Usability Requirements
 
-**Goal**
+####Goal
+
 The goal is to create a system that can control the flight of a rocket, ensuring stability and safe flight. It must also be able to display real time data from the rocket on a laptop such as height, location etc.
 
+####Scenarios
 
-**Scenarios**
-Launch
+**Launch**
 
 Before launch, the mission control system is required to notify when the launch is imminent so the avionics can arm the parachute ejection charges.
 
-Diagnostics
+**Diagnostics**
 
 During flight, the mission control system must run on a laptop in the field and display data from the rocket.
-
-
-**Goal**
-The goal is to create a system that can control the flight of a rocket, ensuring stability and safe flight. It must also be able to display real time data from the rocket on a laptop such as height, location etc.
-
-**Scenarios**
-Launch
-
-Before launch, the mission control system is required to notify when the launch is imminent so the avionics can arm the parachute ejection charges. 
-
-Diagnostics
-
-During flight, the mission control system must run on a laptop in the field and display data from the rocket. 
 
 **Should work in the absence of an internet connection**
 
@@ -340,7 +329,6 @@ _Extensibility_ is how easy it is to refactor the codebase. Without causing any 
 - availability of comprehensible program documentation
 
 ### 3.8 Physical and Environmental Requirements
-
 
 **Operating Systems**
 
@@ -630,7 +618,7 @@ Below is a list of the assumptions for this project listed in ascending priority
 | Sandy (Alexander Saunders) | 5.3 |
 | Jesse Wood | 3.6, 3.7, 3.8, 4.6, 4.7, 6.1, 6.2 |
 | Marcus Rathod | 3.1, 3.3, 5.4 |
-| Mason Yi | 3.2, 3.3 |
+| Mason Yi | 3.1, 3.2, 3.3, 3.8 |
 
 ---
 
