@@ -401,7 +401,7 @@ A one page statement of contributions, including a list of each member of the gr
 | Elliott Andrews | 1.1, 5.1, 5.2, 5.3, 6.2, 3.4 |
 | Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3 |
 | Sandy (Alexander Saunders) | 5.3 |
-| Jesse Wood | 3.7, 4.7 |
+| Jesse Wood | 3.6, 3.7, 3.8, 4.6, 4.7 |
 | Marcus Rathod | 3.1, 3.3 |
 | Mason Yi | 3.2, 3.3 |
 ---
