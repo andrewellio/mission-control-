@@ -142,9 +142,9 @@ Identify dates for key project deliverables:
 
 #### 5.2.1 Budget
 
-Present a budget for the project (as a table), showing the amount of expenditure the project requires and the date(s) on which it will be incurred. Substantiate each budget item by reference to fulfilment of project goals (one paragraph per item).
 
-(1 page). 
+Is it assumed that MC will not need to use any funds from the project budget.
+More explanation for this can be found in the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project-charter) budget information.
 
 #### 5.2.2 Procurement
 
@@ -176,7 +176,14 @@ One page glossary as required
 
 ## 7. Contributions
 
-An one page statement of contributions, including a list of each member of the group and what they contributed to this document.
+| Team Member | Section Contributions |
+| ------ | ------ |
+| Elliott Andrews |  |
+| Binke Xu |  |
+| Sandy (Alexander Saunders) |  |
+| Jesse Wood | |
+| Marcus Rathod |  |
+| Mason Yi |  |
 
 ---
 
