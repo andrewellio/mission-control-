@@ -298,13 +298,13 @@ Miru's Examples:
 
 N.B We will ask the other teams what they have done
 -->
+
 The information provided by external interfaces limits the design. The simulation, rocket and weather service are the external interfaces. These each provides our system with information. Which our system then represents in a graphical interface. Our software has to communicate with _any_ simulation or rocket system. To do so, we implement a generic interface.
 
 The system requires radio communication through LoRa. We use to communicate with the rocket. LoRa is a low-power wide-area network protocol. LoRa offers wireless technology that offers a long-range. Our system must process the incoming transmissions in real-time. Our GUI must be able to represent the real-time nature of these transmissions. Updating the current view at regular frequencies.
 
 The system interacts with data provided by external simulation software. We parse this through a generic data-interchange format. Examples include XML or JSON. JSON is a Javascript Object Notation. It is straightforward for both machines and humans to read and write (we discuss XML next.) The system can process the chosen format.
 
-The weather service is another external interface which imposes design constraints. We query the service. It provides data in the XML format. The system must interpret the XML. XML is an extensible markup language. It encodes documents in both a human and machine-readable format. It must filter out the excise. It extracts the necessary information such as wind speeds and cloud coverage. We require this information for the go / no go functionality.
 
 ### 3.7 Nonfunctional system attributes
 
