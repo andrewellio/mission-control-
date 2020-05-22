@@ -11,12 +11,25 @@
 
 <div style="page-break-after: always;"></div>
 
-# ENGR 301 Project *NN* Project Proposal and Requirements Document
-#### Author list, a comma-separated list of the names of each member of the team.
+# ENGR 301 Project 12 Project Proposal and Requirements Document
+
+#### Elliott Andrews, Jesse Wood, Binke Xu, Alexander Saunders, Mason Yi, Marcus Rathod
 
 ## 1. Introduction
 
-<!-- One page overall introduction including sections 1.1 and 1.2. -->
+Amateur rockets are flown regularly worldwide. These rockets are typically
+flown with off the shelf rocket motors with widely available propellant reloads.
+These rockets often exceed the speed of sound, altitudes above 30 km are not
+unheard of. These rockets are almost never controlled, they are stable due to
+passive aerodynamic features.
+
+While passively stable rockets are reasonably simple and reliable if well designed, they are susceptible to a variety of disturbances, particularly early in
+flight. Unexpected winds can cause the rocket to weathercock; flexibility in the
+launch tower/rail can cause railwhip, imparting a random launch angle to the
+rocket; the thrust from the rocket motor is also never perfectly symmetrical.
+
+The responsibility for this project's group is to develop software with appropriate functionality to
+operate as a mission control station that runs on a laptop. 
 
 ### Client
 
@@ -45,11 +58,13 @@ Mission Control's purpose for the [Rocket Project](https://ecs.wgtn.ac.nz/foswik
 
 ### 1.2 Scope
 
-Should provide rocket flight logging system to record flight data.
+Our system should provide a rocket flight logging system to record flight data, and display this data on a graphic interface. Also, our system should provide a wireless control system to connect with the rocket. 
+To ensure the rocket launch is safe and under control, our system should be able to simulate the rocket flight with the intergrated similation software. This will be done before the rocket launch and display feedback data on the screen, so the mission control team can verify and confirm wether it is safe to launch the rocket or not.
 
-Should provide wireless control system.
-
-Should provide rocket self-control system to control motor during the flight, and open parachute.
+<!-- TODO
+a more report like flow,
+rather than bullet points  
+-->
 
 <!-- TODO
 a more report like flow,
@@ -60,8 +75,13 @@ rather than bullet points
 ### 1.3 Product overview
 #### 1.3.1 Product perspective
 
-This project aims to vertical launch a rocket and keep rocket stable during the flight, also need display data from racket on the laptop such as height, location, flight time.
-The project is a prototype of real rocket mission control system, this project will provide an experience of how mission control system works, and the relationships between avionics and simulations.
+This project aims to provide a simplified version of mission control system, this system contains the core functionality of a real mission control system, such monitoring and checking rocket states, displaying rocket data on user interface and providing rocket launch buttons, etc.
+The user can understand how the mission control system works through this project. In additon the user will understand how to track the rocket throughout its flight and the process and checkes needed beforehand to launch a rocket.
+
+<!-- TODO
+- grammar checks
+- more expansion
+ -->
 
 <!-- TODO
 - grammar checks
@@ -74,13 +94,15 @@ The project is a prototype of real rocket mission control system, this project w
 - use bullet points
  -->
 
-The mission control system should display all the data on laptop as graphical interface.
+* The mission control system should display all the data on the laptop as a graphical interface.
 
-The mission control system needs Integrate with local weather condition, simulate flight flights can determine probable landing locations to decide if rocket can be launch.
+* The mission control system needs to integrate with the local weather conditions, simulate flight paths and can determine probable landing locations to decide if the rocket can be launched.
 
-Use the current wind profile and the Monte-Carlo simulation to determine an upwind trajectory for the rocket to follow to minimize its landing distance from the launch site.
+* Use the current wind profile and the Monte-Carlo simulation to determine an upwind trajectory for the rocket to follow to minimize its landing distance from the launch site.
 
-Mission control device may not have internet connection all the time, so mission control system should be able to run in the absence of an internet connection.
+* Mission control device may not have a internet connection available, so the mission control system should be able to run in the absence of an internet connection.
+
+* Mission control software should run on any operating system.
 
 #### 1.3.3 User characteristics   
 
@@ -102,8 +124,10 @@ User should be familiar with interact software by command line and GUI, also our
   - bandwidth - software needs to operate in real-time
  -->
 
-The rocket will wireless monitoring with laptop, so the distance between the laptop and rocket will affect the monitoring effect, if rocket fly too height then laptop may not be able to receive signal from transmission unit on the rocket.
-The terrain may also affect the data transmission effect, such as steep hill or woodland, those launch environment may lead data loss or unstable connection between laptop and rocket.
+
+The rocket will perform wireless monitoring with a laptop, so the distance between the laptop and rocket may impact and have an unexpected effect on monitoring, if the rocket reaches a higher height than anticipated then the laptop may not be able to receive the signal from the transmission unit on the rocket.
+The terrain may also affect the data transmission, such as a steep hill or trees/woodland. Considering this launch environment may lead to data loss or a unstable connection between the laptop and the rocket.
+The bandwidth is a  important limitation since the software needs real-time data transmission to be consitent between the laptop and rocket, if the bandwith is too low between the laptop and the rocket, then the data transmission will suffer from delays.
 
 ## 2. References
 
@@ -114,6 +138,8 @@ The terrain may also affect the data transmission effect, such as steep hill or 
 References to other documents or standards. Follow the IEEE Citation  Reference scheme, available from the [IEEE website](https://www.ieee.org/) (please use the search box). (1 page, longer if required)
 
 \[1\] “Quality Assurance,” Quality Assurance " Software Quality Attributes. [Online]. Available: http://www.qasigma.com/2008/12/software-quality-attributes.html. [Accessed: 02-May-2020].
+
+\[2\] "Gyrogliders and Parasails,Unmanned Aircraft (including Balloons), Kites, and Rockets – Operating Rules". [Online]. Available: https://www.aviation.govt.nz/assets/rules/consolidations/Part_101_Consolidation.pdf. [Accessed: 21-May-2020].
 
 ## 3. Specific requirements  
 
@@ -137,6 +163,27 @@ A laptop will be used on site to display data from the rocket. The data displaye
 The laptop will include further operations/functionalities which will allow additional data to be displayed on the laptop. This will include landing locations within a certain bound, a go/no go functionality and the imminence of when a
 rocket is to be launched. The laptop will also allow the rocket to be integrated with openRocket which allow the mission control system to be integrated with monte-carlo integration.
 
+**Simulation Interface**
+
+A simulation interface will help provide an accurate representation of how a rocket flies with our integrated mission control system. The simulation interface that we will be using is called OpenRocket. OpenRocket is a software that 
+provides an accurate simulation of real life rocket flights. It allows the user the build and create their own rocket designs before flying them. By integrating a simulation interface, we are able to accurately assess how our mission
+control system would work in the real world without having a real rocket launch. This allows us to do more testing to ensure that our system is fully working before we test it on the field.
+
+**Map Service**
+
+The integration of an external map service is required for the mission control system. A map service provides an accurate visual representation of the location of the rocket on a world map. This is vital for the system as this means 
+that we are able to use our current rocket coordinates to show where the rocket would be on a map. The mission control system requires the current location of the rocket to be displayed on the screen. A map service will display the 
+current location of the rocket on screen to the user of the mission control system. Other vital pieces of information, such as the current flight path of the rocket and the approximate landing location, will also be shown on screen 
+through the map service.
+
+**Weather Service Interface**
+
+For the mission control system to work correctly, the integration of an external weather service interface is required. An external weather service interface provides information about the current local weather conditions that we are
+able to use to assess different situations throughout a rocket's flight. The system requires the local weather conditions for multiple uses, specifically the go/no go functionality and to help control the rocket mid flight. The main 
+use for the external weather service interface is the go/no go functionality, the local weather conditions are required to allow the system to assess the weather conditions are suitable for the rocket to proceed with launching or not. 
+Mid flight, the weather conditions are required to provide data such as the current wind speeds to help determine the current flight path of the rocket.
+
+
 ### 3.2 Functions
 
 <!-- TODO
@@ -157,44 +204,53 @@ rocket is to be launched. The laptop will also allow the rocket to be integrated
 
 This is typically the longest subsection in the document. List up to fifty use cases (in order of priority for development), and for at least top ten focal use cases, write a short goal statement and use case body (up to seven pages).  Identify the use cases that comprise a minimum viable product.
 
-The primary function for our product is to serve as a diagnostics tool, providing data before and during a flight. This data from the rocket allows the user to analyse the flight of the rocket, checking that everything is working as it should. For our client, the main use cases for our product would be: Launch, and mid-flight analysis.
+The primary function for our product is to serve as a diagnostics tool, providing data before and during a flight. This data from the rocket allows the user to analyse the flight of the rocket, checking that everything is working as
+it should. For our client, the main use cases for our product would be: Launch, and mid-flight analysis.
 
-**Use cases**
+#### Use cases
 
-Launch
+**Launch**
 
-During the launch process, our client will be primarily using the product to notify whether the launch is imminent. This notifying is used to allow the avionics team to arm the parachute ejection charges.
-Along with this, the product has a go/no go funcitonality. This will analyse the current launch situation and our client will use this to assess whether the rocket should launch or not.
+During the launch process, our client will be primarily using the product to notify whether the launch is imminent. This notifying is used to allow the avionics team to arm the parachute ejection charges. The primary use for the mission
+control system during launch is to assure that every aspect of the rocket is ready for launch.
 
-Mid-flight analysis
+**Go/No Go Functionality**
 
-The mid-flight portion is where the main use will be for our product. During flight, our product will display real time data from the rocket to a laptop in the field. This data will be used by our client to analyse the rocket's flight and help diagnose the current state/s of the rocket flight should there be any issues.
+Our mission control system has a go/no go funcitonality. This means that the system will analyse the current launch situation and our client will use this to assess whether the rocket should launch or not. The initial check for our 
+system will be to check the hardware of the rocket is all working properly. This is essential for the launch process of the rocket as the system will analyse all hardware, ensuring everything is working as intended before launch. 
+
+
+Another check that the go/no go functionality will make is for the weather before a launch. The weather must be assessed before the launch of a rocket to see whether there are any chance of the rocket flight going wrong. The main 
+weather components that are assessed for the go/no go functionality are the cloud coverage and wind speed.
+
+The cloud coverage is an essential component of the assessment for the potential launch of a rocket. The weather needs to be relatively clear in order for a weather conditions to be viable to launch. This is because if the clouds 
+are too thick, it can create atmospheric temperatures that are too cold for a rocket to operate in. 
+
+Arguably the most important weather component that can affect a rocket's flight are the wind speeds of the surrounding area for the rocket launch. When wind speeds are too high for a rocket, it is able to put the rocket off course.
+By putting the rocket off course, this means that the landing process is hugely affected and this already requires much precision. 
+
+
+**Mid-flight analysis**
+
+The mid-flight portion is where the main use will be for our product. During flight, our product will display real time data from the rocket to a laptop in the field. This data will be used by our client to analyse the rocket's flight
+and help diagnose the current state/s of the rocket flight should there be any issues.
 
 
 ### 3.3 Usability Requirements
-<!-- See 9.5.12. for most systems this will be around one page. -->
-
-> **9.5.12 Usability requirements**<br>
-> Define usability (quality in use) requirements. Usability requirements and objectives for the software system include measurable effectiveness, efficiency, and satisfaction criteria in specific contexts of use.
-
-<!-- TODO  
-- bold the titles for clarity
-- formatting issues
-- mention personas
-  i.e., usability requirements are derived from user personas goals and context scenarios
-- spelling and grammar: aim for clarity - unecessary/unnecessary
--->
-
-**Goal**
-The goal is to create a system that can control the flight of a rocket, ensuring stability and safe flight. It must also be able to display real time data from the rocket on a laptop such as height, location etc.
 
 
-**Scenarios**
-Launch
+#### Goal
+
+The goal is to create a system that can control the flight of a rocket, ensuring stability and safe flight. The system must also be able to display real time data from the rocket on a laptop such as height, location etc.
+
+
+#### Scenarios
+
+**Launch**
 
 Before launch, the mission control system is required to notify when the launch is imminent so the avionics can arm the parachute ejection charges.
 
-Diagnostics
+**Diagnostics**
 
 During flight, the mission control system must run on a laptop in the field and display data from the rocket.
 
@@ -224,7 +280,14 @@ creating a user interface (UI) will allow the data to be displayed in a more coh
   - bandwidth
 -->
 
-> **9.5.13 Performance requirements** <br>
+Performance requirements help to define the software that displays data from the rocket, the communication needed for the go/no go functinality and recieving/sending simulation data. 
+
+When the rocket is first turned on, the software should be able to connect to the rocket's internal hardware data components from the maximum distance calculated by the avionics and simulation teams. Data retrived should include at least, windspeed, location co-ordinates and velocity. The data units will need to be consistent with the simulation software, and used to predict the landing locations defined by the simulation team. This data, when reported to the display, should be recorded in a logging format with the timestamp and a readable format (or file format which can be parsed). The display will need to show the data consitently, updated approximatley at least every second or as otherwise calculated. Such as the appropriate calulations for latency (the delay between the software and rocket) will need to be taken into consideration. Overall the performace requirments for the software while displaying the data should consistent, accurate and recorded/logged efficently.
+
+The go/no go functionality should be incorporated into the software, preferaby within the same software package. The functionality needs to be programmed into a requirment checklist. This will involve gathering a report about the rocket and report it's status for a 'go' or 'no go.' The report will result in a success or a fail (fail will report which checks failed and why if applicable.) Overall the performace requirments for this functionality needs to complete the go/no go checklist at least under a minute and can be run mutiple times.
+
+Sending and reciving data should be intergrated within the software package and the monte-carlo simulation (e.g OpenRocket). When first retriving the intial data, this should be sent automatically to be simulated (no manual data enterning is ideal). The simulation data received back would also be incorporated into the go/no go checklist. In additon with sending inital rocket data, current weather conditions should be fetched within a five minute time frame. This will ensure the most up to date data is used and will increase the accuracy of the simulations. Overall the performance requirements for the communication data is to be accurate and automated.
+<!--> **9.5.13 Performance requirements** <br>
 > Specify both the static and the dynamic numerical requirements placed on the software or on human interaction with the software as a whole.
 >
 > Static numerical requirements may include the following:
@@ -240,7 +303,7 @@ creating a user interface (UI) will allow the data to be displayed in a more coh
 >  For example, "_95 % of the transactions shall be processed in less than 1 second._" rather than, "An operator shall not have to wait for the transaction to complete."
 >
 > NOTE Numerical limits applied to one specific function are normally specified as part of the processing subparagraph description of that function.
-
+-->
 
 ### 3.5 Logical database requirements
 
@@ -285,6 +348,7 @@ N.B We will ask the other teams what they have done
 List up to twenty systemic requirements / attributes.
 Write a short natural language description of the top nonfunctional requirements (approx. five pages). -->
 
+<<<<<<< project_requirement/project-requirement.md
 We list the important non-functional system attributes below. They are in order of their priority \[1\].
 
 #### Reliability
@@ -307,6 +371,43 @@ _Learnability_ depends on two things. The design on the interfaces; and, the cla
 
 #### Maintainability
 We derive _Maintainability_ from other attributes. _Readability_, _Extensibility_ and _Testability_. We discuss each of these attributes in detail later. A maintainable system is suitable for debugging, modification and extension. Given the size of the teams for this project, the system must be maintainable. Otherwise, the project will devolve into a monolith. With any future changes showing diminishing returns for the product.
+=======
+<!-- TODO
+- proofread this section for grammatical issues
+- formatting - sub headings for each section
+-->
+
+The important non-functional system attributes are listed below in order of their priority.
+
+First the quality attribute of _Reliability_. It is the probability that the system fulfils its function. We can calculate the error rate. That is the frequency of inputs that produce an error compared to the total input frequency.
+The mission control system relies on input from sensors. GPS, altimeters, accelerators, barometer, and radio transmission, to name a few. Each of these sensors has a certain degree of both precision and accuracy. For example, GPS 
+coordinates can only be accurate to +/- XYZ degrees of precision. The sensors on the rocket that provide information to our mission control system. They also operate at different frequencies. The system must be capable to check for 
+redundancy. It must also provide error handling. Which leads to our next quality attribute.
+
+_Robustness_. The effects of operational mistakes, erroneous input data and hardware errors. Take the following hypothetical situation: GPS readings are changing, whereas the accelerometer readings say the rocket is stationary. The
+system has "sanity checks", to maintain reliability. Operational mistakes such as an accidental launch should be reversible. While it is not within the scope of our system to fix hardware errors. We design it in such a way to check for 
+hardware errors. In some situations, hardware errors have drastic impacts. We may prevent actions like launches from happening. We include these pre-flight checks with the "go/no go" functionality. Monitoring important factors like
+the battery temperature, voltage and current. Checking that all sensors are operational and transmitting data to our system. These are all practice steps that we can take to ensure a robust system.
+
+_Portability_ represents an important attribute for our system. This is because it is an explicit requirement. The software must run on a laptop. Presumably at the launch site, or at least within the radio frequency range. This laptop
+is not team property. We can deploy the system on _any_ laptop. The software has to be hardware-agnostic; it must run on any operating system. This effects the chosen language and development framework. The framework and language we 
+chose must support CI/CD. Through tests, we build the system on another machine. Through an integrated pipeline.
+
+The _correctness_ is another important quality attribute. Does the code meet its specifications? We use the goal-directed design and agile development to ensure this. The goal-directed design relies on the requirements definition and 
+business objectives. We start with the requirements of the customer. We derive all the predominant aspects of the design from those requirements. Nothing more, nothing less. Also through the agile development process, we involve the 
+customer in the process. We have constant feedback and throughput from the client. So we can stay on course with their desired trajectory.
+
+_Efficiency_ makes the system a practicable solution. The systems ability to use its resources to their capacity. Despite all the bells and whistles, our system must operate in real-time. If not our system is redundant. Instead, we 
+would store the information on the rocket and then retrieve it afterwards. So the interface must run with minimal overhead. Also, it must deliver all the necessary functionality. The 80/20 rule is applicable here. 20% of its features
+produce 80% of the output. We develop a system that meets the requirements. It processes the information quickly. Then display it in the simplest and most readable format. It is important here to remove excise.
+
+_Learnability_ depends on two things. The design on the interfaces; and, the clarity and simplicity of the user instructions. We meet the users' personas goals and business objectives. That's why we have chosen goal-oriented design. 
+We use user personas and context scenarios to construct the requirements definition. That requirements definition is the base of the design framework. The system will have the user personas goals at the forefront of its design. An 
+important user personas experience goals is _ease of use_. The goal-oriented design ensures the interface is easy to learn.
+
+We derive _Maintainability_ from other attributes. _Readability_, _Extensibility_ and _Testability_. We discuss each of these attributes in detail later. A maintainable system is suitable for debugging, modification and extension. 
+Given the size of the teams for this project, the system must be maintainable. Otherwise, the project will devolve into a monolith. With any future changes showing diminishing returns for the product.
+>>>>>>> project_requirement/project-requirement.md
 
 #### Readability
 _Readability_ depends on a variety of factors. These include
@@ -349,6 +450,29 @@ Examples:
 -->
 
 <!-- For systems with hardware components, identify the physical characteristics of that hardware (9.4.10) and environment conditions in which it must operate (9.4.11).  Depending on the project, this section may be from one page up to 5 pages. -->
+
+**Operating Systems**
+
+The ability to run the mission control system from any different operating system is an essential requirement for our product. This is because the system must be able to run on any type of operating system that the user may have.
+
+**Portability**
+
+Similar to operating systems, it is necessary that our mission control system is able to be run from any type of laptop/computer. Our mission control system must be portable as our client may choose to use the system on multiple 
+devices and such.
+
+**CAA / Local council guidelines**
+
+Our mission control system is required to follow the Civil Aviation Authority guidelines. Part 101 of the regulations specifies the rules for flying unmanned aircrafts, and more specifically includes rockets which is relevant to our project. 
+
+Subpart D, 101.155 of CAA's Part 101 rules state that:
+- A person shall not operate a rocket on or within 4 km of an aerodrome boundary.
+- A person shall not operate a rocket between 4 and 8 km of an aerodrome boundary above 400 feet AGL.
+
+Subpart D, 101.157 of CAA's Part 101 rules state that:
+- A person shall not operate a rocket at any altitude where: there are clouds or obscuring phenomena of more than foureighths coverage, or the horizontal visibility is less than 8 km.
+- A person shall not operate a rocket into cloud.
+
+
 
 ### 3.9 Supporting information
 
@@ -498,24 +622,19 @@ The portability of a software depends on:
 
 ### 5.1 Schedule
 
-<!-- TODO
-- spelling and grammar checks
-- whole team to review  
- -->
-
 **Architectural Prototype**
 
 The Architectural Prototype and the supporting Architecture Design document is currently scheduled to be completed by the end of June 2020. The approximate aim for a date completion is the 15th of June.
 
 **Minimum Viable Product**
 
-The Minimial Viable Product is currently scheduled to be near the beginning of June (end of Trimester 1), but may be delayed until approximatley the 13th of July (start of Trimester 2).
+The Minimial Viable Product is currently scheduled to be near the beginning of July (end of Trimester 1), but may be delayed until approximatley the 13th of July (start of Trimester 2).
 
 **Further releases**
 
-The Final Prototype will be completed by the end of October (approximatley by the 15th) and refined until the end of November (approximatley the day before the launch)
+The Final Prototype will be completed by the end of October (approximatley by the 15th) and refined/tested until the end of November (approximatley the day before the launch)
 
-More details for the Project Schedule can be seen on the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project%20Charter) and this repository [Milestones](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/milestones).
+More details for the Project Schedule can be seen on the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project%20Charter).
 
 
 ### 5.2 Budget
@@ -525,22 +644,20 @@ More explanation for this can be found in the [Project Charter](https://gitlab.e
 
 ### 5.3 Risks
 
-<!-- TODO
-- spelling and grammar checks
--->
-
 | Risk | Type | Likelihood | Impact | Mitigation Strategies |
 | ------ | ------ | ------ | ------ | ------ |
-| Failure to produce Mission Control software by launch date | Practical/deliverable | Even (subject to change) | Low | Consistent retrospectives and sprints should indicate a long term plan to prevent project fallout. Some deliverable or prototype should be produced, even if not functional yet. |
-| Unexpected univeristy shutdown/course changes | Operations | Very unlikely | High | Remain with primary channel of communication; Mattermost for announcments of course or university changes. Concerns to be taken up with class reps, tutors, lecturer, course co-ordinator or ECS dean. Follow any given instructions accordingly. Prepare for project halt or termination. |
-| Laptop battery dies and/or software fails to run | Technical | Unlikely (preperation/testing dependent) | High | With regards to the battery, if available bring a secondary battery. Checks before hand should take place for battery levels. If software fails to run, have several packages with troubleshooting options (i.e. compatability). To assist with with, take a secondary laptop which has been tested. |
-| Placement of Mission Control | Locational/Enviromental | Very unlikely | Low | Mission Control Station should be reasonably mobile to allow a approximate radius range of where the rocket may land. Mission Control should not be placed near the launchpad and outside the landing locations. Range testing should ensure that the data can be recieved from the rocket at a safe distance. |
+| Failure to produce Mission Control software by launch date | Practical/deliverable | Even (subject to change) | Low | Consistent retrospectives and sprints should indicate a long term plan to prevent project fallout. Some deliverable or prototype should be produced, even if the resulting product is not functional yet. |
+| Unexpected Univeristy shutdown/course changes | Operations | Very unlikely | High | Remain in contact with primary channel of communication; Mattermost for announcments related to course or university changes. Concerns to be taken up with class reps, tutors, lecturer, course co-ordinator or ECS dean. Follow any given instructions accordingly. Prepare for any temporary project pauses or overall termination. |
+| Laptop battery dies and/or software fails to run | Technical | Unlikely (preperation/testing dependent) | High | With regards to the battery, if available bring a secondary battery. Checks before hand should take place for battery charge levels. If the software fails to run, have several packages with troubleshooting options (i.e. compatability modes). It also should be considered to take a secondary laptop which has been tested. |
+| Location of Mission Control Station | Locational/Enviromental | Very unlikely | Low | Mission Control Station should be reasonably mobile to allow a approximate radius range of where the rocket may land. Mission Control should not be placed near the launchpad or inside the probable landing locations. Range testing and data transmission should ensure that the data can be recieved from the rocket at a safe distance. |
 | Weather conditions | Environmental | Even (subject to change) | High | If predicted weather conditions are unfavourable on the day, there should be a postponement day scheduled, if applicable. If there is a sudden weather change, the resources taken to travel to launch site should be as minimal as possible, to allow a launch retry on the postponement day. |
-| Rocket launch injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, this likelihood of this risk should remain as low as possible. Launch site should be secured and all operations should pass the go functionality for a safe launch. |
-| Rocket in-flight injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, this likelihood of this risk should remain as low as possible. Rocket flight should approximately follow simulation predictions and data being received in consistent, including flight time, max height and max velocity. |
-| Rocket return injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, this likelihood of this risk should remain as low as possible. There should be two landing mitigations, the parachute with air friction and the landing zone. The parachutes should have various measures and testing to keep the deployment at a high level, and everyone is well distanced from the landing zone area. |
-| Rocket loses communication within flight | Technical | High | Medium | Testing with rocket range, turbulance and height (if possible) should decrease the loss of communication. Exception handling/logs should programmed to report when, how and what error occurred. |
-| Rocket refuses communication before launch | Technical | High | Medium | If possible, data should have the capability to be run offline. If other teams and requirements allow this, there can be a bypass for real-time data and continue with the go/no go assessment. |
+| Rocket launch injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Launch site should be secured and all operations should pass the go functionality for a safe launch. |
+| Rocket in-flight injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Rocket flight should approximately follow simulation predictions and data should be received consistently, including flight time, max height and max velocity. |
+| Rocket return injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Various landing mitigations should be in place. The parachute with air friction and the probable landing zone. The parachutes should have various measures and testing to keep the deployment at a high probability sucess level. In additon, everyone is well distanced from the landing zone area. |
+| Rocket loses communication within flight | Technical | High | Medium | Testingthe cabalility of various rocket ranges, turbulance simulations and height distance (if possible) should decrease the chances of communication loss. Exception handling/logs should programmed to report when, how and what error occurred durining rocket being in-flight. |
+| Rocket refuses communication before launch | Technical | High | Medium | If possible, data should have the capability to be run offline. If other teams and requirements allow this, there may be a bypass method for real-time data and other laterations with the go/no go assessment to ensure health and saftey requirements are still upheld. |
+
+For more information about the health and safety risks outlined here, follow the link in section 5.4 below
 
 ### 5.4 Health and Safety
 
@@ -605,11 +722,12 @@ MC or MCS (Mission Control or Mission Control System/Software): Reference to Mis
 | Team Member | Section Contributions |
 | ------ | ------ |
 | Elliott Andrews | 1.1, 5.1, 5.2, 5.3, 6.2 |
-| Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3 |
+<<<<<<< project_requirement/project-requirement.md
+| Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3, 4.3 |
 | Sandy (Alexander Saunders) | 5.3 |
 | Jesse Wood | 3.7, 4.7 |
 | Marcus Rathod | 3.1, 3.3 |
-| Mason Yi | 3.2, 3.3 |
+| Mason Yi | 3.1, 3.2, 3.3, 3.8 |
 ---
 
 <!--  
