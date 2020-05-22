@@ -399,11 +399,17 @@ As long as the user can easily understand how to use this software the usuabilit
 
 #### 4.4 Performance Requirements
 
-<!-- TODO
-We need to do this section
-- research performance expectations for the hardware
-- perhaps store information in logs necessary to verify performance requirements
- -->
+In order to achieve the performace requirment, the mission control software needs to be able to store and review logs from the data displayed, go/no go futionality checks and data from simulations run. These logs that have been stored will help verify the performace requirements for the mission control software. Verification in particular will confirm wether not the performace of a process is obsevred to be in a timely, efficent and conistent manner. 
+
+A process may be pulled from the stored logs to be futher reviewed if it fails to perform at its expected level, as defined in section 3.4. The process that this review will take, will be:
+
+*  What went wrong
+*  Why it went wrong
+*  Fixes/issues that need to be implemented
+*  Perform these fixes
+*  Test the process again
+
+These steps will make sure that the process has been reviewed, and can now be verified.
 
 #### 4.5 Domain Model Requirements
 
