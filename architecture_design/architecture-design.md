@@ -23,9 +23,9 @@ All team members are expected to contribute equally to the document and list the
 
 ---
 
-# ENGR 301 Project *NN* Architectural Design and Proof-of-Concept
+# ENGR 301 Project 12 Architectural Design and Proof-of-Concept
 
-**Authors:** a comma-separated list of the names of each member of the team.
+#### Elliott Andrews, Jesse Wood, Binke Xu, Alexander Saunders, Mason Yi, Marcus Rathod
 
 ## 1. Introduction
 
@@ -193,7 +193,7 @@ One page glossary as required
 
 | Team Member | Section Contributions |
 | ------ | ------ |
-| Elliott Andrews |  |
+| Elliott Andrews | 2, 3.1 |
 | Binke Xu |  |
 | Sandy (Alexander Saunders) |  |
 | Jesse Wood | |
