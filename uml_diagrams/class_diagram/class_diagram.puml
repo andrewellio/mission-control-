@@ -1,59 +1,39 @@
-@startuml MissionControl
-class MissionControl {
-  model: Model
+@startuml class_diagram
+
+skinparam packageStyle rectangle
+
+' Mission Control System
+rectangle MissionControl {
+  class Model {
+    void updateRocket()
+  }
+
+  class View {
+    goNoGo: GoNoGoView
+    map: MapView
+    phase: PhaseView
+    readings: ReadingsView
+    void draw()
+  }
+
+  class Controller {
+    void updateLaunchAngle()
+    void suggestLaunchAngle(Vector)
+    void setLocation(Location)
+    void updateWeather()
+    void runSimulations()
+    void sendNoGo()
+    void sendGo()
+    void primeLaunch()
+    void launchRocket()
+  }
 }
-Model "1" <-- "1" MissionControl : runs
 
-class View {
-  model: Model
-  goNoGo: GoNoGoView
-  map: MapView
-  phase: PhaseView
-  readings: ReadingsView
-  void draw()
-}
-MapService "1" <-- "1" View : gets map from
-
-
-class Model {
-  views: List<View>
-  controller: Controller
-  rocketLocation: Location
-  rocketVector: Vector
-  rocketAltitude: float
-  rocketVelocity: float
-  rocketState: RocketState
-  simulationResults: List<Simulation>
-
-  void updateRocket()
-  void runSimulations()
-}
-View "1..*" <-- "1" Model : sends updates to
-Simulator <-- Model : requests simulations from
-WeatherService <-- Model : requests weather from
-Rocket "1" <-- "1" Model : sends instructions to
-
-class Controller {
-  void sendNoGo()
-  void sendGo()
-  void sendLaunchImminent()
-  void updateLaunchAngle()
-  void updateWeather()
+interface Rocket {
   void suggestLaunchAngle(Vector)
-  void runSimulations()
-  void setLocation(Location)
-}
-Model "1" <-- "1" Controller : sends inputs to
-
-class Location {
-  latitude: float
-  longitude: float
-}
-
-class Vector {
-  x: float
-  y: float
-  z: float
+  void prime()
+  void launch()
+  void update()
 }
 
 enum RocketState {
@@ -65,25 +45,75 @@ enum RocketState {
   RECOVERY
 }
 
-interface Rocket {
-  void suggestLaunchAngle(Vector)
-  void update()
+class Location {
+  latitude: float
+  longitude: float
 }
-Model <-- Rocket : sends status to
+
+class Velocity {
+  velocity: float
+}
+
+class Vector {
+  x: float
+  y: float
+  z: float
+}
 
 interface Simulator {
   Simulation runSimulation(Vector, Location, Weather)
   List<Simulation> getResults()
 }
-Model <-- Simulator : sends results to
 
+class Simulation {
+  Simulation run()
+}
 
 interface WeatherService {
   Weather getWeather()
   void setLocation(Location)
 }
-Model <-- WeatherService : sends results to
 
-interface MapService
+class Weather {
+  windSpeed: float
+  cloudCoverage: float
+}
 
+interface MapService {
+
+}
+
+' MVC
+Model "1" <-- "1" Controller : controller
+View "1..*" <-- "1" Model : views
+Simulator <-- Model : simulations
+
+' External Interface
+MapService "1" <-- "1" View : map
+WeatherService <-- Model : weather
+Rocket "1" <-- "1" Model : sendsInstructions
+Model "1" <-- "1" Rocket : rocket
+
+' Rocket
+Rocket "1" --> "1" Location : location
+Rocket "1" --> "1" Velocity: velocity
+Rocket "1" --> "1" Vector : location
+Rocket "1" --> "1" RocketState : state
+
+' Simulation
+Simulator "1" --> "0..*" Simulation
+Simulation "1" --> "1" Location : location
+Simulation "1" --> "1" Vector: vector
+Simulation "1" --> "1" Weather: weather
+
+' Model
+Model "1" <-- "1" Simulator : sends results to
+Model "1" <-- "1" WeatherService : getReadings
+
+' Weather
+WeatherService "1" --> "1" Location: location
+WeatherService "1" --> "1" Weather
+
+' Map
+MapService "1" --> "1" Location : location
 @enduml

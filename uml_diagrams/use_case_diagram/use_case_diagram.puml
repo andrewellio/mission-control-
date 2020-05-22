@@ -1,10 +1,5 @@
-@startuml
+@startuml use_case_diagram
 skinparam packageStyle rectangle
-
-skinparam usecase {
-	BackgroundColor<< Selected >> GreenYellow
-	BorderColor<< Selected >> Black
-}
 
 actor User
 
