@@ -543,74 +543,23 @@ We verify the _portability_ of the system using our automated pipeline. We run o
 We provide verification for the _correctness_ of the system through the testing framework. We follow the goal-directed design process and test driven development. Naturally our tests verify what we need, not what we expect. The functionality verified by each test is derived from the requirements definition. The requirements definition is derived from the user personas goals and the customers specifications. It is the primary focus of the testing framework to prove that the system does what it needs to. These tests are run after every iteration of the development. This ensures new changes do not have unintended side effects on the system meeting its requirements.
 
 #### Efficiency
-The _efficiency_ of the system is verified through test driven development. As previously mentioned, we write tests for what we need. These needs are specified in the requirements definition. Production code is written to pass these tests. And only those tests. So if a test does not exist for a feature. It will not be developed. Or put simply. If it is not a requirement of the system, it will not exist. This follows the goal-directed design process. As developers we do not let our own _cool_ features dilute the vision for the product.
+The _efficiency_ of the system is verified through test driven development. As previously mentioned, we write tests for what we need. These needs are specified in the requirements definition. Production code is written to pass these tests. And only those tests. So if a test does not exist for a feature. It will not be developed. Or put simply. If it is not a requirement of the system, it will not exist. This follows the goal-directed design process. As developers we do not let our own _cool_ features dilute the vision for the product. We verify the efficiency by monitoring the delay between external interfaces transmissions and our system.
 
 #### Learnability
 <!-- _Learnability_ depends on two things. The design on the interfaces; and, the clarity and simplicity of the user instructions. We meet the users' personas goals and business objectives. That's why we have chosen goal-oriented design. We use user personas and context scenarios to construct the requirements definition. That requirements definition is the base of the design framework. The system will have the user personas goals at the forefront of its design. An important user personas experience goals is _ease of use_. The goal-oriented design ensures the interface is easy to learn. -->
+The _learnability_ can be verified through prototype testing and thorough documentation procedures. We construct a prototype of the GUI. These are tested on users who have no previous experience with out system. We ask to them to complete tasks along the key path scenarios. The tests observe the users expectations of the system. They verify the usability of the interface objectively. To verify the learnability of the system we also provide thorough documentation of the code. This includes installation, testing and development instructions for any operating system. As well as comprehensive explanation for each method and class. We use the wiki to provide additional domain knowledge and justification behind design decisions. During the review of a user story, the team assesses the quality of documentation provided for a code contribution. If members of the team don't understand what the code does from its documentation. It will be revised until we do, then added to the master branch.
 
 #### Maintainability
-<!-- We derive _Maintainability_ from other attributes. _Readability_, _Extensibility_ and _Testability_. We discuss each of these attributes in detail later. A maintainable system is suitable for debugging, modification and extension. Given the size of the teams for this project, the system must be maintainable. Otherwise, the project will devolve into a monolith. With any future changes showing diminishing returns for the product. -->
+We can verify the _maintainability_ of the system through the testing framework. The testing framework provides an extensive reproducible capabilities for debugging. Gitlab issue boards provide a clear framework for documenting these bugs. Our system is open source. It is designed to be modified and extended. We can verify this through analysing UML diagrams generated from production code. Here we can view the coupling, cohesion and modularity of the code. Comparing the actual system architecture to the UML diagrams we had planned.
 
 #### Readability
-<!-- _Readability_ depends on a variety of factors. These include
-- the form of representation
-- programming style
-- consistency
-- readability of the implementation of programming languages
-- structureness of the system
-- the quality of the documentation
-- tools available for inspection
+The _readability_ of the system depends on a variety of attributes discussed in 3.7. We can verify the MVC framework by comparing UML generated from production code to our original UML diagrams. The programming style is verified through linting checks in the automated pipeline. These ensure the each commit containing production code is written in the same style. For example; indentation style, format of methods, commenting style, etc ... We verify redundancy in the code through adding static analysis to the automated pipeline. This checks for parts of code that can be simplified or could cause unintended side effects. Removing redundant code inherently makes the production code easier to understand. We verify when changes were introduced through the history of the repository stores on through VCS. This makes it easy to see where problematic changes were introduced and revert them.
 
-The programming style of the project will follow standard design principles and patterns. With a focus on convention over configuration. Given the system in a user interface. We adopt the MVC framework. That is the model, view, controller. We use interfaces for all communication with external systems. For example; we have a Weather Service, Map Service, and Simulation interfaces.
+#### Testability
+We use test driven development. This means that for all functionality, there is a test that verifies it. Our automated pipeline runs these tests before any branch can be merged with master. We also provide integration tests which use mock data to mimic the external interfaces our system must communicate with. The testing framework and VCS pipeline verify that out system is _testable_.
 
-To ensure the programming languages are readable, we use linting. A predefined style convention for a programming language. We integrate linting into the automated pipelines. If the code does not meet the style guidelines, the pipeline fails. This ensures that all we write production code using the same conventions. This maintains the readability of the programming languages code.
-
-Quality documentation for the entire code base is mandatory. The entire team reviews each of the merge requests before approving them. We review the functionality and documentation of the code. The contributor of the issue explains what the contribution does. We check if the documentation is easy to understand. Or if it even exists. If not the team does not approve the request. We revise the documentation and then reassess later. This process ensures that all production code is well documented.
-
-We use a variety of tools can be for inspection of the codebase. The automated pipeline provides test reports. They describe coverage, static analysis, and individual results. The Gitlabs version control system allows us to view the history of the project. We keep every version of the system. We can view each iteration on the repository. Any user can download and open the repository on an IDE of their choice with the `git clone` command. The project is open source. We use tools available to anyone. So there is no paywall required to inspect all aspects of the project. -->
-
-##### Reliability
-<!-- The probability that this system fulfils a function (determined by the specifications) for a specified number of input conditions in a specified time interval (assuming that hardware and input are free of errors).
-
-A software system can be seen as reliable if this test produces a low error rate (i.e., the probability that an error will occur in a specified time interval.)
-
-The error rate depends on the frequency of inputs and on the probability that an individual input will lead to an error. [sqa] -->
-
-##### Robustness
-<!-- Robustness reduced the impact of operational mistakes, erroneous input data, and hardware errors.
-
-A software system is robust if the consequences of an error in its operation, in the input, or in the hardware, in relation to application, are inversely proportional to the probability of the occurrence of this error in the given application.
-
-- Frequent errors (e.g. erroneous commands, typing errors) must be handled with particular care.
-
-- Less frequent errors (e.g. power failure) can be handled more laxly, bust still must no lead to irreversible consequence. [sqa] -->
-
-##### Testability
-<!-- Suitability for allowing the programmer to follow program execution (runtime behaviour under given conditions) and for debugging. The testability of a software system depends on its:
-- modularity
-- structuredness: System-dependent elements are collected in easily interchangeable program components.
-
-Modular, well-structured programs prove more suitable for systematic, stepwise testing than monolithic, unstructured programs.
-
-Testing tools and the possibility of formulating consistency conditions (assertions) in the source code reduce the testing effort and provide important prerequisites for the extensive, systematic testing of all system components. [sqa] -->
-
-##### Efficiency
-<!-- Ability of a software system to fulfil its purpose with the best possible utilization of all necessary resources (time, storage, transmission channels, and peripherals). -->
-
-##### Portability
-<!-- The ease with which a software system can be adapted to run on computers other than the one for which it was designed.
-
-The portability of a software depends on:
-- Degree of hardware independence
-- Implementation language
-- Extent of exploitation of specialized system functions
-- Hardware properties
-- Structuredness: System-dependent elements are collected in easily interchangeable program components. [sqa] -->
-
-##### Correctness
-<!-- The correctness of a software system refers to:
-- Agreement of program code with specifications
-- Independence of the actual application of the software system -->
+#### Extensibility
+We use interfaces to communicate between separate modules. This allows the testing framework to verify components work through integration testing. Mock data can be streamed through these interfaces, to check each component works as intended. This is how we verify that the system is _extensible_.
 
 #### 4.8 Physical and Environmental Requirements
 
