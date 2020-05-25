@@ -27,7 +27,13 @@ public class WebServiceImpl implements WebServiceInterface {
 		return "Hi," + clientName + ", this is WebService! (Your local weather finder)";
 	}
 
-	String result;
+	String temp;
+	String windS;
+	String windD;
+	String pressure;
+	String lon;
+	String lat;
+	
 	String url;
 	public void getHttpXmlWeather(String cityName, String countryName){
 		try {
@@ -49,8 +55,12 @@ public class WebServiceImpl implements WebServiceInterface {
 			NodeList errNodes = doc.getElementsByTagName("current");//Look at XML main element
 			if (errNodes.getLength() > 0) {
 				Element err = (Element)errNodes.item(0);//Default Listing inside current
-				result = "Temperature: "+((Element) err.getElementsByTagName("temperature").item(0)).getAttributeNode("value").getTextContent();
-				//Search for element temperature and choose the value attribute (option)
+				temp = "Temperature: "+((Element) err.getElementsByTagName("temperature").item(0)).getAttributeNode("value").getTextContent();
+				windS = "Wind Speed: "+((Element) err.getElementsByTagName("speed").item(0)).getAttributeNode("value").getTextContent();
+				windD = "Wind Direction: "+((Element) err.getElementsByTagName("direction").item(0)).getAttributeNode("code").getTextContent();
+				pressure = "Pressure: "+((Element) err.getElementsByTagName("pressure").item(0)).getAttributeNode("value").getTextContent();
+				lon = "Longitude: "+((Element) err.getElementsByTagName("coord").item(0)).getAttributeNode("lon").getTextContent();
+				lat = "Latitude: "+((Element) err.getElementsByTagName("coord").item(0)).getAttributeNode("lat").getTextContent();
 			} else {
 				// success
 			}
@@ -63,6 +73,12 @@ public class WebServiceImpl implements WebServiceInterface {
 	@Override
 	public String realTime(String cityName, String countryName) {
 		getHttpXmlWeather(cityName, countryName);
-		return "The real time temperature of "+ cityName +" in "+ countryName +" above is " + result + " degrees celsius";
+		return "The real time weather values of "+ cityName +" in "+ countryName +" above is: "
+				+ "\n" + temp + " degrees celsius " 
+				+ "\n"+ windS + " m/s "
+				+ "\n"+ windD + " (N/E/S/W) "
+				+ "\n"+ pressure + " hPa "
+				+ "\n"+ lon 
+				+ "\n"+ lat;
 	}
 }
