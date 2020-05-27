@@ -2,6 +2,10 @@
 [![pipeline status](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/badges/master/pipeline.svg)](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/commits/master)
 
 
+## Web application
+There are instructions for the web application in the README of the directory.
+[Web application](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/tree/master/web_application)
+
 ## Wiki
 [Project Wiki](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/home)
 
