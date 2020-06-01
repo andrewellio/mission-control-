@@ -20,3 +20,9 @@ rocket remains in bounds, provided the horizontal velocityat apogee is not too
 high. A possible extension to the mission control would use the current wind
 profile and the monte-carlo simulation to determine an upwind trajectory for the
 rocket to follow to minimise it’s landing distance from the launch site."*
+
+**Web Server Resource**
+
+This is a resource that is written in Java and uses Tomcat v6 to fetch and parse a XML HTTP URL from Openweather's API to report various weather conditions
+
+https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/tree/master/webserver_resource
