@@ -17,8 +17,7 @@
 
 
 
-
-
+# Safety Plans
 | **Risk** | **Safety Plan** |
 | ------ | ------ |
 | High Wind Speeds | cell |
