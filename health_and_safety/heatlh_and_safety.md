@@ -17,6 +17,8 @@
 
 
 
+##Safety Plans
+
 | **Risk** | **Safety Plan** |
 | ------ | ------ |
 | cell | cell |
