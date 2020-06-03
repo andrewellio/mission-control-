@@ -18,7 +18,7 @@
 
 ##Safety Plans
 | **Risk** | **Safety Plan** |
-| --- | --- |
+| --- | ---|
 | High Wind Speeds | |
 | Low Visibility | |
 | Combustion | |
