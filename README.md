@@ -6,6 +6,16 @@
 There are instructions for the web application in the README of the directory.
 [Web application](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/tree/master/web_application)
 
+## Web server
+This is a resource that is written in Java and uses Tomcat v6 to fetch and parse a XML HTTP URL from Openweather's API to report various weather conditions
+[Web server](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/tree/master/webserver_resource)
+
+## Balsamiq Interface Mockups
+These are mockupsthat showcase the design an clickable protypes for the mission control software vision.
+
+**First Iteration**
+[Resource](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Interface/Balsamiq%201st%20Iteration)
+
 ## Wiki
 [Project Wiki](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/home)
 
@@ -25,8 +35,3 @@ high. A possible extension to the mission control would use the current wind
 profile and the monte-carlo simulation to determine an upwind trajectory for the
 rocket to follow to minimise it’s landing distance from the launch site."*
 
-**Web Server Resource**
-
-This is a resource that is written in Java and uses Tomcat v6 to fetch and parse a XML HTTP URL from Openweather's API to report various weather conditions
-
-https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/tree/master/webserver_resource
