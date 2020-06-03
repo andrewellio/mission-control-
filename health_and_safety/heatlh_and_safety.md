@@ -29,7 +29,9 @@
 | Rocket Not Flying Straight | cell |
 | Unsuccessful Launch | cell |
 | Collision with Property and/or Persons | cell |
-
+| Eye Damage | cell |
+| Moderate to Severe Burns | cell |
+| Interference with Aerodome and/or Planes | cell |
 
 
 
