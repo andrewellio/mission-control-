@@ -17,10 +17,11 @@
 
 
 ##Safety Plans
-| **Risk** | **Safety Plan** |
+| header | header |
 | ------ | ------ |
-| High Wind Speeds | cell |
-| Low Visibility | cell | 
+| cell | cell |
+| cell | cell | 
+
 
 
 
