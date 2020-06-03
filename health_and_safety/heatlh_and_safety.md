@@ -16,7 +16,7 @@
 | Interference with Aerodrome and/or Planes | Technical | The data displayed to the user from the mission control system displaying incorrect data | If the data displayed to the user fails to tell the user about possible interference of a aerodome/aeroplane, then there's a chance that the rocket might collide with these objects and cause unfortunate events as well as damage to hardware of the rocket | Possible | Moderate | Medium | According to the CAA and the Model Rocketry guidelines, the rocket must not be launched into clouds or near aeroplanes \[1\]. It will also be beneficial to add a function to the mission control system which would detect things like aeroplanes and aerodomes so that it can tell the user that launch isn't imminent.| 
 
 
-##Safety Plans
+
 | header | header |
 | ------ | ------ |
 | cell | cell |
