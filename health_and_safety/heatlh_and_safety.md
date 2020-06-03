@@ -17,7 +17,7 @@
 
 
 
-| header | header |
+| **Risk** | **Safety Plan** |
 | ------ | ------ |
 | cell | cell |
 | cell | cell | 
