@@ -17,12 +17,18 @@
 
 
 
-##Safety Plans
+
 
 | **Risk** | **Safety Plan** |
 | ------ | ------ |
-| cell | cell |
-| cell | cell | 
+| High Wind Speeds | cell |
+| Low Visibility | cell |
+| Combustion | cell |
+| Explosion | cell |
+| Rocket Falling Over | cell |
+| Rocket Not Flying Straight | cell |
+| Unsuccessful Launch | cell |
+| Collision with Property and/or Persons | cell |
 
 
 
