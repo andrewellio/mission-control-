@@ -21,29 +21,8 @@
 | ------ | ------ |
 | High Wind Speeds | cell |
 | Low Visibility | cell | 
-| Combustion | cell |
-| Explosion | cell |
-| Rocket Falling Over | cell |
-| Rocket Not Flying Straight | cell |
-| Unsuccessful Launch | cell |
-| Collision with Property and/or Persons | cell |
-| Eye Damage | cell |
-| Moderate to Severe Burns | cell |
-| Inteference with Aerodome and/or Planes | cell |
 
-| **Risk** | **Safety Plan** |
-| --- | ---| ---|
-| High Wind Speeds | |
-| Low Visibility | |
-| Combustion | |
-| Explosion | |
-| Rocket Falling Over | |
-| Rocket Not Flying Straight | |
-| Unsuccessful Launch | |
-| Collision with Property and/or Persons | |
-| Eye Damage | |
-| Moderate to Severe Burns | |
-| Interference with Aerodome and/or Planes | |
+
 
 ## Appendices
 Risk Matrix  \[2\]
