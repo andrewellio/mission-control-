@@ -20,17 +20,17 @@
 # Safety Plans
 | **Risk** | **Safety Plan** |
 | ------ | ------ |
-| High Wind Speeds | cell |
-| Low Visibility | cell |
-| Combustion | cell |
-| Explosion | cell |
-| Rocket Falling Over | cell |
-| Rocket Not Flying Straight | cell |
-| Unsuccessful Launch | cell |
-| Collision with Property and/or Persons | cell |
-| Eye Damage | cell |
-| Moderate to Severe Burns | cell |
-| Interference with Aerodome and/or Planes | cell |
+| High Wind Speeds | The weather condition will be assessed through multiple sources prior to the launch. A judegment call will be made by the team based on the data available at the time. Launch will not take place during these conditions |
+| Low Visibility | If there is more than 50% cloud coverage or other objects obscuring view, less than 8km horizontal visibility, or it is night time. The launch will not take place. |
+| Combustion | The rocket will only launch if the launcher incorporates a blast defector device to prevent impinging on flammable materials. As a team, we will also check that the rocket includes a previously tested ignition scheme which has demonstrated capabiity of igniting all rocket motors intended for launch |
+| Explosion | The rocket will only launch if it has no flammable or explosive payload inside. This will prevent the rocket to enter into an explosive state. |
+| Rocket Falling Over | The rocket will only be launched if there is a recovery system such as a streamer or parachute to ensure that the rocket can return safely and undamaged once launched. Also it will be checked if the wadding in the rocket is fireproof, if not then the rocket will not be launched |
+| Rocket Not Flying Straight | Before launch, we will organise a plan to specify the positions of everyone involved in the launch. The stability of the rocket will also be checked before launch, and a warning will be made to possible spectators to spectating at a safe distance. |
+| Unsuccessful Launch | Before launch, there will be a high amount of testing done to ensure that launch is successful. This mean making sure there are no issues with the system which would cause the launch to fail. |
+| Collision with Property and/or Persons | A plan will be organised so that people involved in the launch are standing at a safe distance from the launcher. A warning will be made to any possible spectators so that they are spectating at a safe distance. The rocket will only be launched if there aren't any obstacles/targets in the way of launch, and that there is a recovery system within the rocket to prevent it to fall when fuel is run out. |
+| Eye Damage | Launchers will be placed so that the end of the launch rod is above eye level. Also people near the launch will be required to wear safety goggles. |
+| Moderate to Severe Burns | A plan will be set in place so that the people involved in the launch are at a safe distance. A warning will also be made to spectators so that they are spectating at a safe distance. Launch will not take place unless a raduis of at least 3m from the launcher is clear of brown grass, dry weeds or other easy to burn materials that are likely to be ignited by the exhaust of the rocket |
+| Interference with Aerodome and/or Planes | We will not launch the rocket into clouds and check for near aeroplanes to ensure that the rocket is launchable. The mission control system will also include a function which will detect things like areoplanes or areodomes so that we ensure with more certainty whether launch can take place or nor. |
 
 
 
