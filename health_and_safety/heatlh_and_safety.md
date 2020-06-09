@@ -30,7 +30,7 @@
 | Collision with Property and/or Persons | A plan will be organised so that people involved in the launch are standing at a safe distance from the launcher. A warning will be made to any possible spectators so that they are spectating at a safe distance. The rocket will only be launched if there aren't any obstacles/targets in the way of launch, and that there is a recovery system within the rocket to prevent it to fall when fuel is run out. |
 | Eye Damage | Launchers will be placed so that the end of the launch rod is above eye level. Also people near the launch will be required to wear safety goggles. |
 | Moderate to Severe Burns | A plan will be set in place so that the people involved in the launch are at a safe distance. A warning will also be made to spectators so that they are spectating at a safe distance. Launch will not take place unless a raduis of at least 3m from the launcher is clear of brown grass, dry weeds or other easy to burn materials that are likely to be ignited by the exhaust of the rocket |
-| Interference with Aerodome and/or Planes | We will not launch the rocket into clouds and check for near aeroplanes to ensure that the rocket is launchable. The mission control system will also include a function which will detect things like areoplanes or areodomes so that we ensure with more certainty whether launch can take place or nor. |
+| Interference with Aerodome and/or Planes | We will not launch the rocket into clouds and check for near aeroplanes to ensure that the rocket is launchable. The mission control system will also include a function which will detect things like areoplanes or areodomes so that we ensure with more certainty whether launch can take place or not. |
 
 
 
