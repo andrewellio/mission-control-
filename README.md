@@ -26,6 +26,9 @@ This aims to achieve clarity over the different states that our software program
 ## Wiki
 [Project Wiki](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/home)
 
+## JSON parser
+[JSON parser(JAVA)](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/tree/master/JSONparser)
+
 ## Brief
 
 *"The mission control will run on a laptop in the field and display data from
