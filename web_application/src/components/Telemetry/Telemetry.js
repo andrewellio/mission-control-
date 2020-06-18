@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactSpeedometer from "react-d3-speedometer"
 import "./Telemetry.css"
-// and just use it
 
 function Telemetry(props) {
   return (
@@ -25,5 +24,6 @@ function Telemetry(props) {
     </div>
   );
 }
+
 
 export default Telemetry;
