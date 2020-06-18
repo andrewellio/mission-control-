@@ -19,13 +19,6 @@ function Instructions() {
               </li>
               <li>
                 <b>
-                  <Link to="/Dashboard">Dashboard</Link>
-                </b>
-                <br/>
-                The Dasboard displays telemetry and location data of the Rocket. This information is passed using USB serial over <a href="https://en.wikipedia.org/wiki/LoRa">LoRa</a>. The software displays the current phase of the rocket.
-              </li>
-              <li>
-                <b>
                   <Link to="/Weather">Weather</Link></b>
                 <br/>
                 Use the <a href="https://openweathermap.org/">OpenWeatherMap</a> web service to view the current weather forecast for the area. Save and load forecasts for offline usage.
@@ -36,6 +29,13 @@ function Instructions() {
                 </b>
                 <br/>
                 Predict the expected landing trajectory with an external <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo</a> simulation. Data is exchanged through a JSON. The softwares communicate using a standardized protocol for Rocket telemetry.
+              </li>
+              <li>
+                <b>
+                  <Link to="/Dashboard">Dashboard</Link>
+                </b>
+                <br/>
+                The Dasboard displays telemetry and location data of the Rocket. This information is passed using USB serial over <a href="https://en.wikipedia.org/wiki/LoRa">LoRa</a>. The software displays the current phase of the rocket.
               </li>
             </ol>
           </div>

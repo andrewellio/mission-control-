@@ -19,7 +19,7 @@ function App() {
            <Instructions></Instructions>
          </Route>
          <Route path="/Weather">
-           <Simulation></Simulation>
+           <Weather></Weather>
          </Route>
          <Route path="/Simulation">
            <Simulation></Simulation>
