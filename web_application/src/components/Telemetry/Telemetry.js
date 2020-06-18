@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactSpeedometer from "react-d3-speedometer"
-import "./Telemetry.css"
+import ReactSpeedometer from "react-d3-speedometer";
+import "./Telemetry.css";
 
 function Telemetry(props) {
   return (
@@ -9,7 +9,7 @@ function Telemetry(props) {
         width={200}
         height={200}
         currentValueText="Velocity (m/s)"
-        value={props.value}
+        value={200}
         minValue={0}
         maxValue={500}
         segments={5}
