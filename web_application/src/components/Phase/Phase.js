@@ -7,7 +7,7 @@ function Phase() {
   return (
     <div className="Phase">
       <ProgressBar
-         percent={20}
+         percent={0}
          filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
        >
          <Step transition="scale">
