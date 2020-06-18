@@ -1,23 +1,13 @@
-html {
-  background-color: #2C2F33;
-  color: white;
-  font-size: calc(10px + 2vmin);
-}
-
-a {
-  text-decoration: none;
-}
-
-.App {
+.Landing {
   text-align: center;
 }
 
-.App-logo {
+.Landing-logo {
   height: 10vmin;
   pointer-events: none;
 }
 
-.App-header {
+.Landing-header {
   min-height: 15vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +15,7 @@ a {
   justify-content: center;
 }
 
-.App-body {
+.Landing-body {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -34,17 +24,17 @@ a {
   /* justify-content: center; */
 }
 
-.App-description {
+.Landing-description {
   max-width: 80vh;
   font-size: 14pt;
   text-align: left;
 }
 
-.App-link {
+.Landing-link {
   color: #61dafb;
 }
 
-.App-begin {
+.Landing-begin {
   padding: 10px;
   background-color: #FFFFFF;
   color: #23272A;
@@ -52,27 +42,27 @@ a {
   border-radius: 10px;
 }
 
-.App-begin:hover {
+.Landing-begin:hover {
   color: #FFFFFF;
   background-color: #23272A;
   transition: 100ms;
   transition: background-color 300ms;
 }
 
-.App-instructions {
+.Landing-instructions {
   padding: 10px;
   color: #99AAB5;
   width: 20%;
   border-radius: 10px;
 }
 
-.App-instructions:hover, .App-code:hover {
+.Landing-instructions:hover, .Landing-code:hover {
   color: #FFFFFF;
   background-color: #23272A;
   transition: background-color 300ms;
 }
 
-.App-code {
+.Landing-code {
   padding: 10px;
   color: #99AAB5;
   text-decoration: none;
@@ -82,12 +72,12 @@ a {
 
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .Landing-logo {
+    animation: Landing-logo-spin infinite 20s linear;
   }
 }
 
-@keyframes App-logo-spin {
+@keyframes Landing-logo-spin {
   from {
     transform: rotate(0deg);
   }
