@@ -174,6 +174,11 @@ This diagram shows the proposed UML class layout. Currently the diagram shows fo
 ### 4.3 Process
 ...
 
+This diagram shows the proposed state diagram for the main processes that the software and rocket will stage through. 
+It should be noted that the mission control software will primarly take place in the Pre-Launch section.
+
+![A image of a Tree View](uml_diagrams/state_diagram/MCS_State_Diagram.png)
+
 This diagram shows the proposed tree view for the main processes that the software package should interpret.
 
 ![A image of a Tree View](uml_diagrams/tree_view/tree-view.png)
