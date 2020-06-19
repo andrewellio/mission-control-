@@ -1,3 +1,20 @@
+html {
+  background-color: #2C2F33;
+  color: white;
+  font-size: calc(10px + 2vmin);
+}
+
+a {
+  text-decoration: none;
+  color: #99AAB5;
+}
+
+a:hover {
+  color: #FFFFFF;
+  background-color: #23272A;
+  transition: background-color 300ms;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
