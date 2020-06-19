@@ -3,11 +3,11 @@ import './Phase.css'
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 
-function Phase() {
+const Phase = props => {
   return (
     <div className="Phase">
       <ProgressBar
-         percent={0}
+         percent={props.phase}
          filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
        >
          <Step transition="scale">

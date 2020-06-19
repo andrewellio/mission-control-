@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Weather() {
+const Weather = props => {
   return (
     <div>
       <Link className="Instructions-back" to="/"><i className="material-icons">navigate_before</i></Link>

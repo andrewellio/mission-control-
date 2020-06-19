@@ -1,49 +1,38 @@
 import React from 'react'
 import './Comms.css'
 
-function Comms() {
+const Comms = props => {
   return (
     <div className="Comms">
       <h3>Comms</h3>
       <table>
         <tr>
-           <th>Time</th>
-           <th>Code</th>
-           <th>Message</th>
+          <th>Time</th>
+          <th>Code</th>
+          <th>Message</th>
         </tr>
-        <tr>
-           <td>T-00:10</td>
-           <td>200</td>
-           <td>Launch sequence initiated</td>
-        </tr>
-        <tr>
-           <td>T+00:00</td>
-           <td>200</td>
-           <td>Launch!</td>
-        </tr>
-        <tr>
-           <td>T+00:10</td>
-           <td>200</td>
-           <td>Engine Cut Off</td>
-        </tr>
-        <tr>
-           <td>T+00:20</td>
-           <td>200</td>
-           <td>Apogee</td>
-        </tr>
-        <tr>
-           <td>T+00:30</td>
-           <td>200</td>
-           <td>Ejection</td>
-        </tr>
-        <tr>
-           <td>T+00:40</td>
-           <td>200</td>
-           <td>Recovery</td>
-        </tr>
+        {
+          props.comms.map( i => {
+              return (
+                <tr>
+                  <td>{i.time}</td>
+                  <td>{i.code}</td>
+                  <td>{i.message}</td>
+                </tr>
+              )
+            }
+          )
+        }
       </table>
     </div>
   );
+}
+
+const log = comms => { comms.map(function (com) {
+      return (
+        <div>{com.time}</div>
+      )
+  })
 }
 
 export default Comms;
