@@ -1,7 +1,7 @@
 {
-  "velocity": "0",
-  "altitude": "0",
-  "phase": "100",
+  "velocity": "-30",
+  "altitude": "50",
+  "phase": "80",
   "wind": "0.093",
   "conditions": "clear",
   "position": {
@@ -34,11 +34,6 @@
       "time": "T+00:30",
       "code": "200",
       "message": "Ejection"
-    },
-    {
-      "time": "T+00:40",
-      "code": "200",
-      "message": "Recovery"
     }
   ]
 }

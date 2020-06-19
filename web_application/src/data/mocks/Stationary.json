@@ -1,0 +1,19 @@
+{
+  "velocity": "0",
+  "altitude": "0",
+  "phase": "0",
+  "wind": "0.093",
+  "conditions": "clear",
+  "position": {
+    "lat": "-41.2870",
+    "long": "174.7701"
+  },
+  "comms":
+  [
+    {
+      "time": "T-00:10",
+      "code": "200",
+      "message": "Launch sequence initiated"
+    }
+  ]
+}
