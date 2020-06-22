@@ -3,6 +3,11 @@ import './Phase.css'
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 
+/**
+ *  This is the rocket phase widget for the Dashboard.
+ *  It renders a progress bar to display the current phase.
+ *  We use labels, icons and color to mark that phase.
+ */
 const Phase = props => {
   return (
     <div className="Phase">
@@ -38,7 +43,7 @@ const Phase = props => {
          <Step transition="scale">
            {({ accomplished }) => (
              <div>
-               <h5>Ascent</h5>
+               <h5>ECO</h5>
                <img
                  style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
                  width="30"

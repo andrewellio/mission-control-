@@ -7,8 +7,14 @@ import WeatherWidget from '../WeatherWidget'
 import Comms from '../Comms'
 import './Dashboard.css'
 import { Link } from 'react-router-dom'
+
+// For testing purposes we mock the rocket data through a JSON file
 import data from '../../data/rocket.json'
 
+/**
+ *  This page presents real-time data from the rocket.
+ *  This includes Telemetry, positional and communications.
+ */
 function Dashboard() {
   return (
     <div className="Dashboard">

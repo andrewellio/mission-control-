@@ -8,6 +8,10 @@ import Instructions from './components/Instructions'
 import Simulation from './components/Simulation'
 import Weather from './components/Weather'
 
+/**
+ *  This page house the single page application (SPA).
+ *  We use the DOM to control routing between pages.
+ */
 function App() {
   return (
     <Router>

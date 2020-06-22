@@ -5,6 +5,11 @@ import { Icon } from "leaflet";
 import L from 'leaflet';
 import rocketIcon from '../Icons';
 
+/**
+ *  This is the map widget for the Dashboard page.
+ *  We use the open-source Leaflet JavaScript library.
+ *  This uses the OpenStreetMap API to render a topographical map.
+ */
 const MapPage = props => {
   const position = [props.position.lat, props.position.long]
   return (

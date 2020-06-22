@@ -1,5 +1,6 @@
 import L from 'leaflet';
 
+// A custom rocket icon for leaflet maps used on the Dashboard
 const rocketIcon = new L.Icon({
     iconUrl: require('../../assets/logo.png'),
     iconRetinaUrl: require('../../assets/logo.png'),

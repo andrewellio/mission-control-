@@ -4,7 +4,6 @@ import './Comms.css'
 const Comms = props => {
   return (
     <div className="Comms">
-      <h3>Comms</h3>
       <table>
         <tr>
           <th>Time</th>

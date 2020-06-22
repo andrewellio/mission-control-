@@ -2,6 +2,11 @@ import React from 'react';
 import ReactSpeedometer from "react-d3-speedometer";
 import "./Telemetry.css";
 
+/**
+ *  This is the Telemetry widget for the Dashboard.
+ *  It renders the current veloctiy and altitude.
+ *  These are passed to the component as parameters.
+ */
 const Telemetry = props => {
   return (
     <div className="Telemetry">

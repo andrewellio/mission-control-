@@ -6,6 +6,11 @@ const chartStyle = {
   height: 250,
 }
 
+/**
+ *  This is the Weather widget for the Dashboard.
+ *  It renders the wind speed/direction and cloud coverage
+ *  It uses weather conditions stored by the Weather page.
+ */
 const WeatherWidget = props => {
   return (
     <div className="WeatherWidget">

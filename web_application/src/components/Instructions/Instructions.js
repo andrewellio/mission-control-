@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Instructions.css'
 
+/**
+ * This page provides a high-level overview of each page.
+ * It is intended for first time users to gain their bearings.
+ */
 function Instructions() {
   return (
     <div>
