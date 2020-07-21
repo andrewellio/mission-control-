@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+/**
+ *  This page lets the user run Monte Carlo Simulation.
+ *  This communicates with an external software using JSON.
+ */
 function Simulation() {
   return (
     <div>

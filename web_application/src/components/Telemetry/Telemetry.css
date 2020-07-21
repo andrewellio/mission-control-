@@ -1,3 +1,15 @@
 .Telemetry {
-  padding-left: 20px;
+  /* padding-left: 20px; */
+}
+
+.Velocity {
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+}
+
+.Altitude {
+  position: absolute;
+  left: 250px;
+  bottom: -20px;
 }

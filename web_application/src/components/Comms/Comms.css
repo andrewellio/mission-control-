@@ -1,0 +1,22 @@
+.Comms {
+  position: absolute;
+  top: 47px;
+  left: 50%;
+  width: 45%;
+  height: 370px;
+
+  color: #FFFFFF;
+  background-color: #2C2F33;
+  background-color: #23272A;
+}
+
+.Comms h3 {
+  text-align: center;
+  padding: 10px;
+}
+
+table {
+  padding: 10px;
+  padding-top: 0px;
+  text-align: left;
+}
