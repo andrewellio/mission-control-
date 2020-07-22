@@ -12,6 +12,9 @@ const Weather = props => {
       <Link className="Instructions-back" to="/"><i className="material-icons">navigate_before</i></Link>
       <div className="Landing-body">
         <h1>Weather</h1>
+        <b>
+           <Link to="/SaveData">Save Data</Link>
+       </b>
       </div>
     </div>
   );
