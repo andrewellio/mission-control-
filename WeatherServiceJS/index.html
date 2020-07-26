@@ -35,8 +35,13 @@ function getJson(){
     var json = JSON.parse(Httpreq.responseText);
     
 
-    document.getElementById("weatherdata").innerHTML = "Current weather for: *" + json.name + "<br>Humidity: "+ json.main.humidity + "<br><br><br>*Approximate Location";
-
+    document.getElementById("weatherdata").innerHTML = "Current weather for: *" + json.name + 
+    "<br>Humidity: "+ json.main.humidity + "%" +
+    "<br>Wind Speed: "+ json.wind.speed + " m/s" +
+    "<br>Wind Direction: "+ (json.wind.deg*(Math.PI/180)) + " radians" +
+    "<br>Temperature: "+ json.main.temp + "°C" + //Beware of this symbol, may cause problems when packaging
+    "<br>Air Pressure: "+ json.main.pressure + " hPa" +
+    "<br><br><br>*Approximate Location"; 
 }
 
 
