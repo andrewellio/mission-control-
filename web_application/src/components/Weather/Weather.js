@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom'
  *  The user can save and load weather forecasts for offline usage.
  */
 
-
+// run npm install browserify-fs 
 function Weather() {
 
   function saveData() {
-    var fs = require('fs');
+    var fs = require('browserify-fs');
     var jsonData = '{"wellington":[{"weather":"sunny"},{"wind-speed":"5m/s"}]}';
 
     // parse json
@@ -19,7 +19,7 @@ function Weather() {
 
     var jsonString = JSON.stringify(jsonParsed);
 
-    fs.writeFile('weatherData.json', jsonString, done);
+    fs.writeFile('./weatherData.json', jsonString, done);
 
     function done(){
       console.log('data saved');
@@ -30,7 +30,7 @@ function Weather() {
   }
 
   function loadData() {
-    var fs = require('fs');
+    var fs = require('browserify-fs');
     var readData = fs.readFileSync('weatherData.json');//need a file name (json file)
     var data = JSON.parse(readData);
 
