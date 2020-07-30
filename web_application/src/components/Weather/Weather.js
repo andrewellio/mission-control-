@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './weather.css'
 
 /**
  *  This page can retrive the current weather conditions.
@@ -12,6 +11,7 @@ import './weather.css'
 function Weather() {
 
   function saveData() {
+    var fs = require('fs');
     var jsonData = '{"wellington":[{"weather":"sunny"},{"wind-speed":"5m/s"}]}';
 
     // parse json
@@ -19,7 +19,22 @@ function Weather() {
 
     var jsonString = JSON.stringify(jsonParsed);
 
+    fs.writeFile('weatherData.json', jsonString, done);
+
+    function done(){
+      console.log('data saved');
+    }
+
     console.log(jsonString);
+
+  }
+
+  function loadData() {
+    var fs = require('fs');
+    var readData = fs.readFileSync('weatherData.json');//need a file name (json file)
+    var data = JSON.parse(readData);
+
+    console.log('data');
 
   }
 
@@ -30,7 +45,11 @@ function Weather() {
         <h1>Weather</h1>
 
         <button onClick={saveData}>
-          Save
+          Save Data
+        </button>
+
+        <button onClick={loadData}>
+          Load Data
         </button>
 
       </div>
