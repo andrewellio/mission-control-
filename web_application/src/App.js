@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import Landing from "./components/Landing";
 import Instructions from "./components/Instructions";
@@ -15,20 +20,21 @@ function App() {
     <Router>
       <Switch>
         <Route path="/Dashboard">
-          <Dashboard></Dashboard>
+          <Dashboard />
         </Route>
         <Route path="/Instructions">
-          <Instructions></Instructions>
+          <Instructions />
         </Route>
         <Route path="/Weather">
-          <Weather></Weather>
+          <Weather />
         </Route>
         <Route path="/Simulation">
-          <Simulation></Simulation>
+          <Simulation />
         </Route>
-        <Route path="/">
-          <Landing></Landing>
+        <Route path="/Home">
+          <Landing />
         </Route>
+        <Redirect from="/" to="/Home" />
       </Switch>
     </Router>
   );

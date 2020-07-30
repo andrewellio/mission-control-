@@ -10,8 +10,8 @@ import { useRocket } from "../api/Rocket";
  *  This uses the OpenStreetMap API to render a topographical map.
  */
 const MapPage = () => {
-  const { data } = useRocket();
-  const position = [data.position.lat, data.position.long];
+  const [rocket] = useRocket();
+  const position = [rocket.position.lat, rocket.position.long];
   return (
     <Map center={position} zoom={16}>
       <TileLayer

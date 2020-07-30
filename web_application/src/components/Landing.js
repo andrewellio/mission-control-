@@ -39,7 +39,7 @@ function Landing() {
           rel="noopener noreferrer"
         >
           View Source
-          <i class="material-icons">code</i>
+          <i className="material-icons">code</i>
         </a>
       </footer>
     </div>

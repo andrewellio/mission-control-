@@ -3,17 +3,21 @@ import "./Phase.css";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 import { useRocket } from "../api/Rocket";
+import stationary from "../assets/stationary.png";
+import ejection from "../assets/ejection.png";
+import launch from "../assets/launch.png";
+import recovery from "../assets/recovery.png";
 /**
  *  This is the rocket phase widget for the Dashboard.
  *  It renders a progress bar to display the current phase.
  *  We use labels, icons and color to mark that phase.
  */
 const Phase = props => {
-  const { data } = useRocket();
+  const [rocket] = useRocket();
   return (
     <div className="Phase">
       <ProgressBar
-        percent={data.phase}
+        percent={rocket.phase}
         filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
       >
         <Step transition="scale">
@@ -23,7 +27,7 @@ const Phase = props => {
               <img
                 style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
                 width="30"
-                src="https://static.thenounproject.com/png/668288-200.png"
+                src={stationary}
                 alt="Stationary Rocket Icon"
               />
             </div>
@@ -37,7 +41,7 @@ const Phase = props => {
               <img
                 style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
                 width="30"
-                src="https://img.icons8.com/cotton/2x/launch-rocket.png"
+                src={launch}
                 alt="Launched Rocket Icon"
               />
             </div>
@@ -50,7 +54,7 @@ const Phase = props => {
               <img
                 style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
                 width="30"
-                src="https://img.icons8.com/cotton/2x/launch-rocket.png"
+                src={launch}
                 alt="ECO Rocket Icon"
               />
             </div>
@@ -63,7 +67,7 @@ const Phase = props => {
               <img
                 style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
                 width="30"
-                src="https://img.icons8.com/cotton/2x/launch-rocket.png"
+                src={launch}
                 alt="Epogee Rocket Icon"
               />
             </div>
@@ -76,7 +80,7 @@ const Phase = props => {
               <img
                 style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
                 width="30"
-                src="https://webstockreview.net/images/clipart-rocket-rocket-landing-4.png"
+                src={ejection}
                 alt="Ejection Rocket Icon"
               />
             </div>
@@ -89,7 +93,7 @@ const Phase = props => {
               <img
                 style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
                 width="30"
-                src="https://cdn0.iconfinder.com/data/icons/free-falcon-heavy-demo-mission-1/64/falcon-rocket-landing-land-512.png"
+                src={recovery}
                 alt="Recovery Rocket Icon"
               />
             </div>

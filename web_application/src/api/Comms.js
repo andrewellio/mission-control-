@@ -3,18 +3,20 @@ import "./Comms.css";
 import { useRocket } from "../api/Rocket";
 
 const Comms = () => {
-  const { data } = useRocket();
+  const [rocket] = useRocket();
   return (
     <div className="Comms">
       <table>
-        <tr>
-          <th>Time</th>
-          <th>Code</th>
-          <th>Message</th>
-        </tr>
-        {data.comms.map(i => (
-          <Log log={i} />
-        ))}
+        <thead>
+          <tr>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rocket.comms.map((log, i) => (
+            <Log key={i} log={log} />
+          ))}
+        </tbody>
       </table>
     </div>
   );
@@ -23,9 +25,7 @@ const Comms = () => {
 const Log = ({ log }) => {
   return (
     <tr>
-      <td>{log.time}</td>
-      <td>{log.code}</td>
-      <td>{log.message}</td>
+      <td>{log}</td>
     </tr>
   );
 };

@@ -9,7 +9,7 @@ import { useRocket } from "../api/Rocket";
  *  These are passed to the component as parameters.
  */
 const Telemetry = () => {
-  const { data } = useRocket();
+  const [rocket] = useRocket();
   return (
     <div className="Telemetry">
       <div className="Velocity">
@@ -17,7 +17,7 @@ const Telemetry = () => {
           width={200}
           height={200}
           currentValueText="Velocity (m/s)"
-          value={data.velocity}
+          value={Number(rocket.velocity)}
           minValue={0}
           maxValue={500}
           segments={5}
@@ -29,7 +29,7 @@ const Telemetry = () => {
           width={200}
           height={200}
           currentValueText="Altitude (m)"
-          value={data.altitude}
+          value={Number(rocket.altitude)}
           minValue={0}
           maxValue={500}
           segments={5}
