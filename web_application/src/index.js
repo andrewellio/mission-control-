@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import RocketProvider from "./api/Rocket";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <RocketProvider>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </RocketProvider>,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

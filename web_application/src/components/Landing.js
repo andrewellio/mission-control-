@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from '../../assets/logo.png';
-import './Landing.css'
+import React from "react";
+import logo from "../assets/logo.png";
+import "./Landing.css";
 import { Link } from "react-router-dom";
 
 /**
@@ -17,11 +17,19 @@ function Landing() {
       <div className="Landing-body">
         <h1>Mission Control</h1>
         <div className="Landing-description">
-          The mission control runs on a laptop in the field and displays data from the rocket. It can let the rocket know when the launch is immiment so the avionics can arm the parachute ejection charges. Mission control has a go / no go functionality, and integration with a Monte Carlo rocket simulation.
+          The mission control runs on a laptop in the field and displays data
+          from the rocket. It can let the rocket know when the launch is
+          immiment so the avionics can arm the parachute ejection charges.
+          Mission control has a go / no go functionality, and integration with a
+          Monte Carlo rocket simulation.
         </div>
         <p></p>
-        <Link className="Landing-begin" to="/Dashboard">Begin</Link>
-        <Link className="Landing-link Landing-instructions" to="/Instructions">Instructions</Link>
+        <Link className="Landing-begin" to="/Dashboard">
+          Begin
+        </Link>
+        <Link className="Landing-link Landing-instructions" to="/Instructions">
+          Instructions
+        </Link>
       </div>
       <footer>
         <a
