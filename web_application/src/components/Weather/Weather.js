@@ -30,7 +30,7 @@ function Weather() {
   }
 
   function loadData() {
-    var fs = require('browserify-fs');
+    var fs = require('fs');
     var readData = fs.readFileSync('weatherData.json');//need a file name (json file)
     var data = JSON.parse(readData);
 
@@ -47,6 +47,8 @@ function Weather() {
         <button onClick={saveData}>
           Save Data
         </button>
+
+        <p></p>
 
         <button onClick={loadData}>
           Load Data
