@@ -1,15 +1,12 @@
 import React from "react";
-import MapPage from "./Map";
-import Telemetry from "./Telemetry";
-import Phase from "./Phase";
-import Time from "./Time";
-import WeatherWidget from "./WeatherWidget";
-import Comms from "./Comms";
+import MapPage from "../api/Map";
+import Telemetry from "../api/Telemetry";
+import Phase from "../api/Phase";
+import Time from "../api/Time";
+import WeatherWidget from "../api/WeatherWidget";
+import Comms from "../api/Comms";
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
-
-// For testing purposes we mock the rocket data through a JSON file
-import data from "../data/rocket.json";
 
 /**
  *  This page presents real-time data from the rocket.
