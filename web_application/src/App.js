@@ -7,7 +7,6 @@ import Telemetry from './components/Telemetry'
 import Instructions from './components/Instructions'
 import Simulation from './components/Simulation'
 import Weather from './components/Weather'
-import SaveData from './components/saveData'
 
 /**
  *  This page house the single page application (SPA).
@@ -31,10 +30,6 @@ function App() {
 
          <Route path="/Simulation">
            <Simulation></Simulation>
-         </Route>
-
-         <Route path="/SaveData">
-           <SaveData></SaveData>
          </Route>
 
 
