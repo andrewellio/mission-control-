@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './Weather.css'
 
 /**
  *  This page can retrive the current weather conditions.
@@ -11,22 +12,19 @@ import { Link } from 'react-router-dom'
 function Weather() {
 
   function saveData() {
-    var fs = require('browserify-fs');
-    var jsonData = '{"wellington":[{"weather":"sunny"},{"wind-speed":"5m/s"}]}';
+    var download = require('downloadjs');
 
-    // parse json
-    var jsonParsed = JSON.parse(jsonData);
+    var URL = "https://api.openweathermap.org/data/2.5/weather?lat=-41&lon=174&APPID=9dbce15b12f75333f8f274f51793d0ff&mode=json&units=metric" //mode=html should be used for dashboard
 
-    var jsonString = JSON.stringify(jsonParsed);
+    var Httpreq = new XMLHttpRequest(); 
 
-    fs.writeFile('./weatherData.json', jsonString, done);
+    Httpreq.open("GET",URL,false);
+    Httpreq.send(null);
+  
+    var jsonData = JSON.parse(Httpreq.responseText);
+    var jsonString = JSON.stringify(jsonData);
 
-    function done(){
-      console.log('data saved');
-    }
-
-    console.log(jsonString);
-
+    download(jsonString, "WeatherData.json", "text/json");
   }
 
   function loadData() {
@@ -44,13 +42,11 @@ function Weather() {
       <div className="Landing-body">
         <h1>Weather</h1>
 
-        <button onClick={saveData}>
+        <button class="button" onClick={saveData}>
           Save Data
         </button>
 
-        <p></p>
-
-        <button onClick={loadData}>
+        <button class="button" onClick={loadData}>
           Load Data
         </button>
 
