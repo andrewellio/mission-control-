@@ -29,11 +29,9 @@ const WeatherWidget = () => {
         style={chartStyle}
       />
       <div className="Coverage">
-        {rocket.conditions === "clear" ? (
-          <img src={clear} alt="Good Weather Icon" />
-        ) : (
-          <img src={danger} alt="Dangerous Weather Icon" />
-        )}
+        <embed
+          src={`https://api.openweathermap.org/data/2.5/weather?lat=${rocket.position.lat}&lon=${rocket.position.long}&APPID=9dbce15b12f75333f8f274f51793d0ff&mode=html&units=metric`}
+        ></embed>
       </div>
     </div>
   );

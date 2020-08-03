@@ -5,11 +5,11 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
-import Landing from "./components/Landing";
-import Instructions from "./components/Instructions";
-import Simulation from "./components/Simulation";
-import Weather from "./components/Weather";
+import Dashboard from "./pages/Dashboard";
+import Landing from "./pages/Landing";
+import Instructions from "./pages/Instructions";
+import Simulation from "./pages/Simulation";
+import Weather from "./pages/Weather";
 
 /**
  *  This page house the single page application (SPA).

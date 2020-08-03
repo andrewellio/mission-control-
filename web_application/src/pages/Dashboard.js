@@ -1,10 +1,10 @@
 import React from "react";
-import MapPage from "../api/Map";
-import Telemetry from "../api/Telemetry";
-import Phase from "../api/Phase";
-import Time from "../api/Time";
-import WeatherWidget from "../api/WeatherWidget";
-import Comms from "../api/Comms";
+import MapPage from "../components/Map";
+import Telemetry from "../components/Telemetry";
+import Phase from "../components/Phase";
+import Time from "../components/Time";
+import WeatherWidget from "../components/WeatherWidget";
+import Comms from "../components/Comms";
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
 
