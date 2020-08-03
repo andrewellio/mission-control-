@@ -3,12 +3,15 @@ import './Map.css'
 import { Map, Marker, Popup, TileLayer, Circle} from "react-leaflet";
 import { Icon } from "leaflet";
 import L from 'leaflet';
-import * as parkData from "./data/test.json";
 import rocketIcon from '../Icons';
 
-const position = [-41.2870, 174.7701];
-
-export default function MapPage() {
+/**
+ *  This is the map widget for the Dashboard page.
+ *  We use the open-source Leaflet JavaScript library.
+ *  This uses the OpenStreetMap API to render a topographical map.
+ */
+const MapPage = props => {
+  const position = [props.position.lat, props.position.long]
   return (
     <Map center={position} zoom={16}>
       <TileLayer
@@ -36,3 +39,5 @@ export default function MapPage() {
     </Map>
   );
 }
+
+export default MapPage;

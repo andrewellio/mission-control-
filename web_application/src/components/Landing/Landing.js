@@ -3,6 +3,11 @@ import logo from '../../assets/logo.png';
 import './Landing.css'
 import { Link } from "react-router-dom";
 
+/**
+ *  This is the initial page the user is greeted with.
+ *  It offers instructions for beginners, and;
+ *  a link to the repository for technical users.
+ */
 function Landing() {
   return (
     <div className="Landing">

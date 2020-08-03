@@ -8,6 +8,10 @@ import Instructions from './components/Instructions'
 import Simulation from './components/Simulation'
 import Weather from './components/Weather'
 
+/**
+ *  This page house the single page application (SPA).
+ *  We use the DOM to control routing between pages.
+ */
 function App() {
   return (
     <Router>
@@ -15,18 +19,24 @@ function App() {
          <Route path="/Dashboard">
            <Dashboard></Dashboard>
          </Route>
+
          <Route path="/Instructions">
            <Instructions></Instructions>
          </Route>
+
          <Route path="/Weather">
            <Weather></Weather>
          </Route>
+
          <Route path="/Simulation">
            <Simulation></Simulation>
          </Route>
+
+
          <Route path="/">
            <Landing></Landing>
          </Route>
+
        </Switch>
    </Router>
   );

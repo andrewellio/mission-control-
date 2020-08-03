@@ -1,0 +1,39 @@
+{
+  "velocity": "-30",
+  "altitude": "50",
+  "phase": "80",
+  "wind": "0.093",
+  "conditions": "clear",
+  "position": {
+    "lat": "-41.2870",
+    "long": "174.7701"
+  },
+  "comms":
+  [
+    {
+      "time": "T-00:10",
+      "code": "200",
+      "message": "Launch sequence initiated"
+    },
+    {
+      "time": "T+00:00",
+      "code": "200",
+      "message": "Launch!"
+    },
+    {
+      "time": "T+00:10",
+      "code": "200",
+      "message": "Engine Cut Off"
+    },
+    {
+      "time": "T+00:20",
+      "code": "200",
+      "message": "Epogee"
+    },
+    {
+      "time": "T+00:30",
+      "code": "200",
+      "message": "Ejection"
+    }
+  ]
+}
