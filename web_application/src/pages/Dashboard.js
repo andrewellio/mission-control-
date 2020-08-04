@@ -15,7 +15,7 @@ import Reader from "../api/Reader";
  *  This page presents real-time data from the rocket.
  *  This includes Telemetry, positional and communications.
  */
-function Dashboard() {
+const Dashboard = () => {
   return (
     <div className="Dashboard">
       <Reader />
@@ -30,6 +30,6 @@ function Dashboard() {
       <Comms />
     </div>
   );
-}
+};
 
 export default Dashboard;

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
  *  It offers instructions for beginners, and;
  *  a link to the repository for technical users.
  */
-function Landing() {
+const Landing = () => {
   return (
     <div className="Landing">
       <header className="Landing-header">
@@ -44,6 +44,6 @@ function Landing() {
       </footer>
     </div>
   );
-}
+};
 
 export default Landing;

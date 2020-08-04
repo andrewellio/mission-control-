@@ -6,7 +6,7 @@ import "./Instructions.css";
  * This page provides a high-level overview of each page.
  * It is intended for first time users to gain their bearings.
  */
-function Instructions() {
+const Instructions = () => {
   return (
     <div>
       <Link className="Instructions-back" to="/">
@@ -66,6 +66,6 @@ function Instructions() {
       </div>
     </div>
   );
-}
+};
 
 export default Instructions;

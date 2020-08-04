@@ -8,7 +8,7 @@ import "./Time.css";
  *  'T-' represents time until launch
  *  'T+' represents time after the launch
  */
-function Time() {
+const Time = () => {
   return (
     <div className="Timer">
       <Timer initialTime={0} timeToUpdate={10} startImmediately={true}>
@@ -23,6 +23,6 @@ function Time() {
       </Timer>
     </div>
   );
-}
+};
 
 export default Time;
