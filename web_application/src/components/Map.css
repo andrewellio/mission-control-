@@ -1,0 +1,14 @@
+.leaflet-container {
+  margin: 50px;
+  margin-top: 0px;
+  height: 80vh;
+  min-height: 15vh;
+  max-height: 60vh;
+  min-width: 15vh;
+  max-width: 90vh;
+}
+
+.leaflet-div-icon {
+  background: transparent;
+  border-style: none;
+}

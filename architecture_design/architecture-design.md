@@ -159,9 +159,20 @@ As appropriate you should include the following viewpoints:
 Each architectural view should include at least one architectural model. If architectural models are shared across views, refer back to the first occurrence of that model in your document, rather than including a separate section for the architectural models.
 
 ### 4.1 Logical
-...
-<!-- Images have been written in this format so they will update if they change. However the exact filenames and locatins must stay the same -->
 
+The primary concern with a logical view is to show the functionality that a system provides. Typically, UML diagrams are used to represent the logical view of a program as they are able to be 
+displayed through many depictions, for example, class and state diagrams. 
+
+A UML diagram has the purpose of visually representing the system, typically using boxes and arrows to display relationships between the different entities within a system. The boxes of a UML 
+diagram are used to show the different functional components of a system, such as the classes, enums and interfaces. The arrows portray the different relationships between the components of the
+system. 
+
+A UML class diagram is the most common way of portraying a software system's different classes and their attributes. A class diagram shows each class within a software system and how they relate 
+to other different classes. Each box within a class diagram represents a class and their different attributes/behaviours. The arrows of a class diagram represent the relationship between two 
+different classes of a system. Although the information given by the arrows of a class diagram convey useful information, they have a tendency to be imprecise when it comes to explaining, in 
+depth, the specificity of the arrow's meaning.
+
+<!-- Images have been written in this format so they will update if they change. However the exact filenames and locations must stay the same -->
 **Class Diagram**
 
 This diagram shows the proposed UML class layout. Currently the diagram shows four classes (C), one enum (E) and three interfaces (I).
@@ -172,7 +183,18 @@ This diagram shows the proposed UML class layout. Currently the diagram shows fo
 ...
 
 ### 4.3 Process
-...
+
+A process is defined as 'a series of actions or steps taken in order to achieve a particular end.' It is important to know the different processes of a system as it helps create a better 
+understanding of how the system works together and what is needed in order for the system to be relatively functional. If the understanding of a system's processes is thorough enough, there is 
+potential to automate said processes as this would improve the efficiency of a system.  
+
+The process architecture of a system should, at the minimum, show how a system works as a single unit. It should show how the different processes integrate with one another and
+outline what is going on for each of those processes. 
+
+This diagram shows the proposed state diagram for the main processes that the software and rocket will stage through. 
+It should be noted that the mission control software will primarly take place in the Pre-Launch section.
+
+![A image of a Tree View](uml_diagrams/state_diagram/MCS_State_Diagram.png)
 
 This diagram shows the proposed tree view for the main processes that the software package should interpret.
 
@@ -180,9 +202,20 @@ This diagram shows the proposed tree view for the main processes that the softwa
 
 ### 4.4 Physical 
 ...
-
+  
 ### 4.5 Scenarios
-...
+
+Scenarios are essentially brief explanations of expected system use cases for the user and developers. Scenarios seek to provide insight to how the system reacts to different use contexts. 
+In essence, scenarios should cover all the different expected ways that a user could interact with a system. 
+
+Typically, a UML use case diagram is used to represent the different scenarios that a system has. Use case diagrams aim to show what different classes a user may have access to whilst 
+using the system. They are a basic representation of how the user and system interact with one another and as a result, a weakness is that it is not able to show the order in which steps 
+are taken to reach certain use cases. 
+
+A UML use case diagram usually includes actors, associations, use cases and a system boundary. Actors represent the different users that can interact with a system, be it a user or developer. 
+Typically shown through a figure of sorts e.g. stick figure. Associations are the connections between the user and different use cases. These are usually represented by arrows pointing from
+the actor to the arrow. Use cases, as touched on above, are the different ways that one can interact with the system. Use cases are usually expressed as a bubble/ellipse. The system boundary 
+is used to divide the user and the system. When an association passes through the system boundary, we know that the user is interacting with the system. Usually represented as a box around the use cases. 
 
 This diagram shows the different classes and what the user may have access to.
 
@@ -253,6 +286,21 @@ We will follow the following website [2] as a guide to conduct procedures to mak
 Safety Plans may be required for some projects, depending on project requirements.
 
 
+| **Risk** | **Safety Plan** |
+| ------ | ------ |
+| High Wind Speeds | The weather condition will be assessed through multiple sources prior to the launch. A judegment call will be made by the team based on the data available at the time. Launch will not take place during these conditions |
+| Low Visibility | If there is more than 50% cloud coverage or other objects obscuring view, less than 8km horizontal visibility, or it is night time. The launch will not take place. |
+| Combustion | The rocket will only launch if the launcher incorporates a blast defector device to prevent impinging on flammable materials. As a team, we will also check that the rocket includes a previously tested ignition scheme which has demonstrated capabiity of igniting all rocket motors intended for launch |
+| Explosion | The rocket will only launch if it has no flammable or explosive payload inside. This will prevent the rocket to enter into an explosive state. |
+| Rocket Falling Over | The rocket will only be launched if there is a recovery system such as a streamer or parachute to ensure that the rocket can return safely and undamaged once launched. Also it will be checked if the wadding in the rocket is fireproof, if not then the rocket will not be launched |
+| Rocket Not Flying Straight | Before launch, we will organise a plan to specify the positions of everyone involved in the launch. The stability of the rocket will also be checked before launch, and a warning will be made to possible spectators to spectating at a safe distance. |
+| Unsuccessful Launch | Before launch, there will be a high amount of testing done to ensure that launch is successful. This means making sure there are no issues with the system which would cause the launch to fail. |
+| Collision with Property and/or Persons | A plan will be organised so that people involved in the launch are standing at a safe distance from the launcher. A warning will be made to any possible spectators so that they are spectating at a safe distance. The rocket will only be launched if there are not any obstacles/targets in the way of launch, and that there is a recovery system within the rocket to prevent it to fall when fuel is run out. |
+| Eye Damage | Launchers will be placed so that the end of the launch rod is above eye level. Also people near the launch will be required to wear safety goggles. |
+| Moderate to Severe Burns | A plan will be set in place so that the people involved in the launch are at a safe distance. A warning will also be made to spectators so that they are spectating at a safe distance. Launch will not take place unless a raduis of at least 3m from the launcher is clear of brown grass, dry weeds or other easy to burn materials that are likely to be ignited by the exhaust of the rocket |
+| Interference with Aerodome and/or Planes | We will not launch the rocket into clouds and check for near aeroplanes to ensure that the rocket is launchable. The mission control system will also include a function which will detect things like areoplanes or aeroodromes so that we ensure with more certainty whether launch can take place or not. |
+
+
 ## 6. Appendices
 
 ### 6.1 Assumptions and dependencies 
@@ -285,8 +333,9 @@ Below is a list of the assumptions for this project listed in ascending priority
 | Binke Xu |  |
 | Sandy (Alexander Saunders) |  |
 | Jesse Wood | 4.1, 4.3, 4.5, 6.1, 6.2|
-| Marcus Rathod |  |
-| Mason Yi |  |
+| Mason Yi | 4.1, 4.3, 4.5 |
+| Marcus Rathod | 5.4, 5.4.1 |
+
 
 ---
 

@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.png';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Landing from "./pages/Landing";
+import Instructions from "./pages/Instructions";
+import Simulation from "./pages/Simulation";
+import Weather from "./pages/Weather";
 
+/**
+ *  This page house the single page application (SPA).
+ *  We use the DOM to control routing between pages.
+ */
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Mission Control</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          A template <code>Mission-Control-System</code>
-        </p>
-        <a
-          className="App-link"
-          href="https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Repository
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/Dashboard">
+          <Dashboard />
+        </Route>
+        <Route path="/Instructions">
+          <Instructions />
+        </Route>
+        <Route path="/Weather">
+          <Weather />
+        </Route>
+        <Route path="/Simulation">
+          <Simulation />
+        </Route>
+        <Route path="/Home">
+          <Landing />
+        </Route>
+        <Redirect from="/" to="/Home" />
+      </Switch>
+    </Router>
   );
 }
 
