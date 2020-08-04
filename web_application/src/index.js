@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import RocketProvider from "./api/Rocket";
+import WeatherProvider from "./api/Weather";
 
 ReactDOM.render(
-  <RocketProvider>
-    <App />
-  </RocketProvider>,
+  <WeatherProvider>
+    <RocketProvider>
+      <App />
+    </RocketProvider>
+  </WeatherProvider>,
   document.getElementById("root")
 );
 

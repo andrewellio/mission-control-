@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useWeather } from "../api/Weather";
 import "./Weather.css";
 
 /**
@@ -9,100 +10,74 @@ import "./Weather.css";
  */
 
 // run npm install browserify-fs
-function Weather() {
-  function getJson() {
-    document.getElementById("weatherdata").style.border = "thin dotted white";
+const Weather = () => {
+  const [coordinates, setCoordinates] = useState({ lat: 0, long: 0 });
+  const [results, setResults] = useState(null);
+  const [get, save, load] = useWeather();
 
-    var lat = document.getElementById("latId").value;
-    var lon = document.getElementById("lonId").value;
+  const getJson = async () => {
+    const json = await get(coordinates.lat, coordinates.long);
+    setResults(json);
+  };
 
-    var URL =
-      "https://api.openweathermap.org/data/2.5/weather?lat=" +
-      lat +
-      "&lon=" +
-      lon +
-      "&APPID=9dbce15b12f75333f8f274f51793d0ff&mode=json&units=metric"; //mode=html should be used for dashboard
+  const saveData = async () => {
+    save(results);
+  };
 
-    var Httpreq = new XMLHttpRequest();
+  const loadData = async () => {
+    load();
+  };
 
-    Httpreq.open("GET", URL, false);
-    Httpreq.send(null);
+  const setLatitude = event => {
+    const newLat = event.target.value;
+    const newCoordinates = { lat: newLat, long: coordinates.long };
+    setCoordinates(newCoordinates);
+  };
 
-    var json = JSON.parse(Httpreq.responseText);
-
-    document.getElementById("weatherdata").innerHTML =
-      "Current weather for: *" +
-      json.name +
-      "<br>Humidity: " +
-      json.main.humidity +
-      "%" +
-      "<br>Wind Speed: " +
-      json.wind.speed +
-      " m/s" +
-      "<br>Wind Direction: " +
-      json.wind.deg * (Math.PI / 180) +
-      " radians" +
-      "<br>Temperature: " +
-      json.main.temp +
-      "°C" + //Beware of this symbol, may cause problems when packaging
-      "<br>Air Pressure: " +
-      json.main.pressure +
-      " hPa" +
-      "<br><br><br>*Approximate Location";
-  }
-
-  function saveData() {
-    var download = require("downloadjs");
-
-    var URL =
-      "https://api.openweathermap.org/data/2.5/weather?lat=-41&lon=174&APPID=9dbce15b12f75333f8f274f51793d0ff&mode=json&units=metric"; //mode=html should be used for dashboard
-
-    var Httpreq = new XMLHttpRequest();
-
-    Httpreq.open("GET", URL, false);
-    Httpreq.send(null);
-
-    var jsonData = JSON.parse(Httpreq.responseText);
-    var jsonString = JSON.stringify(jsonData);
-
-    download(jsonString, "WeatherData.json", "text/json");
-  }
-
-  function loadData() {
-    var fs = require("fs");
-    var readData = fs.readFileSync("weatherData.json"); //need a file name (json file)
-    var data = JSON.parse(readData);
-    console.log(data);
-  }
+  const setLongitude = event => {
+    const newLong = event.target.value;
+    const newCoordinates = { lat: coordinates.lat, long: newLong };
+    setCoordinates(newCoordinates);
+  };
 
   return (
-    <div>
+    <>
       <Link className="Instructions-back" to="/">
         <i className="material-icons">navigate_before</i>
       </Link>
       <div className="Landing-body">
         <h1>Weather</h1>
-        <document>
+        {results === null ? (
           <p id="weatherdata">Please enter the required fields below</p>
-
-          <label for="space"> </label>
-          <br></br>
-
-          <label for="latValue">Latitude:</label>
-          <br></br>
-          <input type="int" placeholder="e.g. -41.2769" id="latId"></input>
-          <br></br>
-
-          <label for="space"> </label>
-          <br></br>
-
-          <label for="longValue">Longitude:</label>
-          <br></br>
-          <input type="int" placeholder="e.g. 174.7731" id="lonId"></input>
-        </document>
+        ) : (
+          <Result json={results} />
+        )}
+        <label for="space"> </label>
+        <br />
+        <label for="latValue">Latitude:</label>
+        <br />
+        <input
+          type="int"
+          placeholder="e.g. -41.2769"
+          id="latId"
+          value={coordinates.lat}
+          onChange={setLatitude}
+        />
+        <br />
+        <label for="space"> </label>
+        <br />
+        <label for="longValue">Longitude:</label>
+        <br />
+        <input
+          type="int"
+          placeholder="e.g. 174.7731"
+          id="lonId"
+          value={coordinates.long}
+          onChange={setLongitude}
+        />
         &nbsp;
-        <button type="button" id="weatherButton" onClick={getJson}>
-          Get Weather Data
+        <button class="button" id="weatherButton" onClick={getJson}>
+          Get Data
         </button>
         <button class="button" onClick={saveData}>
           Save Data
@@ -111,8 +86,41 @@ function Weather() {
           Load Data
         </button>
       </div>
+    </>
+  );
+};
+
+const Result = ({ json }) => {
+  return (
+    <div style={{ border: "thin dotted white" }}>
+      <table>
+        <tr>
+          <th>Current weather for: </th>
+          <td>{json.name}</td>
+        </tr>
+        <tr>
+          <th>Humidity:</th>
+          <td>{json.main.humidity}</td>
+        </tr>
+        <tr>
+          <th>Wind Speed:</th>
+          <td>{json.wind.speed} m/s</td>
+        </tr>
+        <tr>
+          <th>Wind Direction: </th>
+          <td>{json.wind.deg * (Math.PI / 180)} radians</td>
+        </tr>
+        <tr>
+          <th>Temperature: </th>
+          <td>{json.main.temp} radians</td>
+        </tr>
+        <tr>
+          <th>Air Pressure: </th>
+          <td>{json.main.pressure} radians</td>
+        </tr>
+      </table>
     </div>
   );
-}
+};
 
 export default Weather;
