@@ -100,7 +100,7 @@ const Result = ({ json }) => {
         </tr>
         <tr>
           <th>Humidity:</th>
-          <td>{json.main.humidity}</td>
+          <td>{json.main.humidity} % </td>
         </tr>
         <tr>
           <th>Wind Speed:</th>
@@ -112,11 +112,11 @@ const Result = ({ json }) => {
         </tr>
         <tr>
           <th>Temperature: </th>
-          <td>{json.main.temp} radians</td>
+          <td>{json.main.temp} degrees celsius</td>
         </tr>
         <tr>
           <th>Air Pressure: </th>
-          <td>{json.main.pressure} radians</td>
+          <td>{json.main.pressure} hPa</td>
         </tr>
       </table>
     </div>

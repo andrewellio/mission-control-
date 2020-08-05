@@ -1,5 +1,5 @@
 const weather = require("./Weather");
 
-test("Fake test", () => {
+test("Testing Jest", () => {
   expect(true).toBeTruthy();
 });
