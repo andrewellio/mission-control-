@@ -380,6 +380,20 @@ Wherever possible (especially systemic requirements) you should indicate testabl
 - Simulation
   - valid XML / JSON files parsed
  -->
+ 
+ External interfaces are anything that is required by the system to work that is not the software. For our system, the external interfaces required are:
+ - The laptop that the software is going to be run on.
+ - The OpenWeather service API.
+ - The simulation interface from the simulation team.
+
+The laptop is the proprietary software that our system requires to run the software. The laptop will be used on the field with the software operator, displaying the software system. It must be noted, however, that
+in order to use react, Internet Explorer must be at least version 9 to run the full functionality. All other browsers will be able to use react with no problems. 
+
+The OpenWeather API service is another external interface that we require for functionality of the software system. Our software uses the OpenWeather API to gather information about the weather of a certain set of 
+coordinates. OpenWeather's service is online and thus requires an internet connection to be used. 
+
+The simulation interface is what we will be trying to gather information for. The simulation team will provide valid XML/JSON files that our software must parse in order to gather information about the current weather
+state. 
 
 #### 4.2 Functions
 
@@ -635,7 +649,7 @@ Below is a list of the assumptions for this project listed in ascending priority
 | Sandy (Alexander Saunders) | 5.3 |
 | Jesse Wood | 3.6, 3.7, 3.8, 4.6, 4.7, 6.1, 6.2 |
 | Marcus Rathod | 3.1, 3.3, 5.4, 5.4.1 |
-| Mason Yi | 3.1, 3.2, 3.3, 3.8 |
+| Mason Yi | 3.1, 3.2, 3.3, 3.8, 4.1 |
 
 ---
 
