@@ -394,6 +394,9 @@ Our testing framework covers what we need.
   - We write the tests first, then the production code which provides that functionality
   - generate test coverage reports, e.g., 80% of the class XYZ has been tested
 -->
+All necessary modules and code in Mission control software should be packed together. This will ensure users don`t have to install any additional component on their device and avoid software function Insufficiency.
+Because the Internet must be used to obtain weather data to simulate the fight, so we assume that the user`s device has internet connection to get weather data, and we will also pre-download weather data in case if there is no internet connection.
+We have many separate branches for different functionality of the software. Before we merge each branch to the master branch, we need every team member to review the code and run it to make sure it`s meet the requirement of the function, also when merge code to master branch, the code must pass CI/CD pipeline.
 
 #### 4.3 Usability Requirements
 
