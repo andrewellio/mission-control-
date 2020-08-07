@@ -504,6 +504,12 @@ We specify interfaces to communicate between separate modules. This allows the t
 - links to relevant documents on the site
 - Perhaps a EULA - or suggestions for new users
  -->
+ 
+The physical requirements will make sure that the mission control system will no issues in terms of being executable on the machine being used when launched.
+ - Pipelines will be created to check that whether the system can be run on multiple machines. The main priority will be that the system can run on any linux machine as that is the most likely OS used. If that specific requirement is satisfied, then it would be recommended that the system is runnable in other types of machines.
+
+The environmental requirements will make sure that the mission control system will have no issues based on where the launch is taking place
+- Mission control system must be able to be in use in any weather condition, this means that there shouldn't be any constraints/weather conditions which would stop the system from giving information to the user. The system must give information to the user no matter the weather condition that the launch is taking place in (This is related to the go/no go function).
 
 ## 5. Development schedule.
 
@@ -648,7 +654,7 @@ Below is a list of the assumptions for this project listed in ascending priority
 | Binke Xu | 1.2, 1.3.1, 1.3.2, 1.3.4, 1.3.3, 4.3 |
 | Sandy (Alexander Saunders) | 5.3 |
 | Jesse Wood | 3.6, 3.7, 3.8, 4.6, 4.7, 6.1, 6.2 |
-| Marcus Rathod | 3.1, 3.3, 5.4, 5.4.1 |
+| Marcus Rathod | 3.1, 3.3, 5.4, 5.4.1, 4.8 |
 | Mason Yi | 3.1, 3.2, 3.3, 3.8, 4.1 |
 
 ---
