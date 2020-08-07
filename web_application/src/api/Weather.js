@@ -23,6 +23,7 @@ export default function WeatherProvider({children}) {
     const data = JSON.parse(readData);
     return data;
   }
+  
   return (
     <WeatherContext.Provider value={[get, save, load]}>
       {children}

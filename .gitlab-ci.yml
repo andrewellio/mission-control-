@@ -22,4 +22,5 @@ testing_testing:
     stage: test
     script:
         - cd web_application
-        - npm test
+        - npm test -- --coverage
+    coverage: /All\sfiles.*?\s+(\d+.\d+)/

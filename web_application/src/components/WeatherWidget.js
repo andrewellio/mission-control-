@@ -2,8 +2,6 @@ import React from "react";
 import GaugeChart from "react-gauge-chart";
 import "./WeatherWidget.css";
 import { useRocket } from "../api/Rocket";
-import clear from "../assets/clear.png";
-import danger from "../assets/danger.png";
 
 const chartStyle = {
   height: 250
