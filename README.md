@@ -7,6 +7,11 @@ There are instructions for the web application in the README of the directory.
 
 [Web application](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/tree/master/web_application)
 
+## Web application testing and automation
+Here the wikipage explains the structure of our test cases and automation using Jest.
+
+[Testing Web application](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Testing/JestCICD)
+
 ## Web server
 This is a resource that is written in Java and uses Tomcat v6 to fetch and parse a XML HTTP URL from Openweather's API to report various weather conditions
 
