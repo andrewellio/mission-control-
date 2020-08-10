@@ -14,7 +14,7 @@ import { useRocket } from "../api/Rocket";
  * --------------------
  * 'velocity' has an index of 0
  */
-
+//use "npm install --save react-csv-reader" to install react-csv-reader
 const index = {
   velocity: 0,
   altitude: 1,
