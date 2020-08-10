@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useWeather } from "../api/Weather";
 import "./Weather.css";
+import data from "./WeatherData .json"
 
 /**
  *  This page can retrive the current weather conditions.
@@ -9,7 +10,6 @@ import "./Weather.css";
  *  The user can save and load weather forecasts for offline usage.
  */
 
-// run npm install browserify-fs
 const Weather = () => {
   const [coordinates, setCoordinates] = useState({ lat: 0, long: 0 });
   const [results, setResults] = useState(null);
@@ -25,7 +25,10 @@ const Weather = () => {
   };
 
   const loadData = async () => {
-    load();
+    //load();
+    //console.log("This is load!")
+    //results="hi"
+    setResults(data);
   };
 
   const setLatitude = event => {
@@ -85,10 +88,14 @@ const Weather = () => {
         <button class="button" onClick={loadData}>
           Load Data
         </button>
+
+        <input type="file"  accept=".json" />
       </div>
     </>
   );
 };
+
+
 
 const Result = ({ json }) => {
   return (
@@ -100,7 +107,7 @@ const Result = ({ json }) => {
         </tr>
         <tr>
           <th>Humidity:</th>
-          <td>{json.main.humidity} % </td>
+          <td>{json.main.humidity}</td>
         </tr>
         <tr>
           <th>Wind Speed:</th>
@@ -112,11 +119,11 @@ const Result = ({ json }) => {
         </tr>
         <tr>
           <th>Temperature: </th>
-          <td>{json.main.temp} degrees celsius</td>
+          <td>{json.main.temp} radians</td>
         </tr>
         <tr>
           <th>Air Pressure: </th>
-          <td>{json.main.pressure} hPa</td>
+          <td>{json.main.pressure} radians</td>
         </tr>
       </table>
     </div>
