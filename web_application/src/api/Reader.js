@@ -50,7 +50,7 @@ const convertDataToRocket = e => {
  */
 
 const Reader = props => {
-  const [_, setRocket] = useRocket();
+  const [, setRocket] = useRocket();
 
   const onLoad = e => {
     setRocket(convertDataToRocket(e));
