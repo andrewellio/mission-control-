@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useWeather } from "../api/Weather";
 import "./Weather.css";
-import data from "./WeatherData .json"
+import data from "../data/WeatherData.json";
 
 /**
  *  This page can retrive the current weather conditions.
@@ -13,7 +13,7 @@ import data from "./WeatherData .json"
 const Weather = () => {
   const [coordinates, setCoordinates] = useState({ lat: 0, long: 0 });
   const [results, setResults] = useState(null);
-  const [get, save, load] = useWeather();
+  const [get, save] = useWeather();
 
   const getJson = async () => {
     const json = await get(coordinates.lat, coordinates.long);
@@ -88,14 +88,11 @@ const Weather = () => {
         <button class="button" onClick={loadData}>
           Load Data
         </button>
-
-        <input type="file"  accept=".json" />
+        <input type="file" accept=".json" />
       </div>
     </>
   );
 };
-
-
 
 const Result = ({ json }) => {
   return (
