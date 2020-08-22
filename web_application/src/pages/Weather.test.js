@@ -17,13 +17,13 @@ describe("<Weather />  with no props", () => {
   });
 
   it("should have kelburn park longitude as placeholder", () => {
-    expect(container.find('input[id="lonId"]').props().placeholder).toEqual(
+    expect(container.find('input[id="lonId"]').prop("placeholder")).toEqual(
       "e.g. 174.7731"
     );
   });
 
   it("should have kelburn park latitude as placeholder", () => {
-    expect(container.find('input[id="latId"]').props().placeholder).toEqual(
+    expect(container.find('input[id="latId"]').prop("placeholder")).toEqual(
       "e.g. -41.2769"
     );
   });
@@ -50,5 +50,31 @@ describe("<Weather />  with no props", () => {
 
   it("should have three buttons", () => {
     expect(container.find("button").length).toEqual(3);
+  });
+
+  it("should have an initial longitude of 0 degrees", () => {
+    expect(container.find('input[id="lonId"]').prop("value")).toEqual(0);
+  });
+
+  it("should have an initial latitude of 0 degrees", () => {
+    expect(container.find('input[id="latId"]').prop("value")).toEqual(0);
+  });
+
+  it("should update the latitude on a change event", () => {
+    container.find('input[id="lonId"]').simulate("change", {
+      target: {
+        value: 100
+      }
+    });
+    expect(container.find('input[id="lonId"]').prop("value")).toEqual(100);
+  });
+
+  it("should update the latitude on a change event", () => {
+    container.find('input[id="latId"]').simulate("change", {
+      target: {
+        value: 100
+      }
+    });
+    expect(container.find('input[id="latId"]').prop("value")).toEqual(100);
   });
 });
