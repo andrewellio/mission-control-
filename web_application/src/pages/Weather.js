@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { useWeather } from "../api/Weather";
 import "./Weather.css";
 import data from "../data/WeatherData.json";
+import { BrowserRouter } from "react-router-dom";
 
 /**
  *  This page can retrive the current weather conditions.
  *  We use the OpenWeatherMap API, which required an internet connection.
- *  The user can save and load weather forecasts for offline usage.
+ *  The user can save and load weather forecasts className offline usage.
  */
 
 const Weather = () => {
@@ -45,9 +46,11 @@ const Weather = () => {
 
   return (
     <>
-      <Link className="Instructions-back" to="/">
-        <i className="material-icons">navigate_before</i>
-      </Link>
+      <BrowserRouter>
+        <Link className="Instructions-back" to="/">
+          <i className="material-icons">navigate_before</i>
+        </Link>
+      </BrowserRouter>
       <div className="Landing-body">
         <h1>Weather</h1>
         {results === null ? (
@@ -55,9 +58,9 @@ const Weather = () => {
         ) : (
           <Result json={results} />
         )}
-        <label for="space"> </label>
+        <label className="space"> </label>
         <br />
-        <label for="latValue">Latitude:</label>
+        <label className="latValue">Latitude:</label>
         <br />
         <input
           type="int"
@@ -67,9 +70,9 @@ const Weather = () => {
           onChange={setLatitude}
         />
         <br />
-        <label for="space"> </label>
+        <label className="space"> </label>
         <br />
-        <label for="longValue">Longitude:</label>
+        <label className="longValue">Longitude:</label>
         <br />
         <input
           type="int"
@@ -79,13 +82,13 @@ const Weather = () => {
           onChange={setLongitude}
         />
         &nbsp;
-        <button class="button" id="weatherButton" onClick={getJson}>
+        <button className="button" id="getData" onClick={getJson}>
           Get Data
         </button>
-        <button class="button" onClick={saveData}>
+        <button className="button" id="saveData" onClick={saveData}>
           Save Data
         </button>
-        <button class="button" onClick={loadData}>
+        <button className="button" id="loadData" onClick={loadData}>
           Load Data
         </button>
         <input type="file" accept=".json" />
@@ -99,7 +102,7 @@ const Result = ({ json }) => {
     <div style={{ border: "thin dotted white" }}>
       <table>
         <tr>
-          <th>Current weather for: </th>
+          <th>Current weather className: </th>
           <td>{json.name}</td>
         </tr>
         <tr>

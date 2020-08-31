@@ -15,7 +15,7 @@ import Weather from "./pages/Weather";
  *  This page house the single page application (SPA).
  *  We use the DOM to control routing between pages.
  */
-function App() {
+const App = () => {
   return (
     <Router>
       <Switch>
@@ -38,6 +38,6 @@ function App() {
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;
