@@ -1,7 +1,6 @@
 import React from "react";
-import "./Map.css";
 import { Map, Marker, Popup, TileLayer, Circle } from "react-leaflet";
-import rocketIcon from "./rocketIcon";
+import RocketIcon from "./RocketIcon";
 import { useRocket } from "../api/Rocket";
 import Cache from "../api/Cache";
 
@@ -19,12 +18,12 @@ const Online = () => {
   const [rocket] = useRocket();
   const position = [rocket.position.lat, rocket.position.long];
   return (
-    <Map center={position} zoom={16}>
+    <Map style={primaryStyle} center={position} zoom={16}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker position={position} icon={rocketIcon}>
+      <Marker position={position} icon={RocketIcon}>
         <Popup>
           <h1>Launch Site</h1>
           Salamanca Road,
@@ -46,35 +45,19 @@ const Online = () => {
   );
 };
 
+export const primaryStyle = {
+  margin: "50px",
+  marginTop: "0px",
+  height: "80vh",
+  minHeight: "1vh",
+  maxHeight: "65vh",
+  minWidth: "15vh",
+  maxWidth: "90vh",
+  width: "50%"
+};
+
 const Offline = () => {
-  const [rocket] = useRocket();
-  const position = [rocket.position.lat, rocket.position.long];
-  return (
-    <Map center={position} zoom={16}>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      />
-      <Marker position={position} icon={rocketIcon}>
-        <Popup>
-          <h1>Launch Site</h1>
-          Salamanca Road,
-          <br />
-          Kelburn,
-          <br />
-          Wellington 6012
-        </Popup>
-      </Marker>
-      <Circle center={position} radius={200}>
-        <Popup>
-          <h1>Landing Zone</h1>
-          <b>200</b> simulations were run
-          <br />
-          <i>N.B we use Monte Carlo situations</i>
-        </Popup>
-      </Circle>
-    </Map>
-  );
+  return <h1>Please connect</h1>;
 };
 
 export default MapPage;

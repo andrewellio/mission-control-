@@ -1,11 +1,12 @@
 import React from "react";
 import "./Comms.css";
 import { useRocket } from "../api/Rocket";
+import { primaryStyle } from "./Map";
 
 const Comms = () => {
   const [rocket] = useRocket();
   return (
-    <div className="Comms">
+    <div className="Comms" style={primaryStyle}>
       <table>
         <thead>
           <tr>

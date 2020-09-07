@@ -11,7 +11,10 @@ import { useRocket } from "../api/Rocket";
 const Telemetry = () => {
   const [rocket] = useRocket();
   return (
-    <div className="Telemetry">
+    <div
+      className="Telemetry"
+      style={{ display: "flex", alignItems: "center" }}
+    >
       <div className="Velocity">
         <ReactSpeedometer
           width={200}

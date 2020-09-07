@@ -1,7 +1,7 @@
 import L from "leaflet";
 
 // A custom rocket icon for leaflet maps used on the Dashboard
-const rocketIcon = new L.Icon({
+const RocketIcon = new L.Icon({
   iconUrl: require("../assets/logo.png"),
   iconRetinaUrl: require("../assets/logo.png"),
   iconAnchor: null,
@@ -10,7 +10,7 @@ const rocketIcon = new L.Icon({
   shadowSize: null,
   shadowAnchor: null,
   iconSize: new L.Point(40, 40),
-  className: "leaflet-div-icon"
+  style: { background: "transparent", borderStyle: "none" }
 });
 
-export default rocketIcon;
+export default RocketIcon;
