@@ -3,13 +3,19 @@ import "./Map.css";
 import { Map, Marker, Popup, TileLayer, Circle } from "react-leaflet";
 import rocketIcon from "./rocketIcon";
 import { useRocket } from "../api/Rocket";
+import Cache from "../api/Cache";
 
 /**
  *  This is the map widget for the Dashboard page.
  *  We use the open-source Leaflet JavaScript library.
  *  This uses the OpenStreetMap API to render a topographical map.
  */
+
 const MapPage = () => {
+  return <Cache Child={OnlineMap} />;
+};
+
+const OnlineMap = () => {
   const [rocket] = useRocket();
   const position = [rocket.position.lat, rocket.position.long];
   return (

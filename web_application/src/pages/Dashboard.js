@@ -1,14 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Dashboard.css";
 import MapPage from "../components/Map";
 import Telemetry from "../components/Telemetry";
 import Phase from "../components/Phase";
 import Time from "../components/Time";
 import WeatherWidget from "../components/WeatherWidget";
 import Comms from "../components/Comms";
-import "./Dashboard.css";
-import { Link } from "react-router-dom";
-
-// TODO The Reader is in the class temporarily for demonstration
 import Reader from "../api/Reader";
 
 /**
