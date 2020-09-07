@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Dashboard.css";
+import Connected from "../components/Connected";
 import MapPage from "../components/Map";
 import Telemetry from "../components/Telemetry";
 import Phase from "../components/Phase";
@@ -16,6 +17,7 @@ import Reader from "../api/Reader";
 const Dashboard = () => {
   return (
     <div className="Dashboard">
+      <Connected />
       <Reader />
       <Link className="Dashboard-back" to="/">
         <i className="material-icons">navigate_before</i>
