@@ -1,13 +1,9 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, {createContext, useContext, useState, useEffect} from "react";
 
-const OnlineContext = createContext();
-const useOnline = useContext(OnlineContext);
+const OnlineContext = createContext({});
+const useOnline = () => useContext(OnlineContext);
 
-const isOnline = () => {
-  return navigator.onLine;
-};
-
-const OnlineProvider = ({ children }) => {
+const OnlineProvider = ({children}) => {
   const [online, setOnline] = useState(false);
 
   useEffect(() => {
@@ -19,5 +15,9 @@ const OnlineProvider = ({ children }) => {
   );
 };
 
+const isOnline = () => {
+  return navigator.onLine;
+};
+
 export default OnlineProvider;
-export { useOnline };
+export {useOnline};
