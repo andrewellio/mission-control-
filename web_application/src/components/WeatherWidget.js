@@ -1,5 +1,4 @@
-import React from "react";
-import GaugeChart from "react-gauge-chart";
+import React, { useEffect } from "react";
 import "./WeatherWidget.css";
 import { useRocket } from "../api/Rocket";
 
@@ -10,11 +9,14 @@ import { useRocket } from "../api/Rocket";
  */
 const WeatherWidget = () => {
   const [rocket] = useRocket();
+
+  useEffect(() => {}, [rocket]);
+
   return (
     <div className="Coverage">
       <embed
         src={`https://api.openweathermap.org/data/2.5/weather?lat=${rocket.position.lat}&lon=${rocket.position.long}&APPID=9dbce15b12f75333f8f274f51793d0ff&mode=html&units=metric`}
-      ></embed>
+      />
     </div>
   );
 };
