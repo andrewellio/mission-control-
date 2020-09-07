@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
+import WifiOffIcon from "@material-ui/icons/WifiOff";
 
-const Cache = ({ Child }) => {
+const Cache = ({Child}) => {
   const [online, setOnline] = useState(false);
 
   useEffect(() => {
@@ -15,7 +16,14 @@ const isOnline = () => {
 };
 
 const Cached = () => {
-  return <h1>Offline!</h1>;
+  return (
+    <>
+      <p>
+        You are offline!
+        <WifiOffIcon />
+      </p>
+    </>
+  );
 };
 
 export default Cache;
