@@ -1,18 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import WifiOffIcon from "@material-ui/icons/WifiOff";
+import {useOnline} from "./Online";
 
 const Cache = ({Child}) => {
-  const [online, setOnline] = useState(false);
-
-  useEffect(() => {
-    setOnline(isOnline());
-  }, []);
-
+  const online = useOnline();
   return <>{online ? <Child /> : <Cached />}</>;
-};
-
-const isOnline = () => {
-  return navigator.onLine;
 };
 
 const Cached = () => {
