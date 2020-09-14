@@ -24,12 +24,14 @@ const MapPage = () => {
 const Online = () => {
   const [rocket] = useRocket();
   const position = [rocket.position.lat, rocket.position.long];
+  const options = {
+    url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    attribution:
+      '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  };
   return (
     <Map style={styles.map} center={position} zoom={16}>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      />
+      <TileLayer {...options} />
       <Marker position={position} icon={RocketIcon}>
         <Popup>
           <h1>Launch Site</h1>
@@ -55,14 +57,18 @@ const Online = () => {
 const Offline = () => {
   const [rocket] = useRocket();
   const position = [rocket.position.lat, rocket.position.long];
-  const crs = L.CRS.EPSG4326;
-  const map =
-    "/home/woodj/Documents/uni/engr302/group-12/web_application/src/data/wellington.map";
-  const wms = `http://localhost/cgi-bin/mapserv?map=${map}&version=1.1.1&`;
+
+  const options = {
+    url:
+      "http://localhost/cgi-bin/mapserv?map=/home/woodj/Documents/uni/engr302/group-12/web_application/src/data/wellington.map&",
+    crs: L.CRS.EPSG4326,
+    format: "image/png",
+    layers: "topographical"
+  };
 
   return (
-    <Map crs={crs} style={styles.map} center={position} zoom={16}>
-      <WMSTileLayer url={wms} />
+    <Map style={styles.map} center={position} zoom={16}>
+      <WMSTileLayer {...options} />
       <Marker position={position} icon={RocketIcon}>
         <Popup>
           <h1>Launch Site</h1>

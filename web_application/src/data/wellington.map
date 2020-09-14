@@ -1,12 +1,13 @@
 MAP
     NAME          "wellington-topographical"
+    EXTENT        6289755.442237 -3805984.513519 6292696.369653 -3805245.394890
     UNITS         meters
     SIZE          800 600
 
     IMAGETYPE     PNG
 
     PROJECTION
-      "init=epsg:3994"
+      "init=epsg:4326"
     END
 
     WEB
@@ -16,7 +17,7 @@ MAP
         ows_title          "wellington-topographical"
         ows_format         "PNG"
         ows_server_version "1.1.1"
-        ows_srs            "EPSG:3994 EPSG:4326"
+        ows_srs            "EPSG:4326"
         ows_onlineresource "http://localhost/cgi-bin/mapserv?map=/home/woodj/Documents/uni/engr302/group-12/web_application/src/data/wellington.map&"
         ows_abstract       "A topographical map of Wellington"
         ows_enable_request "*"
@@ -25,7 +26,7 @@ MAP
 
     LAYER
       NAME "topographical"
-      DATA "../components/lds-nz-topo50-maps-GTiff/nz-topo50-maps.tif"
+      DATA "tiff/nz-topo50-maps.tif"
       TYPE Raster
       STATUS ON
 
@@ -34,3 +35,6 @@ MAP
       END
     END
 END
+
+# This can be tested at the following URL 
+# http://localhost/cgi-bin/mapserv?map=/home/woodj/Documents/uni/engr302/group-12/web_application/src/data/wellington.map&SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&layers=topographical&srs=EPSG:4326&BBOX=174.725,-41.3521,174.976,-41.2081&FORMAT=PNG&WIDTH=800&HEIGHT=600
