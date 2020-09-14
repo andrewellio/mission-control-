@@ -63,7 +63,7 @@ const Offline = () => {
       "http://localhost/cgi-bin/mapserv?map=/home/woodj/Documents/uni/engr302/group-12/web_application/src/data/wellington.map&",
     crs: L.CRS.EPSG4326,
     format: "image/png",
-    layers: "topographical"
+    layers: "wellington-topographical"
   };
 
   return (
