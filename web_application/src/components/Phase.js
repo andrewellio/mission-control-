@@ -33,7 +33,6 @@ const Phase = props => {
             </div>
           )}
         </Step>
-
         <Step transition="scale">
           {({ accomplished }) => (
             <div>

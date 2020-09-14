@@ -10,18 +10,16 @@ import "./Time.css";
  */
 const Time = () => {
   return (
-    <div className="Timer">
-      <Timer initialTime={0} timeToUpdate={10} startImmediately={true}>
-        {({ start, resume, pause, stop, reset, timerState }) => (
-          <div>
-            T+<span> </span>
-            <Timer.Hours />:
-            <Timer.Minutes />:
-            <Timer.Seconds />
-          </div>
-        )}
-      </Timer>
-    </div>
+    <Timer initialTime={0} timeToUpdate={10} startImmediately={true}>
+      {({ start, resume, pause, stop, reset, timerState }) => (
+        <div>
+          T+<span> </span>
+          <Timer.Hours />:
+          <Timer.Minutes />:
+          <Timer.Seconds />
+        </div>
+      )}
+    </Timer>
   );
 };
 
