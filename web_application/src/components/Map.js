@@ -45,6 +45,34 @@ const Online = () => {
   );
 };
 
+const Offline = () => {
+  const [rocket] = useRocket();
+  const position = [rocket.position.lat, rocket.position.long];
+  return (
+    <Map style={primaryStyle} center={position} zoom={16}>
+      <TileLayer url="./components/offline_maps/mapTiles/{z}/{x}/{y}.png" />
+      <Marker position={position} icon={RocketIcon}>
+        <Popup>
+          <h1>Launch Site</h1>
+          Salamanca Road,
+          <br />
+          Kelburn,
+          <br />
+          Wellington 6012
+        </Popup>
+      </Marker>
+      <Circle center={position} radius={200}>
+        <Popup>
+          <h1>Landing Zone</h1>
+          <b>200</b> simulations were run
+          <br />
+          <i>N.B we use Monte Carlo situations</i>
+        </Popup>
+      </Circle>
+    </Map>
+  );
+};
+
 export const primaryStyle = {
   margin: "50px",
   marginTop: "0px",
@@ -54,10 +82,6 @@ export const primaryStyle = {
   minWidth: "15vh",
   maxWidth: "90vh",
   width: "50%"
-};
-
-const Offline = () => {
-  return <h1>Please connect</h1>;
 };
 
 export default MapPage;

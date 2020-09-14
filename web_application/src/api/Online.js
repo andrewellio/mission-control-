@@ -1,13 +1,22 @@
-import React, {createContext, useContext, useState, useEffect} from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 const OnlineContext = createContext({});
 const useOnline = () => useContext(OnlineContext);
 
-const OnlineProvider = ({children}) => {
+const checkInterval = 1000;
+
+const OnlineProvider = ({ children }) => {
   const [online, setOnline] = useState(false);
 
+  function run() {
+    setOnline(isOnline);
+  }
+
   useEffect(() => {
-    setOnline(isOnline());
+    const interval = setInterval(() => {
+      run();
+    }, checkInterval);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -20,4 +29,4 @@ const isOnline = () => {
 };
 
 export default OnlineProvider;
-export {useOnline};
+export { useOnline };

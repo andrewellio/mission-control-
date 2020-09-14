@@ -18,7 +18,7 @@ import HomeIcon from "@material-ui/icons/Home";
 const Dashboard = () => {
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={styles.header}>
         <Link className="Dashboard-back inline-chart" to="/">
           <HomeIcon></HomeIcon>
         </Link>
@@ -26,17 +26,32 @@ const Dashboard = () => {
         <Time />
         <Connected />
       </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={styles.main}>
         <MapPage />
         <Comms />
       </div>
-      <div style={{ display: "flex", justifyContent: "left" }}>
+      <div style={styles.secondary}>
         <Telemetry />
         <Phase />
         <WeatherWidget />
       </div>
     </>
   );
+};
+
+const styles = {
+  header: {
+    display: "flex",
+    justifyContent: "center"
+  },
+  main: {
+    display: "flex",
+    justifyContent: "center"
+  },
+  secondary: {
+    display: "flex",
+    justifyContent: "left"
+  }
 };
 
 export default Dashboard;
