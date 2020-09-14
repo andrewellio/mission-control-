@@ -1,0 +1,36 @@
+MAP
+    NAME          "wellington-topographical"
+    UNITS         meters
+    SIZE          800 600
+
+    IMAGETYPE     PNG
+
+    PROJECTION
+      "init=epsg:3994"
+    END
+
+    WEB
+      IMAGEPATH "/ms4w/tmp/ms_tmp/"
+      IMAGEURL "/ms_tmp/"
+      METADATA
+        ows_title          "wellington-topographical"
+        ows_format         "PNG"
+        ows_server_version "1.1.1"
+        ows_srs            "EPSG:3994 EPSG:4326"
+        ows_onlineresource "http://localhost/cgi-bin/mapserv?map=/home/woodj/Documents/uni/engr302/group-12/web_application/src/data/wellington.map&"
+        ows_abstract       "A topographical map of Wellington"
+        ows_enable_request "*"
+      END
+    END
+
+    LAYER
+      NAME "topographical"
+      DATA "../components/lds-nz-topo50-maps-GTiff/nz-topo50-maps.tif"
+      TYPE Raster
+      STATUS ON
+
+      METADATA
+        ows_title "topographical"
+      END
+    END
+END

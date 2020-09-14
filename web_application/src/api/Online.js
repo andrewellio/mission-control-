@@ -6,7 +6,7 @@ const useOnline = () => useContext(OnlineContext);
 const checkInterval = 1000;
 
 const OnlineProvider = ({ children }) => {
-  const [online, setOnline] = useState(false);
+  const [online, setOnline] = useState(true);
 
   function run() {
     setOnline(isOnline);

@@ -1,9 +1,16 @@
 import React from "react";
-import { Map, Marker, Popup, TileLayer, Circle } from "react-leaflet";
+import {
+  Map,
+  Marker,
+  Popup,
+  TileLayer,
+  Circle,
+  WMSTileLayer
+} from "react-leaflet";
 import RocketIcon from "./RocketIcon";
 import { useRocket } from "../api/Rocket";
 import Cache from "../api/Cache";
-
+import L from "leaflet";
 /**
  *  This is the map widget for the Dashboard page.
  *  We use the open-source Leaflet JavaScript library.
@@ -18,7 +25,7 @@ const Online = () => {
   const [rocket] = useRocket();
   const position = [rocket.position.lat, rocket.position.long];
   return (
-    <Map style={primaryStyle} center={position} zoom={16}>
+    <Map style={styles.map} center={position} zoom={16}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -48,9 +55,14 @@ const Online = () => {
 const Offline = () => {
   const [rocket] = useRocket();
   const position = [rocket.position.lat, rocket.position.long];
+  const crs = L.CRS.EPSG4326;
+  const map =
+    "/home/woodj/Documents/uni/engr302/group-12/web_application/src/data/wellington.map";
+  const wms = `http://localhost/cgi-bin/mapserv?map=${map}&version=1.1.1&`;
+
   return (
-    <Map style={primaryStyle} center={position} zoom={16}>
-      <TileLayer url="./components/offline_maps/mapTiles/{z}/{x}/{y}.png" />
+    <Map crs={crs} style={styles.map} center={position} zoom={16}>
+      <WMSTileLayer url={wms} />
       <Marker position={position} icon={RocketIcon}>
         <Popup>
           <h1>Launch Site</h1>
@@ -73,15 +85,17 @@ const Offline = () => {
   );
 };
 
-export const primaryStyle = {
-  margin: "50px",
-  marginTop: "0px",
-  height: "80vh",
-  minHeight: "1vh",
-  maxHeight: "65vh",
-  minWidth: "15vh",
-  maxWidth: "90vh",
-  width: "50%"
+const styles = {
+  map: {
+    margin: "50px",
+    marginTop: "0px",
+    height: "80vh",
+    minHeight: "1vh",
+    maxHeight: "65vh",
+    minWidth: "15vh",
+    maxWidth: "90vh",
+    width: "50%"
+  }
 };
 
 export default MapPage;
