@@ -17,3 +17,8 @@ parser.on("data", (line) => console.log(line),setIncomeData(line));  //log data 
 
 // Write the data to the serial port
 port.write("Some date write to port!");  // can change to weatherData
+
+function writeMessage() {
+  let msg = "date write to port!";
+  port.write(msg)
+}

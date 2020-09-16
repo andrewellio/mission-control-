@@ -1,24 +1,9 @@
 import React from "react";
 import "./Comms.css";
 import { useRocket } from "../api/Rocket";
-import {serialport, prototype } from "serialport"
 
 const Comms = () => {
   const [rocket] = useRocket();
-  const SerialPort = serialport.SerialPort;
-  const port = new SerialPort('COM1',{
-    baudrate: 9600,
-    parser: serialport.parsers.readline("\n")
-  });
-
-  function read(){
-
-  }
-
-  function write (data) {
-    port.write(data)
-    console.log(data)
-  };
 
   return (
     <div className="Comms">
