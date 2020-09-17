@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 /**
  * This page provides a high-level overview of each page.
@@ -14,7 +14,7 @@ export default function Instructions() {
             navigate_before
           </i>
         </Link>
-        <h1>Instructions</h1>
+        <h1 style={styles.title}>Instructions</h1>
         <div style={styles.content}>
           <ol>
             <li>
@@ -62,6 +62,25 @@ export default function Instructions() {
   );
 }
 
+const styles = {
+  container: {
+    display: "flex",
+    justifyContent: "center"
+  },
+  title: {
+    textAlign: "center"
+  },
+  content: {
+    maxWidth: "80vh",
+    fontSize: "14pt",
+    textAlign: "left"
+  },
+  back: {
+    fontSize: "30pt",
+    color: "white"
+  }
+};
+
 function RepositoryLink() {
   return (
     <TextLink
@@ -97,22 +116,6 @@ function OfflineUsageLink() {
   );
 }
 
-function TextLink({text, url}) {
+function TextLink({ text, url }) {
   return <a href={url}>{text}</a>;
 }
-
-const styles = {
-  container: {
-    display: "flex",
-    justifyContent: "center"
-  },
-  content: {
-    maxWidth: "80vh",
-    fontSize: "14pt",
-    textAlign: "left"
-  },
-  back: {
-    fontSize: "30pt",
-    color: "white"
-  }
-};
