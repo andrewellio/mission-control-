@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Dashboard.css";
 import Connected from "../components/Connected";
 import MapPage from "../components/Map";
 import Telemetry from "../components/Telemetry";
@@ -15,12 +14,12 @@ import HomeIcon from "@material-ui/icons/Home";
  *  This page presents real-time data from the rocket.
  *  This includes Telemetry, positional and communications.
  */
-const Dashboard = () => {
+export default function Dashboard() {
   return (
     <>
       <div style={styles.header}>
-        <Link className="Dashboard-back inline-chart" to="/">
-          <HomeIcon></HomeIcon>
+        <Link style={styles.back} to="/">
+          <HomeIcon />
         </Link>
         <Reader />
         <Time />
@@ -37,7 +36,7 @@ const Dashboard = () => {
       </div>
     </>
   );
-};
+}
 
 const styles = {
   header: {
@@ -51,7 +50,9 @@ const styles = {
   secondary: {
     display: "flex",
     justifyContent: "left"
+  },
+  back: {
+    fontSize: "30pt",
+    color: "white"
   }
 };
-
-export default Dashboard;
