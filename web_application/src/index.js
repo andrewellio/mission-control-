@@ -8,15 +8,21 @@ import OnlineProvider from "./api/Online";
 import WeatherProvider from "./api/Weather";
 
 ReactDOM.render(
-  <OnlineProvider>
-    <WeatherProvider>
-      <RocketProvider>
-        <App />
-      </RocketProvider>
-    </WeatherProvider>
-  </OnlineProvider>,
+  <Contexts>
+    <App />
+  </Contexts>,
   document.getElementById("root")
 );
+
+function Contexts({ children }) {
+  return (
+    <OnlineProvider>
+      <WeatherProvider>
+        <RocketProvider>{children}</RocketProvider>
+      </WeatherProvider>
+    </OnlineProvider>
+  );
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

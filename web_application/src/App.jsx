@@ -1,10 +1,6 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from "react-router-dom";
+import {HashRouter as Router, Switch, Route, Redirect} from "react-router-dom";
+import {v4} from "uuid";
 import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import Instructions from "./pages/Instructions";
@@ -20,7 +16,7 @@ export default function App() {
     <Router>
       <Switch>
         {pages.map(page => (
-          <Route path={page.path} component={page.component} />
+          <Route key={v4()} path={page.path} component={page.component} />
         ))}
         <Redirect from="/" to={defaultPage} />
       </Switch>
@@ -29,11 +25,11 @@ export default function App() {
 }
 
 const pages = [
-  { path: "/Home", component: Landing },
-  { path: "/Dashboard", component: Dashboard },
-  { path: "/Instructions", component: Instructions },
-  { path: "/Weather", component: Weather },
-  { path: "/Simulation", component: Simulation }
+  {path: "/Home", component: Landing},
+  {path: "/Dashboard", component: Dashboard},
+  {path: "/Instructions", component: Instructions},
+  {path: "/Weather", component: Weather},
+  {path: "/Simulation", component: Simulation}
 ];
 
 const defaultPage = pages[0].path;
