@@ -133,6 +133,8 @@ References to other documents or standards. Follow the IEEE Citation Reference s
 
 \[3\] "A Guide to Dependencies, Constraints and Assumptions (Part 3): Project Assumptions", InLoox. [Online]. Available: https://www.inloox.com/company/blog/articles/a-guide-to-dependencies-constraints-and-assumptions-part-3-project-assumptions/ [Accessed: 22-May-2020]
 
+\[4\] "Welcome to Mapserver", MapServer. [Online] Available: https://mapserver.org/ [Accessed: 17-Sept-2020]
+
 ## 3. Specific requirements
 
 <!-- 20 pages outlining the requirements of the system. You should apportion these pages across the following subsections to focus on the most important parts of your product. -->
@@ -166,7 +168,7 @@ control system would work in the real world without having a real rocket launch.
 The integration of an external map service is required for the mission control system. A map service provides an accurate visual representation of the location of the rocket on a world map. This is vital for the system as this means
 that we are able to use our current rocket coordinates to show where the rocket would be on a map. The mission control system requires the current location of the rocket to be displayed on the screen. A map service will display the
 current location of the rocket on screen to the user of the mission control system. Other vital pieces of information, such as the current flight path of the rocket and the approximate landing location, will also be shown on screen
-through the map service. For offline usage we require an ability to cache a pre-existing map. When the user is not connected to the internet the map service must use these cached maps.
+through the map service \[4\]. For offline usage we require an ability to cache a pre-existing map. When the user is not connected to the internet the map service must use these cached maps.
 
 **Weather Service Interface**
 
@@ -403,7 +405,7 @@ coordinates. OpenWeather's service is online and thus requires an internet conne
 The simulation interface is what we will be trying to gather information for. The simulation team will provide valid XML/JSON files that our software must parse in order to gather information about the current weather
 state.
 
-The Map Service is an external interface that we use to provide maps for our application. It allows our application to be portable. We need to verify that our cached maps are loaded when their is no internet connection. This can be down through blackbox tests that mock the scenario of no internet connection. Then test to check that the map if rendered.
+The Map Service \[4\] is an external interface that we use to provide maps for our application. It allows our application to be portable. We need to verify that our cached maps are loaded when their is no internet connection. This can be down through black-box tests that mock the scenario of no internet connection. Then test to check that the map if rendered.
 
 #### 4.2 Functions
 
