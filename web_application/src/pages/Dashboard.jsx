@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import HomeIcon from "@material-ui/icons/Home";
 import Connected from "../components/Connected";
 import MapPage from "../components/Map";
 import Telemetry from "../components/Telemetry";
@@ -8,7 +9,6 @@ import Time from "../components/Time";
 import WeatherWidget from "../components/WeatherWidget";
 import Comms from "../components/Comms";
 import Reader from "../api/Reader";
-import HomeIcon from "@material-ui/icons/Home";
 
 /**
  *  This page presents real-time data from the rocket.
