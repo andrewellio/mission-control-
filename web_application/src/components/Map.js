@@ -57,10 +57,10 @@ const Online = () => {
 const Offline = () => {
   const [rocket] = useRocket();
   const position = [rocket.position.lat, rocket.position.long];
-
+  const mapfile =
+    "/home/woodj/Documents/uni/engr302/group-12/web_application/src/data/wellington.map";
   const options = {
-    url:
-      "http://localhost/cgi-bin/mapserv?map=/home/woodj/Documents/uni/engr302/group-12/web_application/src/data/wellington.map&",
+    url: `http://localhost/cgi-bin/mapserv?map=${mapfile}&`,
     crs: L.CRS.EPSG4326,
     format: "image/png",
     layers: "wellington-topographical"
