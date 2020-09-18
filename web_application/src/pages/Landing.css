@@ -70,7 +70,6 @@
   border-radius: 10px;
 }
 
-
 @media (prefers-reduced-motion: no-preference) {
   .Landing-logo {
     animation: Landing-logo-spin infinite 20s linear;

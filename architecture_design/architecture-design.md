@@ -8,7 +8,6 @@
 
 <!--In the context of ENGR 301, a walking skeleton does not need to deliver any business value to your project: the aim is technical validation and risk mitigation.-->
 
-
 <!--## Document-->
 
 <!--The aim of the architectural design document is to describe the architecture and high-level design of the system your group is to build, to identify any critical technical issues with your design, and to explain how you have addressed the highest rated technical and architectural risks. The architecture document should also demonstrate your understanding of architectural techniques and architectural quality, using tools and associated notations as necessary to communicate the architecture precisely, unambiguously and clearly in a written technical document.-->
@@ -69,7 +68,6 @@ References to other documents or standards. Follow the IEEE Citation Reference s
 
 \[2\] "A Guide to Dependencies, Constraints and Assumptions (Part 3): Project Assumptions", InLoox. [Online]. Available: https://www.inloox.com/company/blog/articles/a-guide-to-dependencies-constraints-and-assumptions-part-3-project-assumptions/ [Accessed: 22-May-2020]
 
-
 ## 3. Architecture
 
 Describe your system's architecture according to ISO/IEC/IEEE 42010:2011(E), ISO/IEC/IEEE 12207, ISO/IEC/IEEE 15289 and ISO/IEC/IEEE 15288.
@@ -88,91 +86,92 @@ This means that you should refer to information (e.g. risks, requirements, model
 
 **Customer/Client**
 
-*  Software should be compiled into a executable format 
-*  Software should be as portable to run as possible
-*  Software should be able to run on any mordern operating system
-*  Software should display all required data with consistent units
-*  Software should be displayed as a GUI with mapping features
-*  Software should include the go/no go functionality with various checks
+- Software should be compiled into a executable format
+- Software should be as portable to run as possible
+- Software should be able to run on any modern operating system
+- Software should display all required data with consistent units
+- Software should be displayed as a GUI with mapping features
+- Software should include the go/no go functionality with various checks
 
 **Software Developers/Engineers**
 
-*  Shall be able to communicate with other teams to share ideas with suggestions and solutions
-*  Shall work as a team while being respectful and listen to everyones ideas
-*  Shall comment and use 'approval feature' for feedback on contributions
+- Shall be able to communicate with other teams to share ideas with suggestions and solutions
+- Shall work as a team while being respectful and listen to everyone's ideas
+- Shall comment and use 'approval feature' for feedback on contributions
 
 **Software Testers**
 
-*  Shall use both testing methods of blackbox testing and whitebox testing 
-*  Shall have a well defined testing process, with goals, requirments and results for each test
-*  Releate back to user experiences while testing, such as personas and use cases
+- Shall use both testing methods of blackboy testing and white-box testing
+- Shall have a well defined testing process, with goals, requirements and results for each test
+- Relate back to user experiences while testing, such as personas and use cases
 
 **Victoria University of Wellington: Engineering and Computer Science**
 
-*  Abide to the health and saftey standards set by the ECS while in labs
-*  Licensing should be educational and open source as defined by the project code agreement signed
+- Abide to the health and safety standards set by the ECS while in labs
+- Licensing should be educational and open source as defined by the project code agreement signed
 
-**Rocket enthusiasts and communites within New Zealand**
+**Rocket enthusiasts and communities within New Zealand**
 
-*  Encourage and promote the open source license of the code, to allow extesnions and resuability for people who are looking to implement a similar system. However make sure to include a no responsibility clause, with a short terms of use and appropriate warnings listed.
+- Encourage and promote the open source license of the code, to allow extensions and resuability for people who are looking to implement a similar system. However make sure to include a no responsibility clause, with a short terms of use and appropriate warnings listed.
 
 **Wellington City Council (WCC)**
 
-*  Should comply with regulations and laws according to those with relation to 'model rockets' and compy with CAANZ.
-*  The software shall be used and used only for the model rocket, no copyright or trademarks need registering by the council.
+- Should comply with regulations and laws according to those with relation to 'model rockets' and comply with CAANZ.
+- The software shall be used and used only for the model rocket, no copyright or trademarks need registering by the council.
 
 **Wellington business and residential zones**
 
-*  Depending on the enviroment, nearby business's / resident's may need to be informed of the rocket launch if they are near the launch site. They must accept and give their permission for the launch to continue. If they field is large enough, this will likely not be required.
+- Depending on the environment, nearby business's / resident's may need to be informed of the rocket launch if they are near the launch site. They must accept and give their permission for the launch to continue. If they field is large enough, this will likely not be required.
 
 **Civil Aviation Authority of New Zealand (CAANZ)**
 
-* This project should follow all related CAA regulations, particularly those in  regulations; part 101 [1]
+- This project should follow all related CAA regulations, particularly those in regulations; part 101 [1]
 
-(Still needs a table maaping concerns to stakeholder)
-
+(Still needs a table mapping concerns to stakeholder)
 
 ### 3.2 Architectural Viewpoints
-(1 page, 42010 5.4) 
+
+(1 page, 42010 5.4)
 
 Identify the architectural viewpoints you will use to present your system's architecture. Write one sentence to outline each viewpoint. Show which viewpoint frames which architectural concern.
 
 ### 4. Architectural Views
 
-(5 sub-sections of 2 pages each sub-section, per 42010, 5.5, 5.6, with reference to Annex F of both 12207 and 15288) 
+(5 sub-sections of 2 pages each sub-section, per 42010, 5.5, 5.6, with reference to Annex F of both 12207 and 15288)
 
 Describe your system's architecture in a series of architectural views, each view corresponding to one viewpoint.
 
 You should include views from the following viewpoints (from Kruchten's 4+1 model):
 
- * Logical
- * Development
- * Process
- * Physical 
- * Scenarios - present scenarios illustrating how two of your most important use cases are supported by your architecture
+- Logical
+- Development
+- Process
+- Physical
+- Scenarios - present scenarios illustrating how two of your most important use cases are supported by your architecture
 
 As appropriate you should include the following viewpoints:
 
- * Circuit Architecture
- * Hardware Architecture
+- Circuit Architecture
+- Hardware Architecture
 
 Each architectural view should include at least one architectural model. If architectural models are shared across views, refer back to the first occurrence of that model in your document, rather than including a separate section for the architectural models.
 
 ### 4.1 Logical
 
-The primary concern with a logical view is to show the functionality that a system provides. Typically, UML diagrams are used to represent the logical view of a program as they are able to be 
-displayed through many depictions, for example, class and state diagrams. 
+The primary concern with a logical view is to show the functionality that a system provides. Typically, UML diagrams are used to represent the logical view of a program as they are able to be
+displayed through many depictions, for example, class and state diagrams.
 
-A UML diagram has the purpose of visually representing the system, typically using boxes and arrows to display relationships between the different entities within a system. The boxes of a UML 
+A UML diagram has the purpose of visually representing the system, typically using boxes and arrows to display relationships between the different entities within a system. The boxes of a UML
 diagram are used to show the different functional components of a system, such as the classes, enums and interfaces. The arrows portray the different relationships between the components of the
-system. 
+system.
 
-A UML class diagram is the most common way of portraying a software system's different classes and their attributes. A class diagram shows each class within a software system and how they relate 
-to other different classes. Each box within a class diagram represents a class and their different attributes/behaviours. The arrows of a class diagram represent the relationship between two 
-different classes of a system. Although the information given by the arrows of a class diagram convey useful information, they have a tendency to be imprecise when it comes to explaining, in 
+A UML class diagram is the most common way of portraying a software system's different classes and their attributes. A class diagram shows each class within a software system and how they relate
+to other different classes. Each box within a class diagram represents a class and their different attributes/behaviours. The arrows of a class diagram represent the relationship between two
+different classes of a system. Although the information given by the arrows of a class diagram convey useful information, they have a tendency to be imprecise when it comes to explaining, in
 depth, the specificity of the arrow's meaning.
 
 <!-- Images have been written in this format so they will update if they change. However the exact filenames and locations must stay the same -->
+
 **Class Diagram**
 
 This diagram shows the proposed UML class layout. Currently the diagram shows four classes (C), one enum (E) and three interfaces (I).
@@ -180,19 +179,20 @@ This diagram shows the proposed UML class layout. Currently the diagram shows fo
 ![A image of the Class Diagram](uml_diagrams/class_diagram/class_diagram.png)
 
 ### 4.2 Development
+
 ...
 
 ### 4.3 Process
 
-A process is defined as 'a series of actions or steps taken in order to achieve a particular end.' It is important to know the different processes of a system as it helps create a better 
-understanding of how the system works together and what is needed in order for the system to be relatively functional. If the understanding of a system's processes is thorough enough, there is 
-potential to automate said processes as this would improve the efficiency of a system.  
+A process is defined as 'a series of actions or steps taken in order to achieve a particular end.' It is important to know the different processes of a system as it helps create a better
+understanding of how the system works together and what is needed in order for the system to be relatively functional. If the understanding of a system's processes is thorough enough, there is
+potential to automate said processes as this would improve the efficiency of a system.
 
 The process architecture of a system should, at the minimum, show how a system works as a single unit. It should show how the different processes integrate with one another and
-outline what is going on for each of those processes. 
+outline what is going on for each of those processes.
 
-This diagram shows the proposed state diagram for the main processes that the software and rocket will stage through. 
-It should be noted that the mission control software will primarly take place in the Pre-Launch section.
+This diagram shows the proposed state diagram for the main processes that the software and rocket will stage through.
+It should be noted that the mission control software will primarily take place in the Pre-Launch section.
 
 ![A image of a Tree View](uml_diagrams/state_diagram/MCS_State_Diagram.png)
 
@@ -200,22 +200,23 @@ This diagram shows the proposed tree view for the main processes that the softwa
 
 ![A image of a Tree View](uml_diagrams/tree_view/tree-view.png)
 
-### 4.4 Physical 
+### 4.4 Physical
+
 ...
-  
+
 ### 4.5 Scenarios
 
-Scenarios are essentially brief explanations of expected system use cases for the user and developers. Scenarios seek to provide insight to how the system reacts to different use contexts. 
-In essence, scenarios should cover all the different expected ways that a user could interact with a system. 
+Scenarios are essentially brief explanations of expected system use cases for the user and developers. Scenarios seek to provide insight to how the system reacts to different use contexts.
+In essence, scenarios should cover all the different expected ways that a user could interact with a system.
 
-Typically, a UML use case diagram is used to represent the different scenarios that a system has. Use case diagrams aim to show what different classes a user may have access to whilst 
-using the system. They are a basic representation of how the user and system interact with one another and as a result, a weakness is that it is not able to show the order in which steps 
-are taken to reach certain use cases. 
+Typically, a UML use case diagram is used to represent the different scenarios that a system has. Use case diagrams aim to show what different classes a user may have access to whilst
+using the system. They are a basic representation of how the user and system interact with one another and as a result, a weakness is that it is not able to show the order in which steps
+are taken to reach certain use cases.
 
-A UML use case diagram usually includes actors, associations, use cases and a system boundary. Actors represent the different users that can interact with a system, be it a user or developer. 
+A UML use case diagram usually includes actors, associations, use cases and a system boundary. Actors represent the different users that can interact with a system, be it a user or developer.
 Typically shown through a figure of sorts e.g. stick figure. Associations are the connections between the user and different use cases. These are usually represented by arrows pointing from
-the actor to the arrow. Use cases, as touched on above, are the different ways that one can interact with the system. Use cases are usually expressed as a bubble/ellipse. The system boundary 
-is used to divide the user and the system. When an association passes through the system boundary, we know that the user is interacting with the system. Usually represented as a box around the use cases. 
+the actor to the arrow. Use cases, as touched on above, are the different ways that one can interact with the system. Use cases are usually expressed as a bubble/ellipse. The system boundary
+is used to divide the user and the system. When an association passes through the system boundary, we know that the user is interacting with the system. Usually represented as a box around the use cases.
 
 This diagram shows the different classes and what the user may have access to.
 
@@ -235,19 +236,17 @@ The Architectural Prototype and the supporting Architecture Design document is c
 
 **Minimum Viable Product**
 
-The Minimial Viable Product is currently scheduled to be near the beginning of July (end of Trimester 1), but may be delayed until approximatley the 13th of July (start of Trimester 2).
+The Minimial Viable Product is currently scheduled to be near the beginning of July (end of Trimester 1), but may be delayed until approximately the 13th of July (start of Trimester 2).
 
 **Further releases**
 
-The Final Prototype will be completed by the end of October (approximatley by the 15th) and refined/tested until the end of November (approximatley the day before the launch)
+The Final Prototype will be completed by the end of October (approximately by the 15th) and refined/tested until the end of November (approximately the day before the launch)
 
 More details for the Project Schedule can be seen on the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project%20Charter).
-
 
 ### 5.2 Budget and Procurement
 
 #### 5.2.1 Budget
-
 
 Is it assumed that MC will not need to use any funds from the project budget.
 More explanation for this can be found in the [Project Charter](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Project-charter) budget information.
@@ -257,27 +256,28 @@ More explanation for this can be found in the [Project Charter](https://gitlab.e
 Present a table of goods or services that will be required to deliver project goals and specify how they are to be procured (e.g. from the School or from an external organisation). These may be software applications, libraries, training or other infrastructure, including open source software. Justify and substantiate procurement with reference to fulfilment of project goals, one paragraph per item.
 (1 page).
 
-### 5.3 Risks 
+### 5.3 Risks
 
-| Risk | Type | Likelihood | Impact | Mitigation Strategies |
-| ------ | ------ | ------ | ------ | ------ |
-| Failure to produce Mission Control software by launch date | Practical/deliverable | Even (subject to change) | Low | Consistent retrospectives and sprints should indicate a long term plan to prevent project fallout. Some deliverable or prototype should be produced, even if the resulting product is not functional yet. |
-| Unexpected Univeristy shutdown/course changes | Operations | Very unlikely | High | Remain in contact with primary channel of communication; Mattermost for announcments related to course or university changes. Concerns to be taken up with class reps, tutors, lecturer, course co-ordinator or ECS dean. Follow any given instructions accordingly. Prepare for any temporary project pauses or overall termination. |
-| Laptop battery dies and/or software fails to run | Technical | Unlikely (preperation/testing dependent) | High | With regards to the battery, if available bring a secondary battery. Checks before hand should take place for battery charge levels. If the software fails to run, have several packages with troubleshooting options (i.e. compatability modes). It also should be considered to take a secondary laptop which has been tested. |
-| Location of Mission Control Station | Locational/Enviromental | Very unlikely | Low | Mission Control Station should be reasonably mobile to allow a approximate radius range of where the rocket may land. Mission Control should not be placed near the launchpad or inside the probable landing locations. Range testing and data transmission should ensure that the data can be recieved from the rocket at a safe distance. |
-| Weather conditions | Environmental | Even (subject to change) | High | If predicted weather conditions are unfavourable on the day, there should be a postponement day scheduled, if applicable. If there is a sudden weather change, the resources taken to travel to launch site should be as minimal as possible, to allow a launch retry on the postponement day. |
-| Rocket launch injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Launch site should be secured and all operations should pass the go functionality for a safe launch. |
-| Rocket in-flight injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Rocket flight should approximately follow simulation predictions and data should be received consistently, including flight time, max height and max velocity. |
-| Rocket return injury | Safety & health | Very unlikely | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Various landing mitigations should be in place. The parachute with air friction and the probable landing zone. The parachutes should have various measures and testing to keep the deployment at a high probability sucess level. In additon, everyone is well distanced from the landing zone area. |
-| Rocket loses communication within flight | Technical | High | Medium | Testingthe cabalility of various rocket ranges, turbulance simulations and height distance (if possible) should decrease the chances of communication loss. Exception handling/logs should programmed to report when, how and what error occurred durining rocket being in-flight. |
-| Rocket refuses communication before launch | Technical | High | Medium | If possible, data should have the capability to be run offline. If other teams and requirements allow this, there may be a bypass method for real-time data and other laterations with the go/no go assessment to ensure health and saftey requirements are still upheld. |
+| Risk                                                       | Type                     | Likelihood                               | Impact    | Mitigation Strategies                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ---------------------------------------------------------- | ------------------------ | ---------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Failure to produce Mission Control software by launch date | Practical/deliverable    | Even (subject to change)                 | Low       | Consistent retrospectives and sprints should indicate a long term plan to prevent project fallout. Some deliverable or prototype should be produced, even if the resulting product is not functional yet.                                                                                                                                                                                                                 |
+| Unexpected University shutdown/course changes              | Operations               | Very unlikely                            | High      | Remain in contact with primary channel of communication; Mattermost for announcements related to course or university changes. Concerns to be taken up with class reps, tutors, lecturer, course co-ordinator or ECS dean. Follow any given instructions accordingly. Prepare for any temporary project pauses or overall termination.                                                                                    |
+| Laptop battery dies and/or software fails to run           | Technical                | Unlikely (preparation/testing dependent) | High      | With regards to the battery, if available bring a secondary battery. Checks before hand should take place for battery charge levels. If the software fails to run, have several packages with troubleshooting options (i.e. compatibility modes). It also should be considered to take a secondary laptop which has been tested.                                                                                          |
+| Location of Mission Control Station                        | Locational/Environmental | Very unlikely                            | Low       | Mission Control Station should be reasonably mobile to allow a approximate radius range of where the rocket may land. Mission Control should not be placed near the launchpad or inside the probable landing locations. Range testing and data transmission should ensure that the data can be received from the rocket at a safe distance.                                                                               |
+| Weather conditions                                         | Environmental            | Even (subject to change)                 | High      | If predicted weather conditions are unfavourable on the day, there should be a postponement day scheduled, if applicable. If there is a sudden weather change, the resources taken to travel to launch site should be as minimal as possible, to allow a launch retry on the postponement day.                                                                                                                            |
+| Rocket launch injury                                       | Safety & health          | Very unlikely                            | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Launch site should be secured and all operations should pass the go functionality for a safe launch.                                                                                                                                                                                                   |
+| Rocket in-flight injury                                    | Safety & health          | Very unlikely                            | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Rocket flight should approximately follow simulation predictions and data should be received consistently, including flight time, max height and max velocity.                                                                                                                                         |
+| Rocket return injury                                       | Safety & health          | Very unlikely                            | Very high | Following the strict safety and health requirements, the likelihood of this risk should remain as low as possible. Various landing mitigations should be in place. The parachute with air friction and the probable landing zone. The parachutes should have various measures and testing to keep the deployment at a high probability success level. In addition, everyone is well distanced from the landing zone area. |
+| Rocket loses communication within flight                   | Technical                | High                                     | Medium    | Testing the capability of various rocket ranges, turbulence simulations and height distance (if possible) should decrease the chances of communication loss. Exception handling/logs should programmed to report when, how and what error occurred during rocket being in-flight.                                                                                                                                         |
+| Rocket refuses communication before launch                 | Technical                | High                                     | Medium    | If possible, data should have the capability to be run offline. If other teams and requirements allow this, there may be a bypass method for real-time data and other alterations with the go/no go assessment to ensure health and safety requirements are still upheld.                                                                                                                                                 |
 
 For more information about the health and safety risks outlined here, follow the link in section 5.4 below
+
 ### 5.4 Health and Safety
 
-Link to the document highlighting the health and safety apsects of this project: 
+Link to the document highlighting the health and safety aspects of this project:
 
-https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/blob/master/health_and_safety/heatlh_and_safety.md 
+https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/blob/master/health_and_safety/heatlh_and_safety.md
 
 We will follow the following website [2] as a guide to conduct procedures to make sure that person(s) associated with this project stays safe from risks highlighted in the health_and_safety.md (the link above). More information found in the link above.
 
@@ -285,29 +285,27 @@ We will follow the following website [2] as a guide to conduct procedures to mak
 
 Safety Plans may be required for some projects, depending on project requirements.
 
-
-| **Risk** | **Safety Plan** |
-| ------ | ------ |
-| High Wind Speeds | The weather condition will be assessed through multiple sources prior to the launch. A judegment call will be made by the team based on the data available at the time. Launch will not take place during these conditions |
-| Low Visibility | If there is more than 50% cloud coverage or other objects obscuring view, less than 8km horizontal visibility, or it is night time. The launch will not take place. |
-| Combustion | The rocket will only launch if the launcher incorporates a blast defector device to prevent impinging on flammable materials. As a team, we will also check that the rocket includes a previously tested ignition scheme which has demonstrated capabiity of igniting all rocket motors intended for launch |
-| Explosion | The rocket will only launch if it has no flammable or explosive payload inside. This will prevent the rocket to enter into an explosive state. |
-| Rocket Falling Over | The rocket will only be launched if there is a recovery system such as a streamer or parachute to ensure that the rocket can return safely and undamaged once launched. Also it will be checked if the wadding in the rocket is fireproof, if not then the rocket will not be launched |
-| Rocket Not Flying Straight | Before launch, we will organise a plan to specify the positions of everyone involved in the launch. The stability of the rocket will also be checked before launch, and a warning will be made to possible spectators to spectating at a safe distance. |
-| Unsuccessful Launch | Before launch, there will be a high amount of testing done to ensure that launch is successful. This means making sure there are no issues with the system which would cause the launch to fail. |
-| Collision with Property and/or Persons | A plan will be organised so that people involved in the launch are standing at a safe distance from the launcher. A warning will be made to any possible spectators so that they are spectating at a safe distance. The rocket will only be launched if there are not any obstacles/targets in the way of launch, and that there is a recovery system within the rocket to prevent it to fall when fuel is run out. |
-| Eye Damage | Launchers will be placed so that the end of the launch rod is above eye level. Also people near the launch will be required to wear safety goggles. |
-| Moderate to Severe Burns | A plan will be set in place so that the people involved in the launch are at a safe distance. A warning will also be made to spectators so that they are spectating at a safe distance. Launch will not take place unless a raduis of at least 3m from the launcher is clear of brown grass, dry weeds or other easy to burn materials that are likely to be ignited by the exhaust of the rocket |
-| Interference with Aerodome and/or Planes | We will not launch the rocket into clouds and check for near aeroplanes to ensure that the rocket is launchable. The mission control system will also include a function which will detect things like areoplanes or aeroodromes so that we ensure with more certainty whether launch can take place or not. |
-
+| **Risk**                                  | **Safety Plan**                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| High Wind Speeds                          | The weather condition will be assessed through multiple sources prior to the launch. A judgement call will be made by the team based on the data available at the time. Launch will not take place during these conditions                                                                                                                                                                                          |
+| Low Visibility                            | If there is more than 50% cloud coverage or other objects obscuring view, less than 8km horizontal visibility, or it is night time. The launch will not take place.                                                                                                                                                                                                                                                 |
+| Combustion                                | The rocket will only launch if the launcher incorporates a blast defector device to prevent impinging on flammable materials. As a team, we will also check that the rocket includes a previously tested ignition scheme which has demonstrated capability of igniting all rocket motors intended for launch                                                                                                        |
+| Explosion                                 | The rocket will only launch if it has no flammable or explosive payload inside. This will prevent the rocket to enter into an explosive state.                                                                                                                                                                                                                                                                      |
+| Rocket Falling Over                       | The rocket will only be launched if there is a recovery system such as a streamer or parachute to ensure that the rocket can return safely and undamaged once launched. Also it will be checked if the wadding in the rocket is fireproof, if not then the rocket will not be launched                                                                                                                              |
+| Rocket Not Flying Straight                | Before launch, we will organise a plan to specify the positions of everyone involved in the launch. The stability of the rocket will also be checked before launch, and a warning will be made to possible spectators to spectating at a safe distance.                                                                                                                                                             |
+| Unsuccessful Launch                       | Before launch, there will be a high amount of testing done to ensure that launch is successful. This means making sure there are no issues with the system which would cause the launch to fail.                                                                                                                                                                                                                    |
+| Collision with Property and/or Persons    | A plan will be organised so that people involved in the launch are standing at a safe distance from the launcher. A warning will be made to any possible spectators so that they are spectating at a safe distance. The rocket will only be launched if there are not any obstacles/targets in the way of launch, and that there is a recovery system within the rocket to prevent it to fall when fuel is run out. |
+| Eye Damage                                | Launchers will be placed so that the end of the launch rod is above eye level. Also people near the launch will be required to wear safety goggles.                                                                                                                                                                                                                                                                 |
+| Moderate to Severe Burns                  | A plan will be set in place so that the people involved in the launch are at a safe distance. A warning will also be made to spectators so that they are spectating at a safe distance. Launch will not take place unless a radius of at least 3m from the launcher is clear of brown grass, dry weeds or other easy to burn materials that are likely to be ignited by the exhaust of the rocket                   |
+| Interference with Aerodrome and/or Planes | We will not launch the rocket into clouds and check for near aeroplanes to ensure that the rocket is launch-able. The mission control system will also include a function which will detect things like aeroplanes or aerodromes so that we ensure with more certainty whether launch can take place or not.                                                                                                        |
 
 ## 6. Appendices
 
-### 6.1 Assumptions and dependencies 
+### 6.1 Assumptions and dependencies
 
 Below is a list of the assumptions for this project listed in ascending priority order \[3\]:
 
-- Level 2 lifted: The current lockdown level will be lifted as some point making it safe for practical applications of the software
+- Level 2 lifted: The current lock-down level will be lifted as some point making it safe for practical applications of the software
 - Performance of developing equipment: the team has access to all necessary developing hardware and software they need
 - Human resource availability: All key project team members are available and have the necessary skills and knowledge to work on the project.
 - Scheduling accuracy: The set deadlines and milestones are achievable and the project can be finished on time.
@@ -317,25 +315,24 @@ Below is a list of the assumptions for this project listed in ascending priority
 ### 6.2 Acronyms and abbreviations
 
 - **MC** or MCS (Mission Control or Mission Control System/Software): Reference to Mission Control's part in the project (our team's part).
-- **DD**: Test-driven development 
+- **DD**: Test-driven development
 - **CAA**: Civil Aviation Authority
 - **IEEE**: The Institute of Electrical and Electronics Engineers
 - **JSON**: JSON (JavaScript Object Notation) is a lightweight data-interchange format
-- **LoRa**:  low-power wide-area network protocol
-- **UML** The Unified Modeling Language (UML)
+- **LoRa**: low-power wide-area network protocol
+- **UML** The Unified Modelling Language (UML)
 - **XML**: Extensible Markup Language (XML) is a markup language
 
 ## 7. Contributions
 
-| Team Member | Section Contributions |
-| ------ | ------ |
-| Elliott Andrews | 2, 3.1 |
-| Binke Xu |  |
-| Sandy (Alexander Saunders) |  |
-| Jesse Wood | 4.1, 4.3, 4.5, 6.1, 6.2|
-| Mason Yi | 4.1, 4.3, 4.5 |
-| Marcus Rathod | 5.4, 5.4.1 |
-
+| Team Member                | Section Contributions   |
+| -------------------------- | ----------------------- |
+| Elliott Andrews            | 2, 3.1                  |
+| Binke Xu                   |                         |
+| Sandy (Alexander Saunders) |                         |
+| Jesse Wood                 | 4.1, 4.3, 4.5, 6.1, 6.2 |
+| Mason Yi                   | 4.1, 4.3, 4.5           |
+| Marcus Rathod              | 5.4, 5.4.1              |
 
 ---
 
@@ -343,7 +340,6 @@ Below is a list of the assumptions for this project listed in ascending priority
 
 <!-- * Write your document using [Markdown](https://gitlab.ecs.vuw.ac.nz/help/user/markdown#gitlab-flavored-markdown-gfm) in your team's GitLab repository.-->
 <!-- * Major sections should be separated by a horizontal rule.-->
-
 
 <!--## Assessment -->
 

@@ -17,11 +17,11 @@ import L from "leaflet";
  *  This uses the OpenStreetMap API to render a topographical map.
  */
 
-const MapPage = () => {
+export default function MapPage() {
   return <Cache Online={Online} Offline={Offline} />;
-};
+}
 
-const Online = () => {
+function Online() {
   const [rocket] = useRocket();
   const position = [rocket.position.lat, rocket.position.long];
   const options = {
@@ -52,18 +52,16 @@ const Online = () => {
       </Circle>
     </Map>
   );
-};
+}
 
-const Offline = () => {
+function Offline() {
   const [rocket] = useRocket();
   const position = [rocket.position.lat, rocket.position.long];
-
   const options = {
-    url:
-      "http://localhost/cgi-bin/mapserv?map=/home/woodj/Documents/uni/engr302/group-12/web_application/src/data/wellington.map&",
+    url: `http://localhost/cgi-bin/map?`,
     crs: L.CRS.EPSG4326,
     format: "image/png",
-    layers: "wellington-topographical"
+    layers: "topographical"
   };
 
   return (
@@ -89,7 +87,7 @@ const Offline = () => {
       </Circle>
     </Map>
   );
-};
+}
 
 const styles = {
   map: {
@@ -103,5 +101,3 @@ const styles = {
     width: "50%"
   }
 };
-
-export default MapPage;
