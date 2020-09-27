@@ -6,25 +6,24 @@ const port = new SerialPort('COM3', {  //not sure if this is correct
   autoOpen: true
 });
 
-const recievedData = 'data';
 // The Serial port parser
 const parser = new Readline();
 port.pipe(parser);
 
-// Read the data from the serial port
-parser.on("data", (line) => parseData(line));  //log data and store it
+var allData = [];
 
-// Write the data to the serial port, can change to weatherData
-writeMessage("hello")
-console.log("data to port")
+writeMessage("hello")  //write data
+parser.on("data", (line) => readData(line));  //read data and save it into array
 
 function writeMessage(data) {
-  let msg = "date write to port!";
-  port.write(data)
+  port.write(data);
 }
 
-function parseData(data){
-  let msg = data;
-  recievedData = data
-  console.log(recievedData);
+function readData(data){
+  allData.push(data);
+  console.log(allData.length);
+  console.log(data)
+  //console.log(data.substr(0,6))
 }
+
+
