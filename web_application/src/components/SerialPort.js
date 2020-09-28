@@ -19,11 +19,17 @@ function writeMessage(data) {
   port.write(data);
 }
 
+//Each line is as follows:
+//time_stamp, lat, long, gimbal_x [degrees], gimbal_y[degrees],
+//IMU_accel_x, IMU_accel_y, IMU_accel_z, IMU_rot_x, IMU_rot_y, IMU_rot_z,
+//internal_temp, height, battery_status, rocket_status
 function readData(data){
   allData.push(data);
   console.log(allData.length);
   console.log(data)
-  //console.log(data.substr(0,6))
+  var spiltStr = data.split(','); //array of data from the port
+  //console.log(data.substr(0,6))  
+  console.log(spiltStr[0]);  //get index of 0 of data
 }
 
 
