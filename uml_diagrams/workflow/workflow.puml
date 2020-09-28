@@ -1,0 +1,37 @@
+@startuml
+autonumber
+
+Actor User
+control Master
+control Dev
+control Feature
+
+activate Dev
+User -> Dev: Start
+
+Dev -> Feature: Checkout 
+deactivate Dev
+activate Feature
+Feature -> Feature: Request
+Feature -> Feature: Resolve
+Feature -> Feature: Test 
+Feature -> Feature: Pass
+Feature -> Dev: Merge
+destroy Feature
+
+activate Dev
+Dev -> Dev: Install 
+Dev -> Dev: Test 
+Dev -> Dev: Pass
+Dev -> Dev: Build
+
+Dev -> Master: Merge
+deactivate Dev
+activate Master
+Master -> Master: Clean 
+Master -> Master: Move 
+Master -> Master: Release
+Master -> User: Done
+deactivate Master
+
+@enduml
