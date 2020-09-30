@@ -13,27 +13,36 @@ import {CSVLink, CSVDownload} from 'react-csv'
 // const csvWriter = createCsvWriter({
 //   path: 'out.csv',
  const header = [ 
-    {id: 'latId', title: 'lanuchLatitude'},
-    {id: 'lonId', title: 'lanuchLongitude'},
-    {id: 'launchAngId', title: 'lanuchAngle'},
-    {id: 'launchAngStdId', title: 'lanuchAngleStdDev'},
-    {id: 'rodLenId', title: 'launchRodLength'},
-    {id: 'launchDirId', title: 'lanuchDirection'},
-    {id: 'launchDirStdId', title: 'lanuchDirectionStdDev'},
-    {id: 'windSpeedId', title: 'windSpeed'},
-    {id: 'windSpeedStdId', title: 'windSpeedStdDev'},
-    {id: 'windDirId', title: 'windDirection'},
-    {id: 'windDirStdId', title: 'windDirectionStdDev'},
-    {id: 'launchTempId', title: 'launchTemperature'},
-    {id: 'launchTempStdId', title: 'temperatureStdDev'},
-    {id: 'altitudeId', title: 'launchAltitude'},
-    {id: 'pressureId', title: 'launchPressure'},
-    {id: 'pressureStdId', title: 'launchPressureStdDev'},
-    {id: 'turbIntensityId', title: 'windTurbulenceIntensity'},
-    {id: 'motorPerfMeanId', title: 'motorPerformanceMean'},
-    {id: 'motorPerfStdId', title: 'motorPerformanceStdDev'},
-    {id: 'numSimsId', title: 'numSims'},
-    {id: 'timeOpenParachuteId', title: 'timeToOpenParachuteStdDev'}
+    {id: 'latId', title: 'Lanuch Latitude'},
+    {id: 'lonId', title: 'Lanuch Longitude'},
+    {id: 'launchAngId', title: 'Lanuch Angle'},
+    {id: 'launchAngStdId', title: 'LanuchAngle (Std Dev)'},
+    {id: 'launchDirId', title: 'Lanuch Direction'},
+    {id: 'launchDirStdId', title: 'Lanuch Direction (Std Dev)'},
+    {id: 'altitudeId', title: 'Launch Altitude'},
+    {id: 'launchTempId', title: 'Temperature'},
+    {id: 'launchTempStdId', title: 'Temperature (Std Dev)'},
+    {id: 'pressureId', title: 'Pressure'},
+    {id: 'pressureStdId', title: 'Pressure (Std Dev)'},
+    {id: 'rodLenId', title: 'Launch Rod Length'},
+    {id: 'turbIntensityId', title: 'Wind Turbulence Intensity'},
+    {id: 'motorPerfMeanId', title: 'Motor Thrust Performance (Mean)'},
+    {id: 'motorPerfStdId', title: 'Motor Thurst Performance (Std Dev)'},
+    {id: 'timeOpenParachuteId', title: 'Parachute Deployment Time (Std Dev)'}
+    {id: 'numSimsId', title: 'Number of Simulations'},
+    {id: 'windSpeedId', title: 'Wind Speed Launch'},
+    {id: 'windSpeedStdId', title: 'Wind Speed (Std Dev)'},
+    {id: 'windDirId', title: 'Wind Direction Launch'},
+    {id: 'windDirStdId', title: 'Wind Direction (Std Dev)'},
+ 
+ 
+  
+
+   
+
+   
+
+ 
  
   ];
 
