@@ -13,27 +13,36 @@ import {CSVLink, CSVDownload} from 'react-csv'
 // const csvWriter = createCsvWriter({
 //   path: 'out.csv',
  const header = [ 
-    {id: 'latId', title: 'lanuchLatitude'},
-    {id: 'lonId', title: 'lanuchLongitude'},
-    {id: 'launchAngId', title: 'lanuchAngle'},
-    {id: 'launchAngStdId', title: 'lanuchAngleStdDev'},
-    {id: 'rodLenId', title: 'launchRodLength'},
-    {id: 'launchDirId', title: 'lanuchDirection'},
-    {id: 'launchDirStdId', title: 'lanuchDirectionStdDev'},
-    {id: 'windSpeedId', title: 'windSpeed'},
-    {id: 'windSpeedStdId', title: 'windSpeedStdDev'},
-    {id: 'windDirId', title: 'windDirection'},
-    {id: 'windDirStdId', title: 'windDirectionStdDev'},
-    {id: 'launchTempId', title: 'launchTemperature'},
-    {id: 'launchTempStdId', title: 'temperatureStdDev'},
-    {id: 'altitudeId', title: 'launchAltitude'},
-    {id: 'pressureId', title: 'launchPressure'},
-    {id: 'pressureStdId', title: 'launchPressureStdDev'},
-    {id: 'turbIntensityId', title: 'windTurbulenceIntensity'},
-    {id: 'motorPerfMeanId', title: 'motorPerformanceMean'},
-    {id: 'motorPerfStdId', title: 'motorPerformanceStdDev'},
-    {id: 'numSimsId', title: 'numSims'},
-    {id: 'timeOpenParachuteId', title: 'timeToOpenParachuteStdDev'}
+    {id: 'latId', title: 'Lanuch Latitude'},
+    {id: 'lonId', title: 'Lanuch Longitude'},
+    {id: 'launchAngId', title: 'Lanuch Angle'},
+    {id: 'launchAngStdId', title: 'LanuchAngle (Std Dev)'},
+    {id: 'launchDirId', title: 'Lanuch Direction'},
+    {id: 'launchDirStdId', title: 'Lanuch Direction (Std Dev)'},
+    {id: 'altitudeId', title: 'Launch Altitude'},
+    {id: 'launchTempId', title: 'Temperature'},
+    {id: 'launchTempStdId', title: 'Temperature (Std Dev)'},
+    {id: 'pressureId', title: 'Pressure'},
+    {id: 'pressureStdId', title: 'Pressure (Std Dev)'},
+    {id: 'rodLenId', title: 'Launch Rod Length'},
+    {id: 'turbIntensityId', title: 'Wind Turbulence Intensity'},
+    {id: 'motorPerfMeanId', title: 'Motor Thrust Performance (Mean)'},
+    {id: 'motorPerfStdId', title: 'Motor Thurst Performance (Std Dev)'},
+    {id: 'timeOpenParachuteId', title: 'Parachute Deployment Time (Std Dev)'}
+    {id: 'numSimsId', title: 'Number of Simulations'},
+    {id: 'windSpeedId', title: 'Wind Speed Launch'},
+    {id: 'windSpeedStdId', title: 'Wind Speed (Std Dev)'},
+    {id: 'windDirId', title: 'Wind Direction Launch'},
+    {id: 'windDirStdId', title: 'Wind Direction (Std Dev)'},
+ 
+ 
+  
+
+   
+
+   
+
+ 
  
   ];
 
@@ -123,7 +132,7 @@ function Simulation() {
         <label for="longValue">Longitude:</label>
         <input //lanuchLongitude
           type="int"
-          placeholder="e.g. 174.7731"
+          placeholder="(Degrees)"
           id="lonId"
           onChange={event => setLongitude(event.target.value)}
         />
@@ -132,7 +141,7 @@ function Simulation() {
         <label for="launchAngleValue">Launch Angle:</label>
         <input //lanuchAngle
           type="int"
-          placeholder="e.g. 10.5 (degrees)"
+          placeholder="(Degrees)"
           id="launchAngId"
           //value={coordinates.long}
           onChange={event => setLaunchAngle(event.target.value)}
@@ -142,7 +151,7 @@ function Simulation() {
         <label for="launchAngleStdDevValue">Launch Angle (Standard Deviation):</label>
         <input //lanuchAngleStdDev
           type="int"
-          placeholder="e.g. 10.5 (mean)"
+          placeholder="(Degrees)"
           id="launchAngStdId"
           //value={coordinates.long}
           onChange={event => setLaunchAngleStdDev(event.target.value)}
@@ -152,7 +161,7 @@ function Simulation() {
         <label for="RodLengthValue">Launch Rod Length:</label>
         <input //launchRodLength
           type="int"
-          placeholder="e.g. 0.5 (meters)"
+          placeholder="(Meters)"
           id="rodLenId"
           //value={coordinates.long}
           onChange={event => setLaunchRodLength(event.target.value)}
@@ -162,7 +171,7 @@ function Simulation() {
         <label for="launchDirectionValue">Launch Direction:</label>
         <input //lanuchDirection
           type="int"
-          placeholder="e.g. 12345.678 (Radians)"
+          placeholder="(Degrees)"
           id="launchDirId"
           //value={coordinates.long}
           onChange={event => setLaunchDirection(event.target.value)}
@@ -172,7 +181,7 @@ function Simulation() {
         <label for="launchDirectionStdDevValue">Launch Direction (Standard Deviation):</label>
         <input //lanuchDirectionStdDev
           type="int"
-          placeholder="e.g. 12345.678 (mean)"
+          placeholder="(Degrees)"
           id="launchDirStdId"
           //value={coordinates.long}
           onChange={event => setLaunchDirectionStdDev(event.target.value)}
@@ -184,7 +193,7 @@ function Simulation() {
         <label for="windSpeedValue">Wind Speed:</label>
         <input //windSpeed
           type="int"
-          placeholder="e.g. 10 (meters per second)"
+          placeholder="(meters per second - m/s)"
           id="windSpeedId"
           //value={coordinates.long}
           onChange={event => setWindSpeed(event.target.value)}
@@ -194,7 +203,7 @@ function Simulation() {
         <label for="windSpeedStdDevValue">Wind Speed (Standard Deviation):</label>
         <input //windSpeedStdDev
           type="int"
-          placeholder="e.g. 10 (Standard Deviation)"
+          placeholder="(meters per second - m/s)"
           id="windSpeedStdId"
           //value={coordinates.long}
           onChange={event => setWindSpeedStdDev(event.target.value)}
@@ -204,7 +213,7 @@ function Simulation() {
         <label for="windDirectionValue">Wind Direction:</label>
         <input //windDirection
           type="int"
-          placeholder="e.g. 12345.678 (Radians)"
+          placeholder="(Degrees)"
           id="windDirId"
           //value={coordinates.long}
           onChange={event => setWindDirection(event.target.value)}
@@ -214,7 +223,7 @@ function Simulation() {
         <label for="windDirectionStdDevValue">Wind Direction (Standard Deviation):</label>
         <input //windDirectionStdDev
           type="int"
-          placeholder="e.g. 12345.678 (Standard Deviation)"
+          placeholder="(Degrees)"
           id="windDirStdId"
           //value={coordinates.long}
           onChange={event => setWindDirectionStdDev(event.target.value)}
@@ -224,7 +233,7 @@ function Simulation() {
         <label for="temperatureValue">Launch Temperature:</label>
         <input //launchTemperature
           type="int"
-          placeholder="e.g. 21 (degrees)"
+          placeholder="(Degrees Celsius)"
           id="launchTempId"
           //value={coordinates.long}
           onChange={event => setLaunchTemp(event.target.value)}
@@ -234,7 +243,7 @@ function Simulation() {
         <label for="temperatureStdDevValue">Launch Temperature: (Standard Deviation)</label>
         <input //temperatureStdDev
           type="int"
-          placeholder="e.g. 21 (Standard Deviation)"
+          placeholder="(Degrees Celsius)"
           id="launchTempStdId"
           //value={coordinates.long}
           onChange={event => setLaunchTempStdDev(event.target.value)}
@@ -244,7 +253,7 @@ function Simulation() {
         <label for="altitudeValue">Launch Altitude</label>
         <input //launchAltitude
           type="int"
-          placeholder="e.g. 1 (meters ground level)"
+          placeholder="(Meters)"
           id="altitudeId"
           //value={coordinates.long}
           onChange={event => setLaunchAltitude(event.target.value)}
@@ -254,7 +263,7 @@ function Simulation() {
         <label for="pressureValue">Launch Pressure</label>
         <input //launchPressure
           type="int"
-          placeholder="e.g. 50 (Percentage)" //Maybe...
+          placeholder="(Pascal - Pa)"
           id="pressureId"
           //value={coordinates.long}
           onChange={event => setLaunchPressure(event.target.value)}
@@ -264,7 +273,7 @@ function Simulation() {
         <label for="pressureStdDevValue">Launch Pressure (Standard Deviation)</label>
         <input //launchPressureStdDev
           type="int"
-          placeholder="e.g. 50 (Standard Deviation)" //Maybe...
+          placeholder="(Pascal - Pa)"
           id="pressureStdId"
           //value={coordinates.long}
           onChange={event => setLaunchPressureStdDev(event.target.value)}
@@ -274,7 +283,7 @@ function Simulation() {
         <label for="turbulanceIntensityValue">Turbulance Intensity:</label>
         <input //windTurbulenceIntensity
           type="int"
-          placeholder="e.g. 50 (Standard Deviation)" //Maybe...
+          placeholder="(Standard Deviation)"
           id="turbIntensityId"
           //value={coordinates.long}
           onChange={event => setTurbulenceIntensity(event.target.value)}
@@ -286,7 +295,7 @@ function Simulation() {
         <label for="motorPerformanceMeanValue">Motor Performance Mean:</label>
         <input //motorPerformanceMean
           type="int"
-          placeholder="e.g. 25 (percentage)" 
+          placeholder="(Percentage)" 
           id="motorPerfMeanId"
           //value={coordinates.long}
           onChange={event => setMotorPerformanceMean(event.target.value)}
@@ -296,7 +305,7 @@ function Simulation() {
         <label for="motorPerformanceStdDevValue">Motor Performance (Standard Deviation):</label>
         <input //motorPerformanceStdDev
           type="int"
-          placeholder="e.g. 25 (Standard Deviation)" 
+          placeholder="(Percentage)" 
           id="motorPerfStdId"
           //value={coordinates.long}
           onChange={event => setMotorPerformanceMeanStdDev(event.target.value)}
@@ -316,14 +325,14 @@ function Simulation() {
         <label for="timeToOpenParachuteStdDevValue">Time To Open Parachute (Standard Deviation):</label>
         <input //timeToOpenParachuteStdDev
           type="int"
-          placeholder="e.g. 3 (seconds) - (Standard Deviation)" 
+          placeholder="(Seconds)" 
           id="timeOpenParachuteId"
           //value={coordinates.long}
           onChange={event => setTimeToOpenParachuteStdDev(event.target.value)}
         />
         <br />
 
-        <CSVLink data={data} filename={"out.csv"}>Download CSV</CSVLink>
+        <CSVLink data={data} filename={"export_mc_and_import_sim.csv"}>Download CSV</CSVLink>
         <br />
 
       </div>
