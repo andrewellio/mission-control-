@@ -28,7 +28,7 @@ import {CSVLink, CSVDownload} from 'react-csv'
     {id: 'turbIntensityId', title: 'Wind Turbulence Intensity'},
     {id: 'motorPerfMeanId', title: 'Motor Thrust Performance (Mean)'},
     {id: 'motorPerfStdId', title: 'Motor Thurst Performance (Std Dev)'},
-    {id: 'timeOpenParachuteId', title: 'Parachute Deployment Time (Std Dev)'}
+    {id: 'timeOpenParachuteId', title: 'Parachute Deployment Time (Std Dev)'},
     {id: 'numSimsId', title: 'Number of Simulations'},
     {id: 'windSpeedId', title: 'Wind Speed Launch'},
     {id: 'windSpeedStdId', title: 'Wind Speed (Std Dev)'},
