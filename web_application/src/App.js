@@ -10,6 +10,7 @@ import Landing from "./pages/Landing";
 import Instructions from "./pages/Instructions";
 import Simulation from "./pages/Simulation";
 import Weather from "./pages/Weather";
+import Graphs from "./pages/Graphs"
 
 /**
  *  This page house the single page application (SPA).
@@ -33,6 +34,9 @@ const App = () => {
         </Route>
         <Route path="/Home">
           <Landing />
+        </Route>
+        <Route path="/Graphs">
+          <Graphs />
         </Route>
         <Redirect from="/" to="/Home" />
       </Switch>

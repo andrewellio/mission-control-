@@ -61,6 +61,14 @@ const Instructions = () => {
               <a href="https://en.wikipedia.org/wiki/LoRa">LoRa</a>. The
               software displays the current phase of the rocket.
             </li>
+            <li>
+              <b>
+                <Link to="/Graphs">Graphs</Link>
+              </b>
+              <br />
+              This is the graphs page. It contains multiple graphs being displayed 
+              from the USB serial data being passed in.
+            </li>
           </ol>
         </div>
       </div>

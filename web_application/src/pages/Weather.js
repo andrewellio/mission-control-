@@ -47,9 +47,9 @@ const Weather = () => {
   return (
     <>
       <BrowserRouter>
-        <Link className="Instructions-back" to="/">
-          <i className="material-icons">navigate_before</i>
-        </Link>
+      <Link className="Dashboard-back" to="/">
+        <i className="material-icons">navigate_before</i>
+      </Link>
       </BrowserRouter>
       <div className="Landing-body">
         <h1>Weather</h1>
