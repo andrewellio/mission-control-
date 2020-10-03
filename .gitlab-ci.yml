@@ -1,26 +1,75 @@
-image: node:latest
+image: node:12
 
 stages:
-  - build
+  - install
   - test
+  - build
+  - deploy
 
-cache:
+Install:
+  stage: install
+  interruptible: true
+  only:
+    - merge_requests
+    - master
+    - web
+    - schedules
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
     paths:
-        - web_application/node_modules/
+      - web_application/.npm/
+  artifacts:
+    paths:
+      - web_application/node_modules
+    expire_in: 1 day
+  script:
+    - cd web_application
+    - npm ci --cache .npm --prefer-offline
 
-install_dependencies:
-    stage: build
-    script:
-        - cd web_application
-        - npm install
-    artifacts:
-        expire_in: 1 hour
-        paths:
-            - node_modules/
+Test:
+  stage: test
+  dependencies:
+    - Install
+  interruptible: true
+  only:
+    - merge_requests
+    - master
+    - web
+    - schedules
+  script:
+    - cd web_application
+    - npm test -- --coverage
+  coverage: /All\sfiles.*?\s+(\d+.\d+)/
 
-testing_testing:
-    stage: test
-    script:
-        - cd web_application
-        - npm test -- --coverage
-    coverage: /All\sfiles.*?\s+(\d+.\d+)/
+Build Site:
+  stage: build
+  dependencies:
+    - Install
+    - Test
+  interruptible: true
+  only:
+    - merge_requests
+    - master
+    - web
+    - schedules
+  script:
+    - cd web_application/
+    - npm run build
+  artifacts:
+    paths:
+      - web_application/dist
+    expire_in: 1 day
+
+pages:
+  stage: deploy
+  interruptible: true
+  only:
+    - master
+  dependencies:
+    - Build Site
+  script:
+    - rm -rf public
+    - mv web_application/dist/  public/
+  artifacts:
+    paths:
+      - public
