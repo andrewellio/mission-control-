@@ -1,10 +1,10 @@
+image: node:12
+
 stages:
   - install
   - test
   - build
   - deploy
-
-image: node:12
 
 Install:
   stage: install
@@ -15,9 +15,7 @@ Install:
     - web
     - schedules
   cache:
-    key:
-      files:
-        - web_application/package-lock.json
+    key: ${CI_COMMIT_REF_SLUG}
     paths:
       - web_application/.npm/
   artifacts:
