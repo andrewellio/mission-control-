@@ -6,6 +6,13 @@ export default function GoNoGo(){
     return(
 
       <div style={styles.title}>
+
+        <Link style={styles.backLinkStyle} to="/">
+          <i style={styles.back} className="material-icons">
+            navigate_before
+          </i>
+        </Link>
+
         <h1>Go/No Go</h1>
         <h3>Set Threshold Values</h3>
   
@@ -60,4 +67,9 @@ const styles = {
     position: 'relative',
     bottom: 20,
   },
+
+  backLinkStyle: {
+    position: 'relative',
+    left: -780,
+  }
 }
