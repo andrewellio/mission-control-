@@ -1,10 +1,11 @@
+import { TextareaAutosize } from '@material-ui/core';
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
 export default function GoNoGo(){
     return(
 
-      <div>
+      <div style={styles.title}>
         <h1>Go/No Go</h1>
         <h3>Set Threshold Values</h3>
   
@@ -14,6 +15,7 @@ export default function GoNoGo(){
             type="int"
             placeholder="30 (degrees - default)"
             id="angle"
+            style={styles.inputBox}
             //onChange={event => setLatitude(event.target.value)}
             />
             <br />
@@ -24,6 +26,7 @@ export default function GoNoGo(){
             type="int"
             placeholder="(calculation OpenRocket - optional)"
             id="angle"
+            style={styles.inputBox}
             //onChange={event => setLatitude(event.target.value)}
             />
             <br />
@@ -34,10 +37,27 @@ export default function GoNoGo(){
             type="int"
             placeholder="25 (k/hr - default)"
             id="angle"
+            style={styles.inputBox}
             //onChange={event => setLatitude(event.target.value)}
             />
             <br />
             </div>
 
     );
+}
+
+const styles = {
+  title: {
+    margin: 'auto',
+    width: 600,
+    border: 3,
+    padding: 10,
+    paddingLeft: 100,
+    textAlign: 'center',
+  },
+
+  inputBox: {
+    position: 'relative',
+    bottom: 20,
+  },
 }

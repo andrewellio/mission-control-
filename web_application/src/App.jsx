@@ -6,6 +6,7 @@ import Landing from "./pages/Landing";
 import Instructions from "./pages/Instructions";
 import Simulation from "./pages/Simulation";
 import Weather from "./pages/Weather";
+import GoNoGo from "./pages/GoNoGo";
 
 /**
  *  This page house the single page application (SPA).
@@ -29,7 +30,8 @@ const pages = [
   {path: "/Dashboard", component: Dashboard},
   {path: "/Instructions", component: Instructions},
   {path: "/Weather", component: Weather},
-  {path: "/Simulation", component: Simulation}
+  {path: "/Simulation", component: Simulation},
+  {path: "/GoNoGo", component: GoNoGo},
 ];
 
 const defaultPage = pages[0].path;
