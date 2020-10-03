@@ -10,6 +10,7 @@ import WeatherWidget from "../components/WeatherWidget";
 import Comms from "../components/Comms";
 import Reader from "../api/Reader";
 
+
 /**
  *  This page presents real-time data from the rocket.
  *  This includes Telemetry, positional and communications.
@@ -17,6 +18,8 @@ import Reader from "../api/Reader";
 export default function Dashboard() {
   return (
     <>
+      <button style={styles.buttonStyle}>Check Go/No Go</button>
+
       <div style={styles.header}>
         <Link style={styles.back} to="/">
           <HomeIcon />
@@ -54,5 +57,10 @@ const styles = {
   back: {
     fontSize: "30pt",
     color: "white"
-  }
+  },
+  buttonStyle:{
+    position: 'relative',
+    left: 1050,
+    top: 30,
+  },
 };
