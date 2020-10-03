@@ -9,7 +9,7 @@ import Time from "../components/Time";
 import WeatherWidget from "../components/WeatherWidget";
 import Comms from "../components/Comms";
 import Reader from "../api/Reader";
-
+import GoNoGo from "../pages/GoNoGo";
 
 /**
  *  This page presents real-time data from the rocket.
@@ -62,5 +62,6 @@ const styles = {
     position: 'relative',
     left: 1050,
     top: 30,
+    
   },
 };

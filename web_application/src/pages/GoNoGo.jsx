@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 export default function GoNoGo(){
     return(
 
+      <div>
         <h1>Go/No Go</h1>
         <h3>Set Threshold Values</h3>
   
@@ -36,6 +37,7 @@ export default function GoNoGo(){
             //onChange={event => setLatitude(event.target.value)}
             />
             <br />
+            </div>
 
     );
 }
