@@ -11,9 +11,7 @@ const parser = new Readline();
 port.pipe(parser);
 
 var allData = [];
-
-writeMessage("hello")  //write data
-parser.on("data", (line) => readData(line));  //read data and save it into array
+var fs = require('fs');
 
 function writeMessage(data) {
   port.write(data);
@@ -23,7 +21,7 @@ function writeMessage(data) {
 //time_stamp, lat, long, gimbal_x [degrees], gimbal_y[degrees],
 //IMU_accel_x, IMU_accel_y, IMU_accel_z, IMU_rot_x, IMU_rot_y, IMU_rot_z,
 //internal_temp, height, battery_status, rocket_status
-function readData(data){
+function readData(data) {
   allData.push(data);
   console.log(allData.length);
   console.log(data)
@@ -32,4 +30,18 @@ function readData(data){
   console.log(spiltStr[0]);  //get index of 0 of data
 }
 
+function writeLogToFile() {
+  var file = fs.createWriteStream('Logs.txt');
+  file.on('error', function (err) { console.log(err) });
+  allData.forEach(function (v) { file.write(v.join(', ') + '\n'); });
+  file.end();
+}
 
+writeMessage("hello")  //write data
+parser.on("data", (line) => readData(line));  //read data and save it into array
+writeLogToFile();
+
+//export functions.
+exports.readData = readData;
+exports.writeMessage = writeMessage;
+exports.writeLogToFile = writeLogToFile;
