@@ -7,7 +7,7 @@ export default function GoNoGo(){
 
       <div style={styles.title}>
 
-        <Link style={styles.backLinkStyle} to="/">
+        <Link style={styles.backLinkStyle} to="/Dashboard">
           <i style={styles.back} className="material-icons">
             navigate_before
           </i>
