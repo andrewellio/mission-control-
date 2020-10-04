@@ -2,7 +2,17 @@ import { TextareaAutosize } from '@material-ui/core';
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
+
 export default function GoNoGo(){
+
+    const[launchRodAngleValue, setLaunchRodAngle] = useState('');
+    const[rocketVelocityLaunchRailValue, setRocketVelocityLaunchRail] = useState('');
+    const[windSpeedValue, setWindSpeed] = useState('');
+
+    const[launchRodAngleThreshold, setLaunchRodAngleThreshold] = useState('');
+    const[rocketVelocityLaunchRailThreshold, setRocketVelocityLaunchRailThreshold] = useState('');
+    const[windSpeedThreshold, setWindSpeedThreshold] = useState('');
+
     return(
 
       <div style={styles.title}>
@@ -18,36 +28,88 @@ export default function GoNoGo(){
   
         <label for="angle">Launch Rod Angle:</label>
         <p>*Angle of attack after the rocket leaves the launch rail. <br /> High angle of attack - the angle of the airstream to the fins, can make a stable rocket, unstable. </p>
-          <input //lanuchLatitude is CSV name
+          <input 
             type="int"
-            placeholder="30 (degrees - default)"
-            id="angle"
+            placeholder="Threshold (e.g.30 degrees)"
+            id="tAngle"
             style={styles.inputBox}
-            //onChange={event => setLatitude(event.target.value)}
+            onChange={event => setLaunchRodAngleThreshold(event.target.value)}
             />
+
+<         input 
+            type="int"
+            placeholder="Realtime Value"
+            id="rAngle"
+            style={styles.inputBox}
+            onChange={event => setLaunchRodAngle(event.target.value)}
+            />
+   
             <br />
+
+            <div>
+            
+              {launchRodAngleThreshold > launchRodAngleValue ? <label style={styles.goStyle}>Go</label> 
+              : <label style={styles.noGoStyle}>No Go</label>}
+              
+            </div>
+
+            <br /> 
+            
   
             <label for="railvelocity">Rocket Velocity Launch Rail:</label>
         <p>*Velocity of the rocket as it leaves the launch rail. <br /> Reported by openRocket and calculate the angle of attack yourself with some trig. </p>
           <input //lanuchLatitude is CSV name
             type="int"
-            placeholder="(calculation OpenRocket - optional)"
-            id="angle"
+            placeholder="Threshold"
+            id="tRailvel"
             style={styles.inputBox}
-            //onChange={event => setLatitude(event.target.value)}
+            onChange={event => setRocketVelocityLaunchRailThreshold(event.target.value)}
             />
+
+            <input 
+            type="int"
+            placeholder="Realtime Value"
+            id="rRailvel"
+            style={styles.inputBox}
+            onChange={event => setRocketVelocityLaunchRail(event.target.value)}
+            />
+            
+            <br />
+
+            <div>
+              {rocketVelocityLaunchRailThreshold > rocketVelocityLaunchRailValue ? <label style={styles.goStyle}>Go</label> 
+              : <label style={styles.noGoStyle}>No Go</label>}
+            </div>
+
             <br />
   
             <label for="windSpeed">Wind Speed:</label>
             <p>*Take into account the rocket and if it has relatively high thrust. </p> 
           <input //lanuchLatitude is CSV name
             type="int"
-            placeholder="25 (k/hr - default)"
-            id="angle"
+            placeholder="Threshold (e.g. 25 (k/hr))"
+            id="tWind"
             style={styles.inputBox}
-            //onChange={event => setLatitude(event.target.value)}
+            onChange={event => setWindSpeedThreshold(event.target.value)}
             />
+
+            <input 
+            type="int"
+            placeholder="Realtime Value"
+            id="rWind"
+            style={styles.inputBox}
+            onChange={event => setWindSpeed(event.target.value)}
+            />
+
             <br />
+
+            <div>
+              {windSpeedThreshold > windSpeedValue ? <label style={styles.goStyle}>Go</label> 
+              : <label style={styles.noGoStyle}>No Go</label>}
+            </div>
+
+            <br />
+
             </div>
 
     );
@@ -71,5 +133,15 @@ const styles = {
   backLinkStyle: {
     position: 'relative',
     left: -780,
+  },
+
+  goStyle: {
+    color: '#008000',
+   
+  },
+
+  noGoStyle: {
+    color: '#FF0000',
+    
   }
 }
