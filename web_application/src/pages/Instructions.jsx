@@ -55,6 +55,16 @@ export default function Instructions() {
               software displays the current phase of the rocket. Instructions
               for offline usage can be found <OfflineUsageLink />.
             </li>
+            <li>
+              <b>
+                <Link to="/GoNoGo">Go/No Go</Link>
+              </b>
+                <br />
+                Values for launch rod angle, rocket velocity and the wind speed 
+                are inputted alongside its threshold value to determine whether
+                the rocket can go or no go.
+              
+            </li>
           </ol>
         </div>
       </div>

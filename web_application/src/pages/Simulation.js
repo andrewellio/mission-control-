@@ -113,6 +113,7 @@ function Simulation() {
     <div>
       <Link className="Instructions-back" to="/"><i className="material-icons">navigate_before</i></Link>
       <div className="Landing-body">
+
         <h1>Simulation</h1>
         <p>Please note that some values like standard deviation (std) 
           and values which are challanging to measure (e.g. wind turbulance) are optional. 

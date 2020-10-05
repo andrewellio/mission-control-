@@ -9,6 +9,9 @@ import Time from "../components/Time";
 import WeatherWidget from "../components/WeatherWidget";
 import Comms from "../components/Comms";
 import Reader from "../api/Reader";
+import GoNoGo from "../pages/GoNoGo";
+
+
 
 /**
  *  This page presents real-time data from the rocket.
@@ -17,8 +20,11 @@ import Reader from "../api/Reader";
 export default function Dashboard() {
   return (
     <>
+      {/* <button style={styles.buttonStyle} Link="/GoNoGo">Check Go/No Go</button> */}
+      <Link style={styles.linkStyle} to='/GoNoGo'>Check Go/No Go</Link>
+
       <div style={styles.header}>
-        <Link style={styles.back} to="/">
+        <Link style={styles.back} >
           <HomeIcon />
         </Link>
         <Reader />
@@ -54,5 +60,11 @@ const styles = {
   back: {
     fontSize: "30pt",
     color: "white"
-  }
+  },
+  linkStyle:{
+    position: 'relative',
+    left: 1600,
+    top: 35,
+    
+  },
 };
