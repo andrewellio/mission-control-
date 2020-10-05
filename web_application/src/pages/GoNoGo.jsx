@@ -13,6 +13,9 @@ export default function GoNoGo(){
     const[rocketVelocityLaunchRailThreshold, setRocketVelocityLaunchRailThreshold] = useState('');
     const[windSpeedThreshold, setWindSpeedThreshold] = useState('');
 
+    var goInt = 0;
+    
+
     return(
 
       <div style={styles.title}>
@@ -24,6 +27,10 @@ export default function GoNoGo(){
         </Link>
 
         <h1>Go/No Go</h1>
+
+        {/* {goInt == 3 ? <h1 style={styles.goStyle}>Go</h1>
+            : <h1 style={styles.noGoStyle}>No Go</h1>} */}
+
         <h3>Set Threshold Values</h3>
   
         <label for="angle">Launch Rod Angle:</label>
@@ -48,7 +55,7 @@ export default function GoNoGo(){
 
             <div>
             
-              {launchRodAngleThreshold > launchRodAngleValue ? <label style={styles.goStyle}>Go</label> 
+              {launchRodAngleThreshold > launchRodAngleValue ? <label style={styles.goStyle}>Go</label>
               : <label style={styles.noGoStyle}>No Go</label>}
               
             </div>
@@ -77,7 +84,7 @@ export default function GoNoGo(){
             <br />
 
             <div>
-              {rocketVelocityLaunchRailThreshold > rocketVelocityLaunchRailValue ? <label style={styles.goStyle}>Go</label> 
+              {rocketVelocityLaunchRailThreshold > rocketVelocityLaunchRailValue ?  <label style={styles.goStyle}>Go</label>
               : <label style={styles.noGoStyle}>No Go</label>}
             </div>
 
@@ -104,7 +111,7 @@ export default function GoNoGo(){
             <br />
 
             <div>
-              {windSpeedThreshold > windSpeedValue ? <label style={styles.goStyle}>Go</label> 
+              {windSpeedThreshold > windSpeedValue ? <label style={styles.goStyle}>Go</label>
               : <label style={styles.noGoStyle}>No Go</label>}
             </div>
 

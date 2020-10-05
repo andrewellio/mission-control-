@@ -63,7 +63,7 @@ const styles = {
   },
   linkStyle:{
     position: 'relative',
-    left: 1050,
+    left: 1600,
     top: 35,
     
   },
