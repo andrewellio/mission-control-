@@ -77,4 +77,12 @@ describe("<Weather />  with no props", () => {
     });
     expect(container.find('input[id="latId"]').prop("value")).toEqual(100);
   });
+
+  it('Test click event', () => {
+    const mockCallBack = jest.fn();
+
+    const button = shallow((<Button onClick={mockCallBack}/>));
+    button.find('button').simulate('click');
+    expect(mockCallBack.mock.calls.length).toEqual(1);
+  });
 });

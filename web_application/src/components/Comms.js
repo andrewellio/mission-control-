@@ -4,6 +4,7 @@ import { useRocket } from "../api/Rocket";
 
 const Comms = () => {
   const [rocket] = useRocket();
+
   return (
     <div className="Comms" style={styles.comms}>
       <table>
