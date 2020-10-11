@@ -2,21 +2,25 @@
 
 Mission Control Interface made using React.
 
+To run the web application as localhost in a browser, first navigate to the directory `cd web_application`
+
 ## Install
 
-This install the libraries for a local machine.
+This will install the libraries for a local machine.
 
 ```bash
 $ npm install
 ```
+(A node modules folder should be created)
 
 ## Run
 
-We can run the application on a local server.
+We can run the application on a local server (i.e. localhost).
 
 ```bash
 $ npm start
 ```
+(The system's default browser should automatically open)
 
 ## Test
 
