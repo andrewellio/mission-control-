@@ -11,7 +11,7 @@ import Instructions from "./pages/Instructions";
 import Simulation from "./pages/Simulation";
 import Weather from "./pages/Weather";
 import Graphs from "./pages/Graphs"
-
+import GoNoGo from "./pages/GoNoGo";
 /**
  *  This page house the single page application (SPA).
  *  We use the DOM to control routing between pages.
@@ -37,6 +37,9 @@ const App = () => {
         </Route>
         <Route path="/Graphs">
           <Graphs />
+        </Route>
+        <Route path="/GoNoGo">
+          <GoNoGo />
         </Route>
         <Redirect from="/" to="/Home" />
       </Switch>
