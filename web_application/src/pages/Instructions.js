@@ -53,6 +53,13 @@ const Instructions = () => {
             </li>
             <li>
               <b>
+                <Link to="/GoNoGo">Go/NoGo</Link>
+              </b>
+              <br />
+              The Go/NoGo will let user decide launch the rocket or not.{" "}
+            </li>
+            <li>
+              <b>
                 <Link to="/Dashboard">Dashboard</Link>
               </b>
               <br />
@@ -61,7 +68,13 @@ const Instructions = () => {
               <a href="https://en.wikipedia.org/wiki/LoRa">LoRa</a>. The
               software displays the current phase of the rocket.
             </li>
- 
+            <li>
+              <b>
+                <Link to="/Graphs">Graphs</Link>
+              </b>
+              <br />
+              The graphs will Visualiz the rocket data during the launch.{" "}
+            </li>
           </ol>
         </div>
       </div>
