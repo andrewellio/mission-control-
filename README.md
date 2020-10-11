@@ -18,16 +18,8 @@ These are mockupsthat showcase the design an clickable protypes for the mission 
 **First Iteration**
 [Resource](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/Interface/Balsamiq%201st%20Iteration)
 
-## State Diagram
-This aims to achieve clarity over the different states that our software program can undergo and the processes.
-
-[State Diagram](https://drive.google.com/file/d/1_ZkzZwD_k9JGtFkdzznK4hVx9MtQip8o/view?usp=sharing)
-
 ## Wiki
 [Project Wiki](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/wikis/home)
-
-## JSON parser
-[JSON parser(JAVA)](https://gitlab.ecs.vuw.ac.nz/course-work/engr300/2020/group12/group-12/-/tree/master/JSONparser)
 
 ## Brief
 
