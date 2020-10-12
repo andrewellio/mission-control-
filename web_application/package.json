@@ -27,7 +27,7 @@
     "react-leaflet": "^2.7.0",
     "react-plotly.js": "^2.5.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.3",
     "react-step-progress-bar": "^1.0.3",
     "serialport": "^9.0.1"
   },

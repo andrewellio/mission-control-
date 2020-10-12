@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom'
 export default function GoNoGo(){
 
     const[launchRodAngleValue, setLaunchRodAngle] = useState('');
+
     const[rocketVelocityLaunchRailValue, setRocketVelocityLaunchRail] = useState('');
     const[windSpeedValue, setWindSpeed] = useState('');
 
-    const[launchRodAngleThreshold, setLaunchRodAngleThreshold] = useState('');
+    const[launchRodAngleThreshold, setLaunchRodAngleThreshold] = useState('')
     const[rocketVelocityLaunchRailThreshold, setRocketVelocityLaunchRailThreshold] = useState('');
     const[windSpeedThreshold, setWindSpeedThreshold] = useState('');
 
@@ -42,6 +43,8 @@ export default function GoNoGo(){
             style={styles.inputBox}
             onChange={event => setLaunchRodAngleThreshold(event.target.value)}
             />
+            
+            
 
 <         input 
             type="int"
@@ -55,7 +58,7 @@ export default function GoNoGo(){
 
             <div>
             
-              {launchRodAngleThreshold > launchRodAngleValue ? <label style={styles.goStyle}>Go</label>
+              {launchRodAngleThreshold - 10 > launchRodAngleValue - 10 ? <label style={styles.goStyle}>Go</label>
               : <label style={styles.noGoStyle}>No Go</label>}
               
             </div>
@@ -84,7 +87,7 @@ export default function GoNoGo(){
             <br />
 
             <div>
-              {rocketVelocityLaunchRailThreshold > rocketVelocityLaunchRailValue ?  <label style={styles.goStyle}>Go</label>
+              {rocketVelocityLaunchRailThreshold - 10 > rocketVelocityLaunchRailValue - 10 ?  <label style={styles.goStyle}>Go</label>
               : <label style={styles.noGoStyle}>No Go</label>}
             </div>
 
@@ -111,7 +114,7 @@ export default function GoNoGo(){
             <br />
 
             <div>
-              {windSpeedThreshold > windSpeedValue ? <label style={styles.goStyle}>Go</label>
+              {windSpeedThreshold - 10 > windSpeedValue - 10 ? <label style={styles.goStyle}>Go</label>
               : <label style={styles.noGoStyle}>No Go</label>}
             </div>
 
