@@ -24,7 +24,7 @@ export default function Dashboard() {
       <Link style={styles.linkStyle} to='/GoNoGo'>Check Go/No Go</Link>
 
       <div style={styles.header}>
-        <Link style={styles.back} >
+        <Link style={styles.back} to='/Home'>
           <HomeIcon />
         </Link>
         <Reader />
