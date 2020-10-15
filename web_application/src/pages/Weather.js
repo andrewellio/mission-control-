@@ -32,13 +32,13 @@ const Weather = () => {
     setResults(data);
   };
 
-  const setLatitude = event => {
+  const setLatitude = (event) => {
     const newLat = event.target.value;
     const newCoordinates = { lat: newLat, long: coordinates.long };
     setCoordinates(newCoordinates);
   };
 
-  const setLongitude = event => {
+  const setLongitude = (event) => {
     const newLong = event.target.value;
     const newCoordinates = { lat: coordinates.lat, long: newLong };
     setCoordinates(newCoordinates);
@@ -47,9 +47,9 @@ const Weather = () => {
   return (
     <>
       <BrowserRouter>
-      <Link className="Dashboard-back" to="/">
-        <i className="material-icons">navigate_before</i>
-      </Link>
+        <Link className="Dashboard-back" to="/">
+          <i className="material-icons">navigate_before</i>
+        </Link>
       </BrowserRouter>
       <div className="Landing-body">
         <h1>Weather</h1>

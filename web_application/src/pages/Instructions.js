@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Instructions.jsx";
 
 /**
  * This page provides a high-level overview of each page.

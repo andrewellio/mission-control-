@@ -7,12 +7,13 @@ import stationary from "../assets/stationary.png";
 import ejection from "../assets/ejection.png";
 import launch from "../assets/launch.png";
 import recovery from "../assets/recovery.png";
+
 /**
  *  This is the rocket phase widget for the Dashboard.
  *  It renders a progress bar to display the current phase.
  *  We use labels, icons and color to mark that phase.
  */
-const Phase = props => {
+const Phase = (props) => {
   const [rocket] = useRocket();
   return (
     <div className="Phase">

@@ -5,12 +5,13 @@ import {
   Popup,
   TileLayer,
   Circle,
-  WMSTileLayer
+  WMSTileLayer,
 } from "react-leaflet";
 import RocketIcon from "./RocketIcon";
 import { useRocket } from "../api/Rocket";
 import Cache from "../api/Cache";
 import L from "leaflet";
+
 /**
  *  This is the map widget for the Dashboard page.
  *  We use the open-source Leaflet JavaScript library.
@@ -21,13 +22,17 @@ export default function MapPage() {
   return <Cache Online={Online} Offline={Offline} />;
 }
 
+/**
+ * This version of the map component requires an internet connection.
+ * It connects to the Open Street Map API to get topographical layers.
+ */
 function Online() {
   const [rocket] = useRocket();
   const position = [rocket.position.lat, rocket.position.long];
   const options = {
     url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     attribution:
-      '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
   };
   return (
     <Map style={styles.map} center={position} zoom={16}>
@@ -54,6 +59,11 @@ function Online() {
   );
 }
 
+/**
+ * This version of the map does not require an internet connection.
+ * Instead, it used a Mapserver WMS which caches map data offline.
+ * Instructions for setting this up are available on the Project wiki.
+ */
 function Offline() {
   const [rocket] = useRocket();
   const position = [rocket.position.lat, rocket.position.long];
@@ -61,7 +71,7 @@ function Offline() {
     url: `http://localhost/cgi-bin/map?`,
     crs: L.CRS.EPSG4326,
     format: "image/png",
-    layers: "topographical"
+    layers: "topographical",
   };
 
   return (
@@ -98,6 +108,6 @@ const styles = {
     maxHeight: "65vh",
     minWidth: "15vh",
     maxWidth: "90vh",
-    width: "50%"
-  }
+    width: "50%",
+  },
 };

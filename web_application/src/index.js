@@ -14,6 +14,10 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
+/**
+ * This returns a component that has the contexts provided.
+ * These contexts must be provided in a specific order to behave properly.
+ */
 function Contexts({ children }) {
   return (
     <OnlineProvider>

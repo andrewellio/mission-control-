@@ -11,8 +11,6 @@ import Comms from "../components/Comms";
 import Reader from "../api/Reader";
 import GoNoGo from "../pages/GoNoGo";
 
-
-
 /**
  *  This page presents real-time data from the rocket.
  *  This includes Telemetry, positional and communications.
@@ -21,10 +19,12 @@ export default function Dashboard() {
   return (
     <>
       {/* <button style={styles.buttonStyle} Link="/GoNoGo">Check Go/No Go</button> */}
-      <Link style={styles.linkStyle} to='/GoNoGo'>Check Go/No Go</Link>
+      <Link style={styles.linkStyle} to="/GoNoGo">
+        Check Go/No Go
+      </Link>
 
       <div style={styles.header}>
-        <Link style={styles.back} to='/Home'>
+        <Link style={styles.back} to="/Home">
           <HomeIcon />
         </Link>
         <Reader />
@@ -47,24 +47,23 @@ export default function Dashboard() {
 const styles = {
   header: {
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   main: {
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   secondary: {
     display: "flex",
-    justifyContent: "left"
+    justifyContent: "left",
   },
   back: {
     fontSize: "30pt",
-    color: "white"
+    color: "white",
   },
-  linkStyle:{
-    position: 'relative',
+  linkStyle: {
+    position: "relative",
     left: 1600,
     top: 35,
-    
   },
 };

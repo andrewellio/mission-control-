@@ -2,6 +2,11 @@ import React from "react";
 import "./Comms.css";
 import { useRocket } from "../api/Rocket";
 
+/**
+ * This component represents the communications from the rocket.
+ * There may be important messages, such as stage transitions,
+ * that may be useful information to display to a user.
+ */
 const Comms = () => {
   const [rocket] = useRocket();
 
@@ -23,6 +28,9 @@ const Comms = () => {
   );
 };
 
+/**
+ * Each log is displayed as a table row.
+ */
 const Log = ({ log }) => {
   return (
     <tr>
@@ -40,8 +48,8 @@ const styles = {
     maxHeight: "65vh",
     minWidth: "15vh",
     maxWidth: "90vh",
-    width: "50%"
-  }
+    width: "50%",
+  },
 };
 
 export default Comms;
