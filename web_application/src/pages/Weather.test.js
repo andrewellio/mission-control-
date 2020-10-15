@@ -34,7 +34,7 @@ describe("<Weather />  with no props", () => {
       onChange: expect.any(Function),
       placeholder: "e.g. 174.7731",
       type: "int",
-      value: 0
+      value: 0,
     });
   });
 
@@ -44,7 +44,7 @@ describe("<Weather />  with no props", () => {
       onChange: expect.any(Function),
       placeholder: "e.g. -41.2769",
       type: "int",
-      value: 0
+      value: 0,
     });
   });
 
@@ -63,8 +63,8 @@ describe("<Weather />  with no props", () => {
   it("should update the latitude on a change event", () => {
     container.find('input[id="lonId"]').simulate("change", {
       target: {
-        value: 100
-      }
+        value: 100,
+      },
     });
     expect(container.find('input[id="lonId"]').prop("value")).toEqual(100);
   });
@@ -72,17 +72,17 @@ describe("<Weather />  with no props", () => {
   it("should update the latitude on a change event", () => {
     container.find('input[id="latId"]').simulate("change", {
       target: {
-        value: 100
-      }
+        value: 100,
+      },
     });
     expect(container.find('input[id="latId"]').prop("value")).toEqual(100);
   });
 
-  it('Test click event', () => {
+  it("Test click event", () => {
     const mockCallBack = jest.fn();
 
-    const button = shallow((<Button onClick={mockCallBack}/>));
-    button.find('button').simulate('click');
+    const button = shallow(<Button onClick={mockCallBack} />);
+    button.find("button").simulate("click");
     expect(mockCallBack.mock.calls.length).toEqual(1);
   });
 });

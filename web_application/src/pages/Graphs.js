@@ -15,8 +15,8 @@ function Graphs() {
       marker: { color: "red" },
     },
   ]);*/
-  const [Xvalue, setXvalue] = useState([1,2,3,4])
-  const [Yvalue, setYvalue] = useState([1,2,3,4])
+  const [Xvalue, setXvalue] = useState([1, 2, 3, 4]);
+  const [Yvalue, setYvalue] = useState([1, 2, 3, 4]);
 
   const data = [
     {
@@ -26,7 +26,7 @@ function Graphs() {
       mode: "lines+markers",
       marker: { color: "red" },
     },
-  ]
+  ];
 
   const layout = {
     width: "50%",
@@ -50,14 +50,9 @@ function Graphs() {
     data[0].x.push(newDataX);
     data[0].y.push(newDataY);
 
-    setXvalue([...Xvalue, 
-      newDataX
-    ])
+    setXvalue([...Xvalue, newDataX]);
 
-    setYvalue([...Yvalue, 
-      newDataX
-    ])
-
+    setYvalue([...Yvalue, newDataX]);
 
     console.log("data[0].x");
     console.log(data[0].x);
