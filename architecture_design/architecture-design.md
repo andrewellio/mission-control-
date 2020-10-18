@@ -212,7 +212,11 @@ This diagram shows the proposed tree view for the main processes that the softwa
 
 ### 4.4 Physical
 
-...
+The 'physicality' of Mission Control is rather known as software components. However, physical objects will include certain requirments, in order to run the software.
+
+- Laptop
+- Physical Communication Device from Serial Port to LoWra
+-USB to carry software if capacity is limited
 
 ### 4.5 Scenarios
 
