@@ -72,7 +72,7 @@ const Instructions = () => {
                 <Link to="/Graphs">Graphs</Link>
               </b>
               <br />
-              The graphs will Visualize the rocket data during the launch.{" "}
+              The graphs will visualize the rocket data during the launch.{" "}
             </li>
           </ol>
         </div>

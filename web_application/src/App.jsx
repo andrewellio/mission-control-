@@ -12,6 +12,7 @@ import Instructions from "./pages/Instructions";
 import Simulation from "./pages/Simulation";
 import Weather from "./pages/Weather";
 import GoNoGo from "./pages/GoNoGo";
+import Graphs from "./pages/Graphs";
 
 /**
  *  This page house the single page application (SPA).
@@ -41,6 +42,7 @@ const pages = [
   { path: "/Weather", component: Weather },
   { path: "/Simulation", component: Simulation },
   { path: "/GoNoGo", component: GoNoGo },
+  { path: "/Graphs", component: Graphs }
 ];
 
 /**
