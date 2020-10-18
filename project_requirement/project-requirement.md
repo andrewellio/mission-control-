@@ -450,6 +450,8 @@ These steps will make sure that the process has been reviewed, and can now be ve
 - generate UML diagrams from codebase and compare it to the original UML diagrams
  -->
 
+![An image of the Class Diagram](uml_diagrams/class_diagram/class_diagram.png)
+
 #### 4.6 Design Constraints
 
 <!-- TODO
@@ -678,7 +680,7 @@ Below is a list of the assumptions for this project listed in ascending priority
 | Sandy (Alexander Saunders) | 5.3                                            |
 | Jesse Wood                 | 2, 3.1, 3.6, 3.7, 3.8, 4.1, 4.6, 4.7, 6.1, 6.2 |
 | Marcus Rathod              | 3.1, 3.3, 5.4, 5.4.1, 4.8                      |
-| Mason Yi                   | 3.1, 3.2, 3.3, 3.8, 4.1                        |
+| Mason Yi                   | 3.1, 3.2, 3.3, 3.8, 4.1, 4.5                   |
 
 ---
 
