@@ -341,7 +341,7 @@ Below is a list of the assumptions for this project listed in ascending priority
 
 | Team Member                | Section Contributions   |
 | -------------------------- | ----------------------- |
-| Elliott Andrews            | 2, 3.1, 4.2                  |
+| Elliott Andrews            | 2, 3.1, 4.2, 4.4                  |
 | Binke Xu                   |                         |
 | Sandy (Alexander Saunders) |                         |
 | Jesse Wood                 | 4.1, 4.3, 4.5, 6.1, 6.2 |
