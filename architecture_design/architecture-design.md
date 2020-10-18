@@ -180,7 +180,17 @@ This diagram shows the proposed UML class layout. Currently the diagram shows fo
 
 ### 4.2 Development
 
-...
+The development process has primarily been deveoped in Node JS, using React. This means that the project takes form of a web_application that is run in an internet browser.
+
+Pair programming has been a key part in deveopment, as well as the design. The web_application has been planned into a few main pages, these consist of:
+
+1. Home Page (Landing Page)
+2. Dashboard - features a summary of all aspects of Mission Control and Rocket Intergation
+3. Simulation - Will produce a CSV file based on the input values for general, atmospheric and others.
+4. Go/NoGo - Based on threshold values, will determine the ultimate decision for rocket launch.
+5. Graphs - Partially implemented graphs to monitor rocket sensors.
+6. Serial Port - Stream of serial port data through LoWra.
+7. Weather - Fetches weather data from Open Weather API, based on longitude and latitude co-ordinates.
 
 ### 4.3 Process
 
